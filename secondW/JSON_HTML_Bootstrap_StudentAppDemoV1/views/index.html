@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Hack Student ! </title>
+		<h1> Hack Student ! </h1>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<h2> Records: </h2>
+		<div id = "container"></div>
+
+		<!-- Add Record -->
+		<div class="container" style = "position: absolute;">
+		  <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal" style = "margin-left: auto; margin-right: auto;">Add New Record !</button>
+		  <div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Add Record</h4>
+		        </div>
+		        <form method="post" action = "/student" name="addRecord" id = "addRecordForm">
+		          <fieldset>
+		            <div class="modal-body">
+		              <div class="form-group">
+		                <label for="name">Name</label>
+		                <input type="text" id="name" name = "name" placeholder="Name" class="form-control" required/>
+		              </div>
+
+		              <div class="form-group">
+		                <label for="age">Age</label>
+		                <input type="number" id="age" name = "age" placeholder="Age" class="form-control" required/>
+		              </div>
+		            </div>
+		            <div class="modal-footer">
+		              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		              <button type="submit" class="btn btn-primary" id = "btn"> Add Record </button>
+		            </div>
+		          </fieldset>
+		        </form>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</body>
+</html>
+
+<script type = "text/javascript">
+	var studentContainer = document.getElementById("container");
+
+	var ourRequest = new XMLHttpRequest();
+	ourRequest.open('GET', 'student.json');
+	ourRequest.onload = function(){
+		var ourData = JSON.parse(ourRequest.responseText);
+		console.log(ourData);
+		renderHTML(ourData);
+	};
+	ourRequest.send();
+
+	function renderHTML(data){
+		console.log(data);
+		var htmlString = "<table border = '0' class = 'table table-hover'>";
+		htmlString += "<tr style = 'background-color : #CCC'><th> ID </th><th> Name </th><th> Age </th><th> Actions </th></tr>";
+
+
+		for(i = 0; i < data.length; i++){
+
+			var viewRecord = "<button type='button' class='btn btn-warning btn-lg' data-toggle='modal' data-target='#myModal3" + data[i].id + "' style = 'width:33%;'>View Record</button><div class='modal fade' id='myModal3" + data[i].id + "' role='dialog'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal'>&times;</button><h4 class='modal-title'>View Record</h4></div><form method='get' action = '/student/" + data[i].id + "' name='viewRecord' id = 'viewRecordForm'><div class='modal-body'><p>Name : " + data[i].name + "</p><p>Age : " + data[i].age + "</p></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>Close</button></div></form></div></div></div>";
+			
+
+			var updateRecord = "<button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal" + data[i].id + "' style = 'width:33%;'>Update Record</button><div class='modal fade' id='myModal" + data[i].id + "' role='dialog'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal'>&times;</button><h4 class='modal-title'>Update Record</h4></div><form method='post' action = '/student?_method=PUT' name='updateRecord' id = 'updateRecordForm'><fieldset><div class='modal-body'><div class='form-group'><label for='name'>Name</label><input type='text' id='name' name = 'name' placeholder='Name' class='form-control' required/></div><div class='form-group'><label for='age'>Age</label><input type='number' id='age' name = 'age' placeholder='Age' class='form-control' required/></div></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>Cancel</button><button type='submit' class='btn btn-primary'> Update Record </button><input type = 'hidden' name = 'id' value = '" + data[i].id +"'></div></fieldset><input type='hidden' name='_method' value='put'></form></div></div></div>";
+			
+			var deleteRecord = "<button type='button' class='btn btn-danger btn-lg' data-toggle='modal' data-target='#myModal2" + data[i].id + "' style = 'text-align: right; width: 33%;'>Delete Record</button><div class='modal fade' id='myModal2" + data[i].id + "' role='dialog'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal'>&times;</button><h4 class='modal-title'>Delete Record</h4></div><form method='post' action = '/student?_method=DELETE' name='deleteRecord' id = 'deleteRecordForm'><p> Are you sure you want to delete the record? </p><button type='button' class='btn btn-default' data-dismiss='modal'>Cancel</button><button type='submit' class='btn btn-danger'> Delete Record? </button><input type = 'hidden' name = 'id' value = '" + data[i].id + "'><input type='hidden' name='_method' value='delete'></form></div></div></div>";
+
+
+
+			htmlString += "<tr>";
+			htmlString += "<td>" + data[i].id + "</td>";
+			htmlString += "<td>" + data[i].name + "</td>";
+			htmlString += "<td>" + data[i].age + "</td>";
+			htmlString += "<td> " + viewRecord + "</td>";
+			htmlString += "<td> " + updateRecord + "</td>";
+			htmlString += "<td> " + deleteRecord + "</td>";
+			htmlString += "</tr>";
+		}
+		htmlString += "</table>";
+		studentContainer.insertAdjacentHTML('beforeend', htmlString);
+	};
+</script>

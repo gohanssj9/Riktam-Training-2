@@ -1,0 +1,78 @@
+/*body {
+	text-align: center;
+}
+
+#box {
+	display: block;
+	width: 500px;
+	margin: 50px auto;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid blue;
+	/*background: linear-gradient(45deg, black, white);*/
+/*	background: radial-gradient(circle, red 0%, orange 50%);
+	box-shadow: 5px 5px 5px rgba(110,110,110, 0.6);
+	border-radius: 30px;
+}
+
+#text{
+	font-family: 'Aclonica';
+	font-size: 30px;
+	font-style: bold;
+	text-shadow: rgb(110,110,110) 3px 3px;
+}
+
+Bucky Roberts HTML5 Tutorials Video 21
+*/
+/*
+body {
+	text-align: center;
+}
+
+#box {
+	display: block;
+	width: 500px;
+	margin: 50px auto;
+	padding: 15px;
+	text-align: center;
+	border: 7px solid blue;
+	background: yellow;
+	transition: transform 2s ;
+}
+
+#text{
+	font-family: 'Aclonica';
+	font-size: 30px;
+	font-style: bold;
+}
+
+#box:hover{
+	transform : rotate(45deg);
+}
+Bucky Roberts Video 23
+*/
+
+body {
+	text-align: center;
+}
+
+#box {
+	display: block;
+	margin: 150px auto;
+	color : #FFFFFF;
+	border-radius: 10px;
+	opacity: 0.6;
+	background: red;
+	width: 120px;
+	height: 75px;
+	transition: transform 2s, opacity 2s, background 2s, width 2s, height 2s;
+
+}
+
+#box:hover{
+	transform: rotate(360deg);
+	opacity: 1;
+	background: #1ec7e6;
+	width: 450px;
+	height: 110px;
+}

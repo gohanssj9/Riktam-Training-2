@@ -1,0 +1,5 @@
+#Empty
+minato:
+  name: Minato
+  email: namikazeminato@konoha.com
+  password_digest: <%= User.digest('namikaze') %>
