@@ -11,7 +11,6 @@ section, div {
   font-family: 'Gentona';
   font-weight: 400;
   line-height: 1;
-  overflow: hidden;
 }
 
 .top-banner {
@@ -229,6 +228,10 @@ section, div {
 }
 
 @media only screen and (max-width: 768px){
+	div {
+		overflow: hidden !important;
+	}
+	
 	.hide-xs {
 		display: none !important;
 	}
