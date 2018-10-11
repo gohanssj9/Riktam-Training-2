@@ -6,7 +6,7 @@ import '../assets/main-body-top.css';
 const RoutesSingleComponent = ({data}) => {
 	console.log(data);
 	return (
-		<ul>
+		<ul className = "col-12 col-sm-12 col-md-3 col-lg-3">
 			<li className = "big"> {data.title} </li>
 			<li> <a href = 'https://www.google.co.in'> {data.bodyStart[0]} to {data.bodyEnd[0]} Outstation Cabs </a> </li>
 			<li> <a href = 'https://www.google.co.in'> {data.bodyStart[1]} to {data.bodyEnd[1]} Outstation Cabs </a> </li>

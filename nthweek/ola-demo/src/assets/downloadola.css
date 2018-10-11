@@ -75,10 +75,6 @@
 	display: flex;
 }
 
-.downloadola-stores .download-link {
-	width: 33.33%;
-}
-
 .downloadola-stores .download-link img {
 	display: inline-block;
 	max-width: 165px;

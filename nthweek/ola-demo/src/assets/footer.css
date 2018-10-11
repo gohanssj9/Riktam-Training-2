@@ -3,7 +3,7 @@ footer.ola-footer {
 	color: #fff;
 	background: #393939;
 	letter-spacing: 0.3px;
-	height: 650px;
+	height: 100%;
 }
 
 .max-width {
@@ -16,17 +16,17 @@ footer.ola-footer .footer {
 	height: 100%;
 }
 
-footer.ola-footer .footer .row-item.main-links {
+footer.ola-footer .footer .row.main-links {
 	padding: 30px 0 40px 256px;
 }
 
-footer.ola-footer .footer .row-item {
+footer.ola-footer .footer .row {
 	position: relative;
 	padding-left: 256px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-footer.ola-footer .footer .row-item .title {
+footer.ola-footer .footer .row .title {
 	font-weight: 400;
 	font-size: 16px;
 	display: inline-block;
@@ -41,35 +41,37 @@ footer.ola-footer .footer .row-item .title {
 	text-align: left;
 }
 
-footer.ola-footer .footer .row-item.lists {
+footer.ola-footer .footer .row.lists {
 	position: relative;
 	padding-top: 30px;
-	height: 280px;
+	height: 100%;
 }
 
-footer.ola-footer .footer .row-item.lists .title {
+footer.ola-footer .footer .row.lists .title {
 	top: 30px;
 	bottom: auto;
 }
 
-footer.ola-footer .footer .row-item.social-media {
-	height: 96px;
+footer.ola-footer .footer .row.social-media {
+	height: 100%;
 	padding-top: 30px;
 	padding-bottom: 33px;
 }
 
-footer.ola-footer .footer .row-item.social-media .title {
+footer.ola-footer .footer .row.social-media .title {
 	top: 34px;
 	bottom: auto;
 }
 
-footer.ola-footer .footer .row-item.social-media img {
+footer.ola-footer .footer .row.social-media img {
 	margin-right: 60px;
 	font-size: 14px;
 	float: left;
+	width: 60px;
+	height: 30px;
 }
 
-footer.ola-footer .footer .row-item.social-media .pull-right {
+footer.ola-footer .footer .row.social-media .pull-right {
 	float: right;
 	display: inline-block;
 	vertical-align: middle;
@@ -77,46 +79,28 @@ footer.ola-footer .footer .row-item.social-media .pull-right {
 	font-weight: 400;
 }
 
-footer.ola-footer .footer .row-item.main-links .pull-left {
+footer.ola-footer .footer .row.main-links .pull-left {
 	margin-right: 38px;
 	font-size: 14px;
 	font-weight: 300;
 	color: rgba(255, 255, 255, 0.9);
 }
 
-footer.ola-footer .footer .row-item.main-links div.pull-left:hover {
+footer.ola-footer .footer .row.main-links div.pull-left:hover {
 	color: #8ec44a;
 }
 
-footer.ola-footer .footer .row-item.main-links div.pull-right {
+footer.ola-footer .footer .row.main-links div.pull-right {
 	font-weight: 600;
-	margin-right: 38px;
+	margin-right: 20px;
 	color: rgba(255, 255, 255, 0.9);
 }
 
-footer.ola-footer .footer .row-item.main-links div.pull-right:hover {
+footer.ola-footer .footer .row.main-links div.pull-right:hover {
 	color: #8ec44a;
 }
 
-select.icon-menu {
-	background-repeat: no-repeat;
-	background-position: bottom-left;
-	padding-left: 30px;
-}
-
-select#countries option[value = "India"] {
-	background-image: url('https://olacabs.com/webstatic/img/footer/india-flag-icon.png')
-}
-
-select#countries option[value = "Australia"] {
-	background-image: url('https://olacabs.com/webstatic/img/footer/australia-flag-icon.png')
-}
-
-select#countries option[value = "The Great Britain"] {
-	background-image: url('https://olacabs.com/webstatic/img/footer/uk-flag-icon.png')
-}
-
-footer.ola-footer .footer .row-item.under-cover{
+footer.ola-footer .footer .row.under-cover{
 	padding: 20px 0;
 	text-align: right;
 	font-size: 14px;
@@ -124,16 +108,16 @@ footer.ola-footer .footer .row-item.under-cover{
 	border-bottom: none;
 }
 
-footer.ola-footer .footer .row-item.under-cover .pull-right {
+footer.ola-footer .footer .row.under-cover .pull-right {
 	float: right;
 	margin-right: 60px;
 }
 
-footer.ola-footer .footer .row-item.under-cover .pull-right:hover {
+footer.ola-footer .footer .row.under-cover .pull-right:hover {
 	color: #8ec44a;
 }
 
-footer.ola-footer .footer .row-item.under-cover .copyrights {
+footer.ola-footer .footer .row.under-cover .copyrights {
 	padding-top: 25px;
 	text-align: right;
 	font-size: 12px;
@@ -145,7 +129,7 @@ img.pull-left {
 	width: 100px;
 }
 
-footer.ola-footer .footer .row-item.lists .expand-more{ 
+footer.ola-footer .footer .row.lists .expand-more{ 
 	color: rgba(255, 255, 255, 0.9);
 	left: 45%;
 	top: 100%;
@@ -155,6 +139,58 @@ footer.ola-footer .footer .row-item.lists .expand-more{
 	position: absolute;
 }
 
-footer.ola-footer .footer .row-item.lists .expand-more:hover {
+footer.ola-footer .footer .row.lists .expand-more:hover {
 	color: #8ec44a;
+}
+
+@media only screen and (max-width: 768px){
+	footer.ola-footer .footer .row, footer.ola-footer .footer .row.main-links {
+		padding-left: 0;
+	}
+
+	footer.ola-footer .footer .row.main-links .title.discoverOla {
+		transform: translateY(-400%);
+	}
+
+	footer.ola-footer .footer .row .title {
+		text-align: center;
+		width: 100%;
+	}
+
+	footer.ola-footer .footer .row.social-media img {
+		margin-right: 0;
+	}
+
+	.dummyClass {
+		padding-top: 50px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.dummyClass-2 {
+		width: 100%;
+	}
+
+	.dummyClass.flexy {
+		flex-direction: column;
+	}
+
+	footer.ola-footer .footer .row.under-cover .pull-left {
+		width: 100%;
+		display: block;
+		height: 80px;
+		padding: 20px;
+	}
+
+	footer.ola-footer .footer .row.social-media .pull-right {
+		float: none;
+		display: flex;
+		justify-content: center;
+		padding-top: 30px;
+		width: 100%;
+	}
+
+	footer.ola-footer .footer .row.under-cover .copyrights {
+		width: 100%;
+	}
 }
