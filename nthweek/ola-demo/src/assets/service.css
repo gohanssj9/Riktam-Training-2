@@ -30,7 +30,6 @@
 }
 
 .service-info .card-holder {
-	width: 33.33%;
 	padding-right: 38px;
 	display: inline-block;
 }
@@ -38,7 +37,7 @@
 .service-info .individual-card {
 	background: #FBFBFC;
 	border-radius: 5px;
-	height: 530px;
+	height: 100%;
 	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 	letter-spacing: 0.3px;
 	display: inline-block;
@@ -48,31 +47,33 @@
 .service-info .individual-card .img-holder {
 	width: 100%;
 	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+	height: 200px;
 }
 
 .service-info .individual-card .img-holder .overlay {
 	position: absolute;
-	height: 200px;
 	top: 0;
 	left: 0;
 	right: 0;
 	background: rgba(0, 0, 0, 0.3);
 	opacity: 0.9;
 	z-index: 1;
+	height: 100%;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
 
 .service-info .individual-card .img-holder .overlay .modified {
-	max-width: 100%;
-	max-height: 100%;
-	object-fit: fill;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
 }
 
 .service-info .individual-card .info-holder {
 	text-align: left;
 	padding: 20px 20px 0 20px;
-	margin-top: 180px;
 }
 
 .service-info .individual-card .info-holder .heading {
@@ -96,6 +97,7 @@
 	line-height: 80px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .service-info .individual-card .info-holder .car-type-info {
@@ -111,4 +113,34 @@
 	padding-top: 30px;
 	padding-bottom: 40px;
 	display: flex;
+}
+
+@media only screen and (max-width: 768px){
+	.service-container {
+		padding: 0px 20px ;
+	}
+
+	.service-info .service-heading {
+		font-size: 28px;
+	}
+
+	.service-info .service-subheading {
+		font-size: 14px;		
+	}
+
+	.service-info .card-holder {
+		padding-right: 20px;
+		display: block;
+		padding-bottom: 10px;
+	}
+
+	.service-info .individual-card .img-holder .car-type {
+		width: 60px;
+		height: 60px;
+		right: 16px;
+	}
+
+	.service-info .individual-card .info-holder {
+		padding: 0 20px;
+	}
 }

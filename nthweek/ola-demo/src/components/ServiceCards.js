@@ -33,12 +33,11 @@ const serviceCardData = [
 const ServiceCards = () => {
 	return (
 		<Fragment>
+		<div className = "row">
 		{serviceCardData.map(card => 
-			<div className = "card-holder">
+			<div className = "col-12 col-sm-12 col-md-4 col-lg-4 card-holder">
 			<div className = "individual-card">
 				<div className = "img-holder">
-					<div className = "main-image">
-					</div>
 					<div className = "overlay">
 						<img src = {card.imageUrl} className = "modified" />
 					</div>
@@ -51,15 +50,16 @@ const ServiceCards = () => {
 					<h2 className = "heading"> {card.title} </h2>
 					<p className = "car-type-info"> {card.body} </p>
 				</div>
-
-				<div className = "offerings-list">
-					<img src = {logo} />
-				</div>
 			</div>
 			</div>
 		)}
+		</div>
 		</Fragment>
 	);
 }
 
 export default ServiceCards;
+
+				// <div className = "offerings-list">
+				// 	<img src = {logo} />
+				// </div>
