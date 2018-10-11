@@ -32,17 +32,15 @@
 
 .why-ola .list-wrapper {
 	width: 100%;
-	padding: 20px 0 0 0;
+	padding: 20px 0 0 30px;
 }
 
 .why-ola .left-items-wrapper {
-	width: 50%;
 	float: left;
 	padding-right: 20px;
 }
 
 .why-ola .right-items-wrapper {
-	width: 50%;
 	float: left;
 	padding-left: 20px;
 }
@@ -66,7 +64,7 @@
 .why-ola .individual-item-list .individual-image {
 	object-fit: cover;
 	width: 100%;
-	height: 130px;
+	max-height: 110px;
 }
 
 .why-ola .individual-item-list .text-holder {
@@ -94,4 +92,40 @@
 	font-size: 16px;
 	color: rgba(0, 0, 0, 0.6);
 	text-align: left;
+}
+
+@media only screen and (max-width: 768px){
+	.why-ola {
+		padding: 0 20px 0 20px;
+	}
+
+	.why-ola .list-wrapper {
+		padding: 0 0 0 20px;
+	}
+
+	.section-holder .why-ola-header {
+		font-size: 28px;
+	}
+
+	.section-holder .why-ola-subheader{
+		font-size: 14px;
+	}
+
+	.why-ola .left-items-wrapper {
+		width: 100%;
+		padding-right: 0;
+	}
+
+	.why-ola .right-items-wrapper {
+		width: 100%;
+		padding-left: 0;
+	}
+
+	.why-ola .individual-item-list .text-heading {
+		font-size: 18px;
+	}
+
+	.why-ola .individual-item-list .text-body {
+		font-size: 14px;
+	}
 }

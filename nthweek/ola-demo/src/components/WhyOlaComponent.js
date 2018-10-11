@@ -51,16 +51,23 @@ const WhyOlaComponent = () => {
 				<h2 className = "why-ola-header"> Why ride with Ola ? </h2>
 				<label className = "why-ola-subheader"> The best way to travel to your destination </label>
 				<div className = "list-wrapper">
-					<div className = "left-items-wrapper">
-						{firstSetOfData.map(item => 
-							<WhyOlaSingleItemComponent header = {item.header} body = {item.body} imgSource = {item.imgSource} />
-						)}
-					</div>
-
-					<div className = "right-items-wrapper">
-						{secondSetOfData.map(item => 
-							<WhyOlaSingleItemComponent header = {item.header} body = {item.body} imgSource = {item.imgSource} />
-						)}
+					<div className = "row">
+						<div className = "col-12 col-sm-12 col-md-6 col-lg-6 left-items-wrapper">
+							<div className = "row">
+								{firstSetOfData.map(item => 
+									<WhyOlaSingleItemComponent header = {item.header} body = {item.body} imgSource = {item.imgSource} />
+								)}
+							</div>
+						</div>
+						<div className = "col-12 col-sm-12 col-md-6 col-lg-6">
+							<div className = "row">
+								<div className = "right-items-wrapper">
+									{secondSetOfData.map(item => 
+										<WhyOlaSingleItemComponent header = {item.header} body = {item.body} imgSource = {item.imgSource} />
+									)}
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
