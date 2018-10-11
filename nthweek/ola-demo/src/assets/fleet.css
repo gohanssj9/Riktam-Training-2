@@ -168,6 +168,10 @@
 	}
 
 	.scroll-fleet-real .scroll-fleet-holder .left-part .scroll-left-part {
+		max-height: 400px;
+	}
+
+	.scroll-fleet-real .scroll-fleet-holder .left-part .scroll-left-part {
 		height: 100%;
 		max-width: 100%;
 	}

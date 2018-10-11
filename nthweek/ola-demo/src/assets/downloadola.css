@@ -15,7 +15,6 @@
 	display: block;
 }
 
-
 .download-image-holder .content .right-holder {
 	width: 50%;
 	height: 100%;
@@ -24,7 +23,7 @@
 }
 
 .download-image-holder .booking-img {
-	height: 100%;
+	max-height: 100%;
 	max-width: 100%;
 }
 
@@ -68,4 +67,10 @@
 	background-repeat: no-repeat;
 	display: block;
 	background-position: left;
+}
+
+@media only screen and (max-width: 768px){
+	.download-image-holder .content .right-holder, .download-image-holder .content .left-holder {
+		width: 100%;
+	}	
 }
