@@ -110,7 +110,7 @@ footer.ola-footer .footer .row.under-cover{
 
 footer.ola-footer .footer .row.under-cover .pull-right {
 	float: right;
-	margin-right: 60px;
+	margin-right: 0;
 }
 
 footer.ola-footer .footer .row.under-cover .pull-right:hover {
