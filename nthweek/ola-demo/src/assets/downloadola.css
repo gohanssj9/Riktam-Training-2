@@ -23,7 +23,7 @@
 }
 
 .download-image-holder .booking-img {
-	max-height: 100%;
+	height: 100%;
 	max-width: 100%;
 }
 
@@ -58,7 +58,7 @@
 	font-weight: 300;
 	line-height: 20px;
 	margin-top: 15px;
-	margin-bottom: 90px;
+	margin-bottom: 60px;
 }
 
 .download-link-image {
@@ -69,8 +69,53 @@
 	background-position: left;
 }
 
+.downloadola-stores {
+	height: 50px;
+	width: 600px;
+	display: flex;
+}
+
+.downloadola-stores .download-link {
+	width: 33.33%;
+}
+
+.downloadola-stores .download-link img {
+	display: inline-block;
+	max-width: 165px;
+	margin-right: 10px;
+	max-height: 100%;
+	max-width: 100%;
+}
+
 @media only screen and (max-width: 768px){
 	.download-image-holder .content .right-holder, .download-image-holder .content .left-holder {
 		width: 100%;
-	}	
+		height: 50%;
+	}
+	.download-image-holder {
+		height: 600px;
+	}
+
+	.left-section {
+		width: 100%;
+		padding: 0 20px 0 20px;
+		top: 0;
+		bottom: 0;
+	}
+
+	.left-section .left-section-heading {
+		font-size: 28px;
+	}
+
+	.left-section .left-section-info {
+		font-size: 14px;
+	}
+
+	.downloadola-stores {
+		width: 100%;
+	}
+
+	.downloadola-stores .download-link {
+		width: 100%;
+	}
 }

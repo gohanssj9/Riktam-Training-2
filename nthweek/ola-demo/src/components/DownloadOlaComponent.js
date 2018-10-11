@@ -17,6 +17,20 @@ const DownloadOlaComponent = () => {
 							<div className = "left-section">
 								<h2 className = "left-section-heading"> Book an Ola from the App </h2>
 								<p className = "left-section-info"> Download the app for exclusive deals and ease of booking </p>
+								<div className = "downloadola-stores">
+									<div className = "col-6 col-sm-6 col-md-4 col-lg-4 download-link">
+										<img src = "https://olacabs.com/webstatic/img/playstore.png" />
+									</div>
+
+									<div className = "col-6 col-sm-6 col-md-4 col-lg-4 download-link">
+										<img src = "https://olacabs.com/webstatic/img/appstore.png" />
+									</div>
+
+									<div className = "col-6 col-sm-6 col-md-4 col-lg-4 download-link">
+										<img src = "https://olacabs.com/webstatic/img/windowstore.png" />
+									</div>
+
+								</div>
 							</div>
 						</div>
 
