@@ -1,5 +1,4 @@
 .awesome-fleet {
-	padding-top: 650px;
 	display: block;
 }
 
@@ -141,4 +140,52 @@
 	width: 80%;
 
 	color: rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width: 768px){
+	.awesome-fleet {
+		padding: 0 20px;
+	}
+
+	.awesome-fleet .fleet-holder .title {
+		font-size: 28px;
+	}
+
+	.awesome-fleet .fleet-holder .subtitle {
+		font-size: 14px;
+	}
+
+	.awesome-fleet .fleet-holder .scroll-fleet {
+		overflow-x: visible !important;;
+	}
+
+	.scroll-fleet-real {
+		height: 100%;
+	}
+
+	.scroll-fleet-real .scroll-fleet-holder .left-part {
+		width: 100%;
+	}
+
+	.scroll-fleet-real .scroll-fleet-holder .left-part .scroll-left-part {
+		height: 100%;
+		max-width: 100%;
+	}
+
+	.scroll-fleet-real .scroll-fleet-holder .right-part {
+		width: 100%;
+		height: 400px;
+	}
+
+	.scroll-fleet-real .scroll-fleet-holder .right-part .right-holder {
+		margin-top: 30px;
+	}
+
+	.scroll-fleet-real .scroll-fleet-holder .right-part .right-holder .title {
+		font-size: 28px;
+	}
+
+	.scroll-fleet-real .scroll-fleet-holder .right-part .right-holder .subtitle {
+		font-size: 14px;
+	}
 }

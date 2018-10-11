@@ -150,7 +150,7 @@ class AwesomeFleetComponent extends Component {
 		return (
 			<section className = "awesome-fleet">
 				<div className = "fleet-holder max-width">
-					<h2 className = "title"> Meet out Awesome Fleet </h2>
+					<h2 className = "title"> Meet our Awesome Fleet </h2>
 					<label className = "subtitle"> The widest variety of cars to choose from </label>
 					<div className = "scroll-fleet">
 						{
