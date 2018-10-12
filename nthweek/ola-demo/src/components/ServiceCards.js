@@ -35,7 +35,7 @@ const ServiceCards = () => {
 		<Fragment>
 		<div className = "row">
 		{serviceCardData.map(card => 
-			<div className = "col-12 col-sm-12 col-md-4 col-lg-4 card-holder">
+			<div className = "col-12 col-sm-6 col-md-4 col-lg-4 card-holder">
 			<div className = "individual-card">
 				<div className = "img-holder">
 					<div className = "overlay">

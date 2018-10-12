@@ -30,8 +30,9 @@
 @media only screen and (max-width: 768px){
 	.offers-container .offers-wrapper {
 		top: 0;
-		background-color: #000000;
+		background-color: #FFFFFF;
 		display: block;
 		position: relative;
+		height: 75px;
 	}
 }

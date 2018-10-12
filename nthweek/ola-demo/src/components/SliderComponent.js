@@ -56,7 +56,7 @@ class SliderComponent extends Component{
 				<div className = "offers-container">
 					<div className = "offers-wrapper max-width">
 						{data.map(item =>
-							<img src = {item} className = "img-holder" />
+							<img src = {item} className = "col-12 col-sm-4 col-md-4 col-lg-4 img-holder" />
 						)}
 					</div>
 				</div>
