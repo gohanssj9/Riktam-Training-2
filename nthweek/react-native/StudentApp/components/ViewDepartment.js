@@ -33,7 +33,7 @@ export default class ViewDepartment extends Component{
   // }
 
   onDelete(id){
-    const url = 'http://192.168.10.196:8000/students/' + id; 
+    const url = 'http://testbed2.riktamtech.com:3000/students/' + id; 
     fetch(url, {
       method: 'DELETE'
     })
@@ -51,7 +51,7 @@ export default class ViewDepartment extends Component{
   componentDidMount(){
     const {navigation} = this.props;
     const departmentId = navigation.getParam('departmentId');
-    const url = 'http://192.168.10.196:8000/departments/' + departmentId + '/students'; 
+    const url = 'http://testbed2.riktamtech.com:3000/departments/' + departmentId + '/students'; 
     fetch(url)
       .then(response => response.json())
       .then(students => {

@@ -26,7 +26,7 @@ export default class AddDepartment extends Component{
       body: body
     };
 
-    const url = 'http://192.168.10.196:8000/departments';
+    const url = 'http://testbed2.riktamtech.com:3000/departments';
 
     fetch(url,{
       method: 'POST',

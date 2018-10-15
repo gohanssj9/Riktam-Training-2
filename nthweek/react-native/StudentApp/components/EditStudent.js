@@ -33,7 +33,7 @@ export default class EditStudent extends Component{
       department_id: department_id
     }];
 
-    const url = 'http://192.168.10.196:8000/students/' + id;
+    const url = 'http://testbed2.riktamtech.com:3000/students/' + id;
 
     fetch(url,{
       method: 'PUT',

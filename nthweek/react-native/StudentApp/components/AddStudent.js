@@ -27,7 +27,7 @@ export default class AddStudent extends Component{
       department_id: id
     };
 
-    fetch('http://192.168.10.196:8000/students',{
+    fetch('http://testbed2.riktamtech.com:3000/students',{
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(data)
