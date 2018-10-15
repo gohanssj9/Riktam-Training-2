@@ -26,7 +26,7 @@ export default class GetDepartments extends Component{
   onRefresh(){
     console.log("Inside onRefresh");
     this.setState({isFetchingData: true}, function(){
-      fetch('http://192.168.10.196:8000/departments')
+      fetch('http://testbed2.riktamtech.com:3000/departments')
       .then(response => response.json())
       .then(departments => {
         console.log(departments);
@@ -37,7 +37,7 @@ export default class GetDepartments extends Component{
   }
 
   onDelete(id){
-    const url = 'http://192.168.10.196:8000/departments/' + id; 
+    const url = 'http://testbed2.riktamtech.com:3000/departments/' + id; 
     fetch(url, {
       method: 'DELETE'
     })
@@ -53,7 +53,7 @@ export default class GetDepartments extends Component{
   }
 
   componentDidMount(){
-    fetch('http://192.168.10.196:8000/departments')
+    fetch('http://testbed2.riktamtech.com:3000/departments')
       .then(response => response.json())
       .then(departments => {
         this.setState({departments: JSON.parse(departments)});
