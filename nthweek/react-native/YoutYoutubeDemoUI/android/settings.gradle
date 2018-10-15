@@ -1,0 +1,3 @@
+rootProject.name = 'YoutYoutubeDemoUI'
+
+include ':app'
