@@ -4,6 +4,11 @@
 	height: 100%;
 }
 
+.navbar-wrapper {
+	border-bottom: 1px solid #e2e2e2;
+	padding: 13px;
+}
+
 .navbar {
 	position: relative;
 	margin-bottom: 0;
@@ -11,11 +16,75 @@
 	background-color: #ffffff;
 	border: 0;
 	color: #000;
-	padding: 0.5% 0;
-	height: 80px;
+	padding: 0;
+}
+
+.container-fluid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.navbar-header {
+	display: flex;
+	flex: 1;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-grow: 1;
 }
 
 .navbar-brand {
 	float: left;
 	min-height: 50px;
+	flex: 1;
+}
+
+.search-bar {
+	display: flex;
+	flex: 3;
+	min-height: 50px;
+	background-color: #f2f2f2;
+	border-radius: 3px;
+}
+
+.search-icon {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.search-content {
+	flex: 9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.search-content input {
+	width: 100%;
+	border: none;
+	background-color: #f2f2f2;
+}
+
+.enclosing-right {
+	flex: 1;
+}
+
+.enclosing-right ul li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 25px;
+}
+
+.navbar-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.enclosing-right-small {
+	flex: 0 0 100%;
+	padding: 15px;
 }
