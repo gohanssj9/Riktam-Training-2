@@ -43,12 +43,27 @@ const Header = () => {
 						</ul>
 					</div>
 
-					<div className = "enclosing-right-small d-block d-xs-block d-sm-block d-md-block d-lg-none">
-						<i class="fa fa-fire" style = {{fontSize: '36px'}}></i>
-						<i class="fa fa-fire" style = {{fontSize: '36px'}}></i>
-						<i class="fa fa-fire" style = {{fontSize: '36px'}}></i>
-						<i class="fa fa-fire" style = {{fontSize: '36px'}}></i>
-						<i class="fa fa-fire" style = {{fontSize: '36px'}}></i>
+					<div className = "enclosing-right-small d-flex d-lg-none">
+						<div className = "text-icon">
+							<i class="fa fa-home" style = {{fontSize: '36px'}}></i>
+							<p> Home </p>
+						</div>
+						<div className = "text-icon">
+							<i class="fa fa-play" style = {{fontSize: '36px'}}></i>
+							<p> Play </p>
+						</div>
+						<div className = "text-icon">
+							<i class="fa fa-plus-circle" style = {{fontSize: '36px'}}></i>
+							<p> Menu </p>
+						</div>
+						<div className = "text-icon">
+							<i class="fa fa-inbox" style = {{fontSize: '36px'}}></i>
+							<p> Inbox </p>
+						</div>
+						<div className = "text-icon">
+							<i class="fa fa-calendar" style = {{fontSize: '36px'}}></i>
+							<p> Events </p>
+						</div>
 					</div>
 				</div>
 			</nav>

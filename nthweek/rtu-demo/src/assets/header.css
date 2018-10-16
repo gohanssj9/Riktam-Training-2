@@ -64,6 +64,9 @@
 	width: 100%;
 	border: none;
 	background-color: #f2f2f2;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .enclosing-right {
@@ -85,6 +88,15 @@
 }
 
 .enclosing-right-small {
+	padding: 20px 0 0 0;
 	flex: 0 0 100%;
-	padding: 15px;
+	align-items: flex-start;
+}
+
+.enclosing-right-small .text-icon {
+	flex: 1;
+}
+
+.enclosing-right-small .text-icon p {
+	margin-bottom: 0;
 }
