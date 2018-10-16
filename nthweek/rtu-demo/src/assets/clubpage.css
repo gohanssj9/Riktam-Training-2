@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'Tungsten';
+  src: url('./Tungsten-A.ttf');
+}
+
 .whole-body {
 	height: 8px;
 	background-image: linear-gradient(to right, #20B2AA, #00FF00);
 	position: relative;
 }
+
