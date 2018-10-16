@@ -12,7 +12,7 @@ const UniversityComponent = () => {
 				<div className = "row">
 					<div className = "col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 university-title">
 						<div>
-							<h1 className = "display-1 text-uppercase"> University of Shantanu </h1>
+							<h1 className = "display-1 text-uppercase" style = {{lineHeight: '48px'}}> University of Shantanu </h1>
 							<span className = "display-1 text-uppercase"> Dhaka </span>
 						</div>
 

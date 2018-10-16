@@ -1,0 +1,31 @@
+.row.checkClass {
+	margin-right: 0;
+	margin-left: 0;
+}
+.background-image {
+	background-image: url('../assets/back-image.jpg');
+	height: 448px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.photo-count {
+	right: 0;
+	bottom: 0;
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 15px 3px;
+}
+
+.photo-count p {
+	color: #EEEEEE;
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767.98px){
+	.background-image {
+		height: 224px;
+	}
+}
