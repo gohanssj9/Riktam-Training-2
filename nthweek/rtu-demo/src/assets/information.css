@@ -1,5 +1,5 @@
 .information-university {
-	background: #d5d5d5;
+	background: #f5f5f5;
 	height: 675px;
 }
 
@@ -10,6 +10,7 @@
 .about, .events, .members {
 	padding-top: 35px;
 	cursor: pointer;
+	font-size: 14px;
 }
 
 .information-holder #active {
@@ -20,4 +21,31 @@
 .information-holder {
 	font-weight: 600;
 	color: #c2c2c2;
+}
+/*--------------------------------------------------------------------------*/
+.about-info {
+	padding: 50px 0;
+}
+
+.about-info .row {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+.about-info .title {
+	font-family: 'Tungsten';
+	text-align: left;
+}
+
+.upcoming-events {
+	padding-top: 50px;
+}
+
+.about-info .title .h4 {
+	font-family: 'Helvetica' !important;
+	font-size: 14px;
+	color: #b5b5b5;
+	letter-spacing: 1px;
+	text-align: left;
 }
