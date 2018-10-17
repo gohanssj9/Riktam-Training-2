@@ -1,0 +1,23 @@
+.information-university {
+	background: #d5d5d5;
+	height: 675px;
+}
+
+.header-information {
+	background: white;
+}
+
+.about, .events, .members {
+	padding-top: 35px;
+	cursor: pointer;
+}
+
+.information-holder #active {
+	color: #00BAB6 !important;
+	border-bottom: 3px solid #00BAB6;
+}
+
+.information-holder {
+	font-weight: 600;
+	color: #c2c2c2;
+}

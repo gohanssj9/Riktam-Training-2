@@ -4,6 +4,8 @@ import '../assets/clubpage.css';
 import Header from './Header';
 import UniversityComponent from './UniversityComponent';
 import ImageComponent from './ImageComponent';
+import InformationComponent from './InformationComponent';
+
 const ClubPageComponent = () => {
 	return (
 		<Fragment>
@@ -11,6 +13,7 @@ const ClubPageComponent = () => {
 			<Header />
 			<UniversityComponent />
 			<ImageComponent />
+			<InformationComponent />
 		</Fragment>
 	);
 }
