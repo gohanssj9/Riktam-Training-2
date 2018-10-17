@@ -1,0 +1,41 @@
+.single-organizer {
+	height: 70px;
+	background: white;
+	flex-direction: row;
+	padding: 10px;
+	border-bottom: 2px solid #fcfcfc;
+}
+
+.organizer-image {
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+.organizer-image img {
+	height: 40px;
+}
+
+.organizer-details {
+	flex: 3;
+	align-items: center;
+}
+
+.organizer-details h4 {
+	font-family: 'Arial' !important;
+	color: black !important;
+	font-weight: bold !important;
+	margin-bottom: 0 !important;
+	font-size: 14px !important;
+	letter-spacing: 0.3px !important;
+	text-align: left;
+}
+
+.organizer-details p {
+	font-family: 'Arial';
+	font-size: 10px;
+	letter-spacing: 0.3px;
+	color: #858585;
+	margin-bottom: 0;
+	text-align: left;
+}
