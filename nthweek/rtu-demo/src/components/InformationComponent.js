@@ -9,7 +9,8 @@ class InformationComponent extends Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			active_class: ['active', 'not-active', 'not-active']
+			active_class: ['active', 'not-active', 'not-active'],
+			flex_class: ['d-flex', 'd-none', 'd-none']
 		};
 
 		this.onClickSetActiveClass = this.onClickSetActiveClass.bind(this);
@@ -17,14 +18,17 @@ class InformationComponent extends Component{
 
 	onClickSetActiveClass(id){
 		console.log("Inside this thing");
-		const {active_class} = this.state;
+		const {active_class, flex_class} = this.state;
 		active_class[0] = active_class[1] = active_class[2] = 'not-active';
 		active_class[id] = 'active';
-		this.setState({active_class});
+		
+		flex_class[0] = flex_class[1] = flex_class[2] = 'd-none';
+		flex_class[id] = 'd-flex';
+		this.setState({active_class, flex_class});
 	}
 
 	render(){
-		const {active_class} = this.state;
+		const {active_class, flex_class} = this.state;
 		return (
 			<div className = "information-university">
 				<div className = "header-information">
@@ -42,9 +46,9 @@ class InformationComponent extends Component{
 				</div>
 
 				<div className = "body-information">
-					<AboutInfoComponent class_name = {'d-flex'} />
-					<EventsInfoComponent class_name = {'d-none'} />
-					<MembersInfoComponent class_name = {'d-none'} />
+					<AboutInfoComponent class_name = {flex_class[0]} />
+					<EventsInfoComponent class_name = {flex_class[1]} />
+					<MembersInfoComponent class_name = {flex_class[2]} />
 				</div>
 			</div>
 		);
