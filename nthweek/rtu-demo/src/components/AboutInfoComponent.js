@@ -1,10 +1,11 @@
 import React from 'react';
 import '../assets/information.css';
+import mapImage from '../assets/map-image.png';
 
 import SingleEventComponent from './SingleEventComponent';
 import SingleOrganizerComponent from './SingleOrganizerComponent';
 const AboutInfoComponent = ({class_name}) => {
-	const name = "about-info max-width " + class_name;
+	const name = "about-info max-width " + class_name + ' flex-column';
 	return (
 		<div className = {name}>
 			<div className = "row">
@@ -49,6 +50,31 @@ const AboutInfoComponent = ({class_name}) => {
 						<SingleOrganizerComponent name = {'Shantanu Dhaka'} position = {'Head Organizer'} />
 						<SingleOrganizerComponent name = {'Siva S'} position = {'Organizer'} />
 						<SingleOrganizerComponent name = {'Stephen Amritraj'} position = {'Organizer'} />
+					</div>
+				</div>
+			</div>
+			<div className = "row align-items-end justify-content-end">
+				<div className = "col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 location-details">
+					<div className = "title">
+						<h3 className = "text-uppercase"> Location </h3>
+					</div>
+					<div className = "inner-div">
+						<div className = "inner-div-location-text">
+							<div className = "university-location d-flex flex-row">
+								<i className = "fa fa-map-marker d-flex justify-content-start align-items-start" style = {{flex: '1', color: '#858585'}}></i>
+								<div className = "text-holder flex-column d-flex justify-content-start align-items-start" style = {{flex: '9'}}>
+									<h3> University of Shantanu Dhaka </h3>
+									<h3> Cambridge, MA </h3>
+								</div>
+							</div>
+							<div className = "get-directions d-flex">
+								<i className = "fa fa-share-square d-flex justify-content-center align-items-center" style = {{flex: '1'}}></i>
+								<h3 className = "d-flex justify-content-start align-items-center" style = {{flex: '9'}}> Get directions </h3>
+							</div>
+						</div>
+						<div className = "map-image">
+							<img src = {mapImage} />
+						</div>
 					</div>
 				</div>
 			</div>
