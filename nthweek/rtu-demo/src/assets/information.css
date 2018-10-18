@@ -94,6 +94,7 @@
 
 .events-info .upcoming-events {
 	width: 100%;
+	padding-top: 0;
 }
 
 .about-info .title .h4, .events-info .title .h4 {
