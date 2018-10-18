@@ -73,17 +73,17 @@
 }
 
 /*--------------------------------------------------------------------------*/
-.about-info {
+.about-info, .events-info {
 	padding: 50px 0;
 }
 
-.about-info .row {
-	margin-left: 0;
-	margin-right: 0;
+.about-info .row, .events-info .row {
+	margin-left: 12px;
+	margin-right: 12px;
 	width: 100%;
 }
 
-.about-info .title {
+.about-info .title, .events-info .title {
 	font-family: 'Tungsten';
 	text-align: left;
 }
@@ -92,7 +92,11 @@
 	padding-top: 50px;
 }
 
-.about-info .title .h4 {
+.events-info .upcoming-events {
+	width: 100%;
+}
+
+.about-info .title .h4, .events-info .title .h4 {
 	font-family: 'Helvetica' !important;
 	font-size: 14px;
 	color: #b5b5b5;
