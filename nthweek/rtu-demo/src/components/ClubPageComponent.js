@@ -5,6 +5,7 @@ import Header from './Header';
 import UniversityComponent from './UniversityComponent';
 import ImageComponent from './ImageComponent';
 import InformationComponent from './InformationComponent';
+import FooterComponent from './FooterComponent';
 
 const ClubPageComponent = () => {
 	return (
@@ -14,6 +15,8 @@ const ClubPageComponent = () => {
 			<UniversityComponent />
 			<ImageComponent />
 			<InformationComponent />
+			<FooterComponent />
+			<div className = "whole-body"></div>
 		</Fragment>
 	);
 }

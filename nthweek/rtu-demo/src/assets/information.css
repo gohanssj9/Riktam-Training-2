@@ -38,10 +38,9 @@
 
 .university-location .text-holder h3 {
 	font-size: 12px;
-	font-weight: 400;
-	color: #858585;
+	font-weight: bold;
+	color: #a5a5a5;
 	font-family: 'Arial';
-	letter-spacing: 1px;
 }
 
 .inner-div-location-text .get-directions {

@@ -1,0 +1,19 @@
+footer {
+	height: 75px;
+	background: white;
+}
+
+.container, .img-holder, .social-holder, .detail-holder {
+	height: 100%;
+}
+
+.social {
+	padding-left: 20px;
+}
+
+.detail{
+	font-size: 14px;
+	color: #858585;
+	font-weight: bold;
+	padding-left: 5px;
+}
