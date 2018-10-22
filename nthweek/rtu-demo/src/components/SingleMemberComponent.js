@@ -1,8 +1,8 @@
 import React, {Fragment} from 'react';
 
 import '../assets/singlemember.css';
-
-const SingleMemberComponent = ({name, gender, city, rating, displayChecked, date, status, leftBorder}) => {
+import profileLogo from '../assets/profile-logo.svg';
+const SingleMemberComponent = ({name, gender, city, rating, displayChecked, date, status, leftBorder, dividedName, dividedNameM}) => {
 	const class_name = "fa fa-check-circle align-items-center " + displayChecked;
 	const para_string = gender + ' • ' + city;
 	const border_class_name = "single-member d-none d-md-flex " + leftBorder;
@@ -35,8 +35,25 @@ const SingleMemberComponent = ({name, gender, city, rating, displayChecked, date
 			<div className = {sm_class_name}>
 				<div className = "top-height row">
 					<div className = "col-8">
+						<div className = "text-adjust d-flex flex-column">
+							<div className = "header-adjust d-flex justify-content-start align-items-center" style = {{flex: '2'}}>
+								<div className = "title">
+									<span className = "span-adjust"> {dividedName} </span>
+									{dividedNameM}
+								</div>
+								<div className = "status-sm d-flex align-items-center">
+									<h4> {status} </h4>
+								</div>
+							</div>
+							<div className = "city-adjust" style = {{flex: '1'}}>
+								<p> {para_string} </p>
+							</div>
+						</div>
 					</div>
 					<div className = "col-4">
+						<div className = "d-flex justify-content-center align-items-center image-adjust">
+							<img src = {profileLogo} />
+						</div>
 					</div>
 				</div>
 				<div className = "bottom-height">

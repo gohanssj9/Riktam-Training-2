@@ -22,11 +22,11 @@ const MembersInfoComponent = ({class_name}) => {
 							<h4 style = {{flex: '2'}}>Joined Date</h4>
 							<h4 style = {{flex: '2'}}>Status</h4>
 						</div>
-						<SingleMemberComponent name = {'Shantanu Dhaka'} gender = {'M'} city = {'New York, NY'} rating = {'11.00'} displayChecked = {'d-none'} date = {'Sep 1, 2018'} status = {'Head Organizer'} leftBorder = {'cyan-border-left'} />
-						<SingleMemberComponent name = {'Shantanu Dhaka'} gender = {'M'} city = {'Brooklyn, NY'} rating = {'UR'} displayChecked = {'d-none'} date = {'May 1, 2018'} status = {'Head Organizer'} leftBorder = {'cyan-border-left'} />
-						<SingleMemberComponent name = {'Siva S'} gender = {'M'} city = {'Hyderabad, India'} rating = {'5.00'} displayChecked = {'d-none'} date = {'Jun 2, 2018'} status = {'Organizer'} leftBorder = {'cyan-border-left'} />
-						<SingleMemberComponent name = {'Stephen Amritraj'} gender = {'M'} city = {'Orlando, FL'} rating = {'10.50'} displayChecked = {'d-none'} date = {'May 1, 2018'} status = {'Organizer'} leftBorder = {'cyan-border-left'} />
-						<SingleMemberComponent name = {'Salman Bader'} gender = {'M'} city = {'Virginia Beach, VA'} rating = {'12.94'} displayChecked = {'d-flex'} date = {'Oct 3, 2018'} status = {'Member'} leftBorder = {'none'} />
+						<SingleMemberComponent name = {'Shantanu Dhaka'} gender = {'M'} city = {'New York, NY'} rating = {'11.00'} displayChecked = {'d-none'} date = {'Sep 1, 2018'} status = {'Head Organizer'} leftBorder = {'cyan-border-left'} dividedName = {'Shantanu'} dividedNameM = {'Dhaka'} />
+						<SingleMemberComponent name = {'Shantanu Dhaka'} gender = {'M'} city = {'Brooklyn, NY'} rating = {'UR'} displayChecked = {'d-none'} date = {'May 1, 2018'} status = {'Head Organizer'} leftBorder = {'cyan-border-left'} dividedName = {'Shantanu'} dividedNameM = {'Dhaka'} />
+						<SingleMemberComponent name = {'Siva S'} gender = {'M'} city = {'Hyderabad, India'} rating = {'5.00'} displayChecked = {'d-none'} date = {'Jun 2, 2018'} status = {'Organizer'} leftBorder = {'cyan-border-left'} dividedName = {'Siva'} dividedNameM = {'S'} />
+						<SingleMemberComponent name = {'Stephen Amritraj'} gender = {'M'} city = {'Orlando, FL'} rating = {'10.50'} displayChecked = {'d-none'} date = {'May 1, 2018'} status = {'Organizer'} leftBorder = {'cyan-border-left'} dividedName = {'Stephen'} dividedNameM = {'Amritraj'} />
+						<SingleMemberComponent name = {'Salman Bader'} gender = {'M'} city = {'Virginia Beach, VA'} rating = {'12.94'} displayChecked = {'d-flex'} date = {'Oct 3, 2018'} status = {'Member'} leftBorder = {'none'} dividedName = {'Salman'} dividedNameM = {'Bader'}  />
 					</div>
 				</div>
 				<div className = "col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 container-2">
