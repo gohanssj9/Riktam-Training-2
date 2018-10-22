@@ -1,3 +1,7 @@
+/*.col-12  {
+	padding-right: 0;
+	padding-left: 0;
+}*/
 .information-university {
 	background: #f5f5f5;
 	height: 100%;
@@ -21,10 +25,6 @@
 .information-holder {
 	font-weight: 600;
 	color: #c2c2c2;
-}
-
-.location-details {
-	height: 100%;
 }
 
 .inner-div {
@@ -73,17 +73,17 @@
 }
 
 /*--------------------------------------------------------------------------*/
-.about-info, .events-info {
+.about-info, .events-info, .members-info {
 	padding: 50px 0;
 }
 
-.about-info .row, .events-info .row {
-	margin-left: 12px;
-	margin-right: 12px;
+.about-info .row, .events-info .row, .members-info .row {
 	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
 }
 
-.about-info .title, .events-info .title {
+.about-info .title, .events-info .title, .members-info .title {
 	font-family: 'Tungsten';
 	text-align: left;
 }
@@ -97,7 +97,7 @@
 	padding-top: 0;
 }
 
-.about-info .title .h4, .events-info .title .h4 {
+.about-info .title .h4, .events-info .title .h4, .members-info .title .h4 {
 	font-family: 'Helvetica' !important;
 	font-size: 14px;
 	color: #b5b5b5;
@@ -105,5 +105,22 @@
 	text-align: left;
 }
 /*---------------------------------------------------------------------------*/
+.table-top {
+	margin-left: 30px;
+}
+.table-top h4 {
+	font-size: 14px;
+	color: #858585;
+	font-weight: bold;
+	justify-content: flex-start;
+	align-items: center;
+	display: flex;
+	padding: 10px;
+	margin-bottom: 0;
+}
+
+.location-details {
+	margin-top: 30px;
+}
 /**/
 /**/

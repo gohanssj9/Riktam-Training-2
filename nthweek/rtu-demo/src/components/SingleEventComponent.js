@@ -4,7 +4,7 @@ import '../assets/singleevent.css';
 import defaultIcon from '../assets/default-icon.svg';
 
 const SingleEventComponent = ({title, subtitle, date, colorBorder, colorStatus, status}) => {
-	const class_name = "single-event d-flex " + colorBorder;
+	const class_name = "single-event d-flex " + colorBorder + "hide-xs";
 	const event_name = "border-color d-flex " + colorStatus;
 	return (
 		<div className = {class_name}>
