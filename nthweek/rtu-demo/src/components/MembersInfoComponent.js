@@ -16,7 +16,7 @@ const MembersInfoComponent = ({class_name}) => {
 						<h3> Members </h3>
 					</div>
 					<div className = "member-holder">
-						<div className = "table-top d-flex flex-row">
+						<div className = "table-top d-md-flex flex-row d-none">
 							<h4 style = {{flex: '5'}}>Player</h4>
 							<h4 style = {{flex: '2'}}>UTR</h4>
 							<h4 style = {{flex: '2'}}>Joined Date</h4>

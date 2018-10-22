@@ -1,35 +1,57 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 
 import '../assets/singlemember.css';
 
 const SingleMemberComponent = ({name, gender, city, rating, displayChecked, date, status, leftBorder}) => {
 	const class_name = "fa fa-check-circle align-items-center " + displayChecked;
 	const para_string = gender + ' • ' + city;
-	const border_class_name = "single-member d-flex " + leftBorder;
+	const border_class_name = "single-member d-none d-md-flex " + leftBorder;
+	const sm_class_name = "single-member-sm d-flex d-md-none flex-column " + leftBorder;
 	return (
-		<div className = {border_class_name}>
-			<div className = "d-flex player-name justify-content-start align-items-center">
-				<div className = "name">
-					<h4> {name} </h4>
-					<p> {para_string} </p>
-				</div>
-			</div>
-			<div className = "player-rating d-flex justify-content-start align-items-center">
-				<div className = "player-rating-holder">
-					<div className = "header-holder d-flex flex-row">
-						<h4> {rating} </h4>
-						<i className = {class_name} style = {{fontSize: '12px', color: '#00BAB6'}}></i>
+		<Fragment>
+			<div className = {border_class_name}>
+				<div className = "d-flex player-name justify-content-start align-items-center">
+					<div className = "name">
+						<h4> {name} </h4>
+						<p> {para_string} </p>
 					</div>
-					<p className = "text-uppercase"> UTR (P) • </p> 
+				</div>
+				<div className = "player-rating d-flex justify-content-start align-items-center">
+					<div className = "player-rating-holder">
+						<div className = "header-holder d-flex flex-row">
+							<h4> {rating} </h4>
+							<i className = {class_name} style = {{fontSize: '12px', color: '#00BAB6'}}></i>
+						</div>
+						<p className = "text-uppercase"> UTR (P) • </p> 
+					</div>
+				</div>
+				<div className = "joining-date d-flex justify-content-start align-items-center">
+					<h4> {date} </h4>
+				</div>
+				<div className = "status d-flex justify-content-start align-items-center">
+					<h4> {status} </h4>
 				</div>
 			</div>
-			<div className = "joining-date d-flex justify-content-start align-items-center">
-				<h4> {date} </h4>
+			<div className = {sm_class_name}>
+				<div className = "top-height row">
+					<div className = "col-8">
+					</div>
+					<div className = "col-4">
+					</div>
+				</div>
+				<div className = "bottom-height">
+					<div className = "d-flex flex-column justify-content-start align-items-start">
+						<div>
+							<h4> UTR (P) • </h4>
+							<div className = "d-flex flex-row">
+								<h3> {rating} </h3>
+								<i className = {class_name} className = {"fa fa-check-circle align-items-start " + displayChecked} style = {{fontSize: '12px', color: '#00BAB6', marginLeft: '3px', marginTop: '3px'}}></i>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div className = "status d-flex justify-content-start align-items-center">
-				<h4> {status} </h4>
-			</div>
-		</div>
+		</Fragment>
 	);
 }
 
