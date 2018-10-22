@@ -9,7 +9,7 @@ const AboutInfoComponent = ({class_name}) => {
 	return (
 		<div className = {name}>
 			<div className = "row">
-				<div className = "col-12 col-xs-12 col-sm-12 col-md-9 col-lg-9 container-1">
+				<div className = "col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8 container-1">
 					<div className = "title">
 						<h3 className = "text-uppercase"> About the University of Shantanu Dhaka </h3>
 						<h4 className = "h4"> 20+ outdoor hard courts for a lot of fun tennis. Woohoo! </h4>
@@ -24,7 +24,9 @@ const AboutInfoComponent = ({class_name}) => {
 								date = {'Nov 22 - Dec 1'}
 								colorBorder = {'yellow-border-left'}
 								colorStatus = {'yellow-border'}
-								status = {'Closed'} />
+								status = {'Closed'}
+								separateMonth = {'Nov - Dec'}
+								separateDate = {'22 - 1'} />
 						</div>
 					</div>
 
@@ -37,11 +39,13 @@ const AboutInfoComponent = ({class_name}) => {
 								date = {'Aug 10'}
 								colorBorder = {'grey-border-left'}
 								colorStatus = {'grey-border'}
-								status = {'Completed'} />
+								status = {'Completed'}
+								separateMonth = {'Oct'}
+								separateDate = {'17'} />
 						</div>
 					</div>
 				</div>
-				<div className = "col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 container-2">
+				<div className = "col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 container-2">
 					<div className = "title">
 						<h3 className = "text-uppercase"> Organizers </h3>
 					</div>

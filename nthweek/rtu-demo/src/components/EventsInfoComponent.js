@@ -17,7 +17,9 @@ const EventsInfoComponent = ({class_name}) => {
 							date = {'Nov 22 - Dec 1'}
 							colorBorder = {'cyan-border-left'}
 							colorStatus = {'cyan-border'}
-							status = {'Open'} />
+							status = {'Open'}
+							separateMonth = {'Nov - Dec'}
+							separateDate = {'22 - 1'} />
 					</div>
 				</div>
 			</div>

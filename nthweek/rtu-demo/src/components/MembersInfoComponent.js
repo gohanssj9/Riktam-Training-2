@@ -11,7 +11,7 @@ const MembersInfoComponent = ({class_name}) => {
 	return (
 		<div className = {name}>
 			<div className = "row">
-				<div className = "col-12 col-xs-12 col-sm-12 col-md-9 col-lg-9 container-1">
+				<div className = "col-12 col-xs-12 col-sm-12 col-md-8 col-lg-8 container-1">
 					<div className = "title">
 						<h3> Members </h3>
 					</div>
@@ -29,7 +29,7 @@ const MembersInfoComponent = ({class_name}) => {
 						<SingleMemberComponent name = {'Salman Bader'} gender = {'M'} city = {'Virginia Beach, VA'} rating = {'12.94'} displayChecked = {'d-flex'} date = {'Oct 3, 2018'} status = {'Member'} leftBorder = {'none'} />
 					</div>
 				</div>
-				<div className = "col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 container-2">
+				<div className = "col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 container-2">
 					<div class_name = "row">
 						<div className = "title">
 							<h3 className = "text-uppercase"> Organizers </h3>
