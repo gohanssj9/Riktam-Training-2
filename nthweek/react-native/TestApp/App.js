@@ -11,34 +11,48 @@ import {
   Right,
   Body,
   Icon,
-  Text } from 'native-base';
+  View,
+  Text,
+  Drawer,
+  Fab } from 'native-base';
 
+import MainComponent from './components/MainComponent';
+import SideBar from './components/SideBar';
 export default class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      active: true
+    };
+    Drawer.defaultProps.styles.mainOverlay.elevation = 0;
+  }
   render() {
+    closeDrawer = () => {
+      this._drawer._root.close();
+    };
+
+    openDrawer = () => {
+      this._drawer._root.open();
+    };
     return (
-      <Container>
-        <Header>
-          <Left>
-            <Button transparent>
-              <Icon name = 'menu' />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content>
-          <Text> Content goes over here </Text>
-        </Content>
-        <Footer>
-          <FooterTab>
-            <Button full>
-              <Text>Footer</Text>
-            </Button>
-          </FooterTab>
-        </Footer>
-      </Container>
+      <Drawer
+        ref = {(ref) => {this._drawer = ref;}}
+        content = {<SideBar />}
+        onClose = {() => closeDrawer()}
+        tweenDuration = {250}
+        tweenEasing = {'easeOutCubic'} >
+
+        <MainComponent openDrawer = {() => openDrawer()} />
+        <Fab
+          active = {this.state.active}
+          direction = "up"
+          containerStyle = {{}}
+          style = {{backgroundColor: '#dd4b39'}}
+          position = "bottomRight"
+          onPress = {() => this.setState({active: !this.state.active})}>
+            <Icon name="pencil" type = "MaterialCommunityIcons"/>
+        </Fab>
+      </Drawer>
     );
   }
 }
