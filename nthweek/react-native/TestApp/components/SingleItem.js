@@ -21,7 +21,13 @@ export default class SingleItem extends Component {
 						<Text style = {styles.innerText}> {item.item.sender[0]} </Text>
 					</View>
 				</View>
-				<View style = {styles.outerSecondDiv}></View>
+				<View style = {styles.outerSecondDiv}>
+					<View style = {{flexDirection: 'row', justifyContent: 'space-between'}}>
+						<Text style = {{textAlign: 'left', fontFamily: 'RobotoM', color: 'black'}}> {item.item.sender} </Text>
+						<Text style = {{fontFamily: 'RobotoMe', fontSize: 12, marginRight: 3}}> {item.item.timeSent} </Text>
+					</View>
+					<Text style = {{fontFamily: 'RobotoMe', fontSize: 14}}> {item.item.title} </Text>
+				</View>
 			</View>
 		);
 	}
@@ -29,22 +35,25 @@ export default class SingleItem extends Component {
 
 const styles = StyleSheet.create({
   container: {
-		height: 90, 
+		height: 86, 
 		flexDirection: 'row', 
-		justifyContent: 'center'
+		justifyContent: 'center',
   },
   outerDiv: {
-  	width: 90, 
-  	height: 90, 
+  	width: 80, 
+  	height: 86, 
   	justifyContent: 'center', 
-  	alignItems: 'center'
+  	alignItems: 'center',
+  	backgroundColor: 'black'
   },
   innerText: {
   	color: 'white', 
   	textAlign: 'center', 
-  	fontSize: 28
+  	fontSize: 28,
+  	fontFamily: 'RobotoM'
   },
   outerSecondDiv: {
-  	flex: 4
+  	flex: 4,
+  	padding: 10,
   },
 });

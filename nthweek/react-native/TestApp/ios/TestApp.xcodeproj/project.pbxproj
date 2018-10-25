@@ -57,6 +57,8 @@
 		F08BC6D6EF6C4965B3C05102 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EF33A8C046F4BB6A8D6C70D /* FontAwesome5_Brands.ttf */; };
 		9A88FE4828824223B20608DA /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F22A5DE8A4DD455E83C8122D /* FontAwesome5_Regular.ttf */; };
 		5318D95C552A46CCA4151821 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6347A792C2D4817BBFAA967 /* FontAwesome5_Solid.ttf */; };
+		0593DF96505349B599B0D9B6 /* RobotoMe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 160346CECB4F47F5BB704F0B /* RobotoMe.ttf */; };
+		4B47D5D75CEC4BA6800A7E06 /* RobotoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7C5EA851EC1480594FB5CC6 /* RobotoM.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -383,6 +385,8 @@
 		7EF33A8C046F4BB6A8D6C70D /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F22A5DE8A4DD455E83C8122D /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C6347A792C2D4817BBFAA967 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		160346CECB4F47F5BB704F0B /* RobotoMe.ttf */ = {isa = PBXFileReference; name = "RobotoMe.ttf"; path = "../fonts/RobotoMe.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E7C5EA851EC1480594FB5CC6 /* RobotoM.ttf */ = {isa = PBXFileReference; name = "RobotoM.ttf"; path = "../fonts/RobotoM.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -668,6 +672,8 @@
 				7EF33A8C046F4BB6A8D6C70D /* FontAwesome5_Brands.ttf */,
 				F22A5DE8A4DD455E83C8122D /* FontAwesome5_Regular.ttf */,
 				C6347A792C2D4817BBFAA967 /* FontAwesome5_Solid.ttf */,
+				160346CECB4F47F5BB704F0B /* RobotoMe.ttf */,
+				E7C5EA851EC1480594FB5CC6 /* RobotoM.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1137,6 +1143,8 @@
 				F08BC6D6EF6C4965B3C05102 /* FontAwesome5_Brands.ttf in Resources */,
 				9A88FE4828824223B20608DA /* FontAwesome5_Regular.ttf in Resources */,
 				5318D95C552A46CCA4151821 /* FontAwesome5_Solid.ttf in Resources */,
+				0593DF96505349B599B0D9B6 /* RobotoMe.ttf in Resources */,
+				4B47D5D75CEC4BA6800A7E06 /* RobotoM.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
