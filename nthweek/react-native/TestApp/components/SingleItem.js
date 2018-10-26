@@ -1,38 +1,36 @@
 import React, {Component} from 'react';
-
 import {View, Text, Icon} from 'native-base';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, TouchableNativeFeedback} from 'react-native';
+
+import CircleText from './CircleText';
 
 export default class SingleItem extends Component {
 	render(){
 		let item = this.props.item;
 		console.log(item.item.sender)
 		return (
-			<View style = {styles.container}>
-				<View style = {styles.outerDiv}>
-					<View 
-						style = {{
-							width: 44, 
-							height: 44, 
-							borderRadius: 22, 
-							backgroundColor: item.item.backgroundColor, 
-							justifyContent: 'center',
-							marginBottom: 5}}>
-						<Text style = {styles.innerText}> {item.item.sender[0]} </Text>
-					</View>
-				</View>
-				<View style = {styles.outerSecondDiv}>
-					<View style = {styles.firstViewInSecondDiv}>
-						<Text style = {styles.sender}> {item.item.sender} </Text>
-						<Text style = {styles.timeSent}> {item.item.timeSent} </Text>
-					</View>
-					<Text numberOfLines = {1} style = {styles.title}> {item.item.title}</Text>
-					<View style = {styles.secondViewInSecondDiv}>
-						<Text numberOfLines = {1} style = {styles.body}>{item.item.body}</Text>
-						<Icon name = "star" type = "EvilIcons" style = {styles.starIcon} />
-					</View>
-				</View>
-			</View>
+      <TouchableNativeFeedback borderLess = {false}>
+  			<View style = {styles.container}>
+          <CircleText 
+            text = {item.item.sender[0]} 
+            background_color = {item.item.backgroundColor} 
+            width = {44} 
+            height = {44} 
+            marginBottom = {15} 
+          /> 
+  				<View style = {styles.outerSecondDiv}>
+  					<View style = {styles.firstViewInSecondDiv}>
+  						<Text style = {styles.sender}> {item.item.sender} </Text>
+  						<Text style = {styles.timeSent}> {item.item.timeSent} </Text>
+  					</View>
+  					<Text numberOfLines = {1} style = {styles.title}> {item.item.title}</Text>
+  					<View style = {styles.secondViewInSecondDiv}>
+  						<Text numberOfLines = {1} style = {styles.body}> {item.item.body} </Text>
+  						<Icon name = "star" type = "EvilIcons" style = {styles.starIcon} />
+  					</View>
+  				</View>
+  			</View>
+      </TouchableNativeFeedback>
 		);
 	}
 }
@@ -42,18 +40,6 @@ const styles = StyleSheet.create({
 		height: 86, 
 		flexDirection: 'row', 
 		justifyContent: 'center',
-  },
-  outerDiv: {
-  	width: 55, 
-  	height: 86, 
-  	justifyContent: 'center', 
-  	alignItems: 'flex-end',
-  },
-  innerText: {
-  	color: 'white', 
-  	textAlign: 'center', 
-  	fontSize: 28,
-  	fontFamily: 'RobotoM'
   },
   outerSecondDiv: {
   	flex: 4,
@@ -85,14 +71,14 @@ const styles = StyleSheet.create({
   	textAlign: 'left'
   },
   body: {
-  	marginLeft: 4,
   	fontFamily: 'RobotoMe', 
   	flex: 8, 
-  	fontSize: 14
+  	fontSize: 14,
+    marginBottom: 5
   },
   starIcon: {
   	flex: 1, 
-  	fontSize: 22, 
+  	fontSize: 26, 
   	color: '#858585'
   }
 });
