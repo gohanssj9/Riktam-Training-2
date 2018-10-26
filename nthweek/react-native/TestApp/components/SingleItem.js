@@ -22,14 +22,14 @@ export default class SingleItem extends Component {
 					</View>
 				</View>
 				<View style = {styles.outerSecondDiv}>
-					<View style = {{flexDirection: 'row', justifyContent: 'space-between'}}>
-						<Text style = {{textAlign: 'left', fontFamily: 'RobotoM'}}> {item.item.sender} </Text>
-						<Text style = {{fontFamily: 'RobotoMe', fontSize: 12, marginRight: 3}}> {item.item.timeSent} </Text>
+					<View style = {styles.firstViewInSecondDiv}>
+						<Text style = {styles.sender}> {item.item.sender} </Text>
+						<Text style = {styles.timeSent}> {item.item.timeSent} </Text>
 					</View>
-					<Text numberOfLines = {1} style = {{fontFamily: 'RobotoMe', fontSize: 14, flex: 1, textAlign: 'left'}}> {item.item.title}</Text>
-					<View style = {{flexDirection: 'row', justifyContent: 'space-between'}}>
-						<Text numberOfLines = {1} style = {{marginLeft: 4,fontFamily: 'RobotoMe', flex: 8, fontSize: 14}}>{item.item.body}</Text>
-						<Icon name = "star" type = "EvilIcons" style = {{flex: 1, fontSize: 22, color: '#858585'}} />
+					<Text numberOfLines = {1} style = {styles.title}> {item.item.title}</Text>
+					<View style = {styles.secondViewInSecondDiv}>
+						<Text numberOfLines = {1} style = {styles.body}>{item.item.body}</Text>
+						<Icon name = "star" type = "EvilIcons" style = {styles.starIcon} />
 					</View>
 				</View>
 			</View>
@@ -59,4 +59,40 @@ const styles = StyleSheet.create({
   	flex: 4,
   	padding: 10,
   },
+  firstViewInSecondDiv: {
+  	flexDirection: 'row', 
+  	justifyContent: 'space-between',
+  	alignItems: 'center'
+  },
+  secondViewInSecondDiv: {
+  	flexDirection: 'row', 
+  	justifyContent: 'space-between',
+  },
+  sender: {
+  	textAlign: 'left', 
+  	fontFamily: 'RobotoM'
+  },
+  timeSent: {
+  	fontFamily: 'RobotoMe', 
+  	fontSize: 12, 
+  	marginRight: 3,
+  	color: '#353535'
+  },
+  title: {
+  	fontFamily: 'RobotoMe', 
+  	fontSize: 14, 
+  	flex: 1, 
+  	textAlign: 'left'
+  },
+  body: {
+  	marginLeft: 4,
+  	fontFamily: 'RobotoMe', 
+  	flex: 8, 
+  	fontSize: 14
+  },
+  starIcon: {
+  	flex: 1, 
+  	fontSize: 22, 
+  	color: '#858585'
+  }
 });

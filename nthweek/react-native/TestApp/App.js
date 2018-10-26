@@ -50,7 +50,7 @@ export default class App extends Component {
           style = {{backgroundColor: '#dd4b39'}}
           position = "bottomRight"
           onPress = {() => this.setState({active: !this.state.active})}>
-            <Icon name="pencil" type = "MaterialCommunityIcons"/>
+            <Icon name="pencil" type = "MaterialCommunityIcons" onPress = {() => {console.log("Here!")}}/>
         </Fab>
       </Drawer>
     );
