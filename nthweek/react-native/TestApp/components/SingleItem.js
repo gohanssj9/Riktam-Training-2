@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {View, Text} from 'native-base';
+import {View, Text, Icon} from 'native-base';
 import {StyleSheet} from 'react-native';
 
 export default class SingleItem extends Component {
@@ -23,10 +23,14 @@ export default class SingleItem extends Component {
 				</View>
 				<View style = {styles.outerSecondDiv}>
 					<View style = {{flexDirection: 'row', justifyContent: 'space-between'}}>
-						<Text style = {{textAlign: 'left', fontFamily: 'RobotoM', color: 'black'}}> {item.item.sender} </Text>
+						<Text style = {{textAlign: 'left', fontFamily: 'RobotoM'}}> {item.item.sender} </Text>
 						<Text style = {{fontFamily: 'RobotoMe', fontSize: 12, marginRight: 3}}> {item.item.timeSent} </Text>
 					</View>
-					<Text style = {{fontFamily: 'RobotoMe', fontSize: 14}}> {item.item.title} </Text>
+					<Text numberOfLines = {1} style = {{fontFamily: 'RobotoMe', fontSize: 14, flex: 1, textAlign: 'left'}}> {item.item.title}</Text>
+					<View style = {{flexDirection: 'row', justifyContent: 'space-between'}}>
+						<Text numberOfLines = {1} style = {{marginLeft: 4,fontFamily: 'RobotoMe', flex: 8, fontSize: 14}}>{item.item.body}</Text>
+						<Icon name = "star" type = "EvilIcons" style = {{flex: 1, fontSize: 22, color: '#858585'}} />
+					</View>
 				</View>
 			</View>
 		);
@@ -40,11 +44,10 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
   },
   outerDiv: {
-  	width: 80, 
+  	width: 55, 
   	height: 86, 
   	justifyContent: 'center', 
-  	alignItems: 'center',
-  	backgroundColor: 'black'
+  	alignItems: 'flex-end',
   },
   innerText: {
   	color: 'white', 

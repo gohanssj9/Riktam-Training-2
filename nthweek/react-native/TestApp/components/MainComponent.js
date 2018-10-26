@@ -45,7 +45,6 @@ export default class MainComponent extends Component {
             renderItem = {(item) => <SingleItem item = {item} />}
             keyExtractor = {(item) => item.id}
             ItemSeparatorComponent = {() => <View style = {{height: 0.5, backgroundColor: '#e5e5e5'}}></View>}
-            initialNumToRender = {0}
           />
         </Content>
       </Container>      

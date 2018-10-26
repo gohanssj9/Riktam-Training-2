@@ -7,7 +7,7 @@
       "body": "Hi Sriteja Ayyagari, Please fill todays (Wed, Oct 24,2018) timesheet.Please login below to check the details.Cheers,Tigersheet.com Team",
       "checkRead": "false",
       "backgroundColor": "#7e4295",
-      "timeSent": "6:00PM",
+      "timeSent": "6:00 PM",
       "date": "25 Oct"
     },
     {
@@ -17,7 +17,7 @@
       "body": "madhu.gogineni@riktamtech.com is requesting access to the following file: app-debug.apk",
       "checkRead": "true",
       "backgroundColor": "#f13bb1",
-      "timeSent": "4:45PM",
+      "timeSent": "4:45 PM",
       "date": "25 Oct"
     },
     {
@@ -27,7 +27,7 @@
       "body": "Welcome to the Big Billion Day Savings! Avail these offers right now!",
       "checkRead": "false",
       "backgroundColor": "#21ad39",
-      "timeSent" : "12:45PM",
+      "timeSent" : "12:45 PM",
       "date": "25 Oct"
     },
     {
@@ -37,7 +37,7 @@
       "body": "Welcome to the Great Indian Sale! Avail these offers right now!",
       "checkRead": "true",
       "backgroundColor": "#9a5730",
-      "timeSent" : "12:43PM",
+      "timeSent" : "12:43 PM",
       "date": "25 Oct"
     },
     {
@@ -47,7 +47,7 @@
       "body": "We're holding a DIV 2 contest this Saturday i.e Pacific time 5:00PM.",
       "checkRead": "true",
       "backgroundColor": "#1c93fd",
-      "timeSent" : "11:43AM",
+      "timeSent" : "11:43 AM",
       "date": "25 Oct"
     },
     {
@@ -57,7 +57,7 @@
       "body": "Welcome to the Great Indian Sale! Avail these offers right now!",
       "checkRead": "true",
       "backgroundColor": "#18d582",
-      "timeSent" : "10:32AM",
+      "timeSent" : "10:32 AM",
       "date": "25 Oct"
     },
     {
@@ -67,7 +67,7 @@
       "body": "Welcome to the Big Billion Day Savings! Avail these offers right now!",
       "checkRead": "false",
       "backgroundColor": "#f5c0d2",
-      "timeSent" : "09:28AM",
+      "timeSent" : "09:28 AM",
       "date": "25 Oct"
     },
     {
@@ -77,7 +77,87 @@
       "body": "We're holding a DIV 2 contest this Saturday i.e Pacific time 5:00PM.",
       "checkRead": "true",
       "backgroundColor": "#e9af75",
-      "timeSent" : "7:32AM",
+      "timeSent" : "7:32 AM",
+      "date": "25 Oct"
+    },
+    {
+      "id":"9",
+      "sender":"Tigersheet.com",
+      "title": "Timesheet Reminder",
+      "body": "Hi Sriteja Ayyagari, Please fill todays (Wed, Oct 24,2018) timesheet.Please login below to check the details.Cheers,Tigersheet.com Team",
+      "checkRead": "false",
+      "backgroundColor": "#7e4295",
+      "timeSent": "6:00 PM",
+      "date": "25 Oct"
+    },
+    {
+      "id": "10",
+      "sender": "Google",
+      "title": "app-debug.apk - Request for access",
+      "body": "madhu.gogineni@riktamtech.com is requesting access to the following file: app-debug.apk",
+      "checkRead": "true",
+      "backgroundColor": "#f13bb1",
+      "timeSent": "4:45 PM",
+      "date": "25 Oct"
+    },
+    {
+      "id": "11",
+      "sender": "Flipkart",
+      "title": "Big Billion Day Savings",
+      "body": "Welcome to the Big Billion Day Savings! Avail these offers right now!",
+      "checkRead": "false",
+      "backgroundColor": "#21ad39",
+      "timeSent" : "12:45 PM",
+      "date": "25 Oct"
+    },
+    {
+      "id": "12",
+      "sender": "Amazon",
+      "title": "Great Indian Sale",
+      "body": "Welcome to the Great Indian Sale! Avail these offers right now!",
+      "checkRead": "true",
+      "backgroundColor": "#9a5730",
+      "timeSent" : "12:43 PM",
+      "date": "25 Oct"
+    },
+    {
+      "id": "13",
+      "sender": "Codeforces",
+      "title": "DIV 2 Contest R-518",
+      "body": "We're holding a DIV 2 contest this Saturday i.e Pacific time 5:00PM.",
+      "checkRead": "true",
+      "backgroundColor": "#1c93fd",
+      "timeSent" : "11:43 AM",
+      "date": "25 Oct"
+    },
+    {
+      "id": "14",
+      "sender": "Amazon",
+      "title": "Great Indian Sale",
+      "body": "Welcome to the Great Indian Sale! Avail these offers right now!",
+      "checkRead": "true",
+      "backgroundColor": "#18d582",
+      "timeSent" : "10:32 AM",
+      "date": "25 Oct"
+    },
+    {
+      "id": "15",
+      "sender": "Flipkart",
+      "title": "Big Billion Day Savings",
+      "body": "Welcome to the Big Billion Day Savings! Avail these offers right now!",
+      "checkRead": "false",
+      "backgroundColor": "#f5c0d2",
+      "timeSent" : "09:28 AM",
+      "date": "25 Oct"
+    },
+    {
+      "id": "16",
+      "sender": "Codeforces",
+      "title": "DIV 2 Contest R-517",
+      "body": "We're holding a DIV 2 contest this Saturday i.e Pacific time 5:00PM.",
+      "checkRead": "true",
+      "backgroundColor": "#e9af75",
+      "timeSent" : "7:32 AM",
       "date": "25 Oct"
     },
   ]
