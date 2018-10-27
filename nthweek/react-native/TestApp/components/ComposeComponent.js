@@ -42,8 +42,8 @@ export default class ComposeComponent extends Component {
           </Right>
         </Header>
         <Content>
-          <MailText text = {'From'} mailText = {'sriteja.ayyagari@riktamtech.com'} displayText = {'flex'} displayIcon = {'flex'} />
-          <MailText text = {'To'} mailText = {''} displayText = {'flex'} displayIcon = {'flex'} />
+          <MailText text = {'From'} mailText = {'sriteja.ayyagari@riktamtech.com'} />
+          <MailText text = {'To'} mailText = {''} />
           <View style = {{height: 60, flex: 1, flexDirection: 'row', borderBottomColor: '#f1f1f1', borderBottomWidth: 1, padding: 10}}>
             <View style = {{flex: 1, justifyContent: 'center', alignItems: 'flex-start'}}>
               <Text style = {{color: '#858585', fontFamily: 'RobotoM', fontSize: 17.5}}> Subject </Text>
