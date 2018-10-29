@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   sender: {
   	textAlign: 'left', 
-  	fontFamily: 'RobotoM'
+  	fontFamily: 'RobotoMe',
   },
   timeSent: {
   	fontFamily: 'RobotoMe', 

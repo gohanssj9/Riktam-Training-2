@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     fontFamily: 'RobotoM'
   },
   toText: {
-    fontWeight: '400'
+    fontFamily: 'RobotoM'
   },
   iconDisplay: {
     color: '#858585', 

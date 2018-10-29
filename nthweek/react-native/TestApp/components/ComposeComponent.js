@@ -31,13 +31,13 @@ export default class ComposeComponent extends Component {
           </Body>
           <Right>
             <Button transparent>
-              <Icon name = 'attachment' type = 'MaterialCommunityIcons' />
+              <Icon name = 'attachment' type = 'MaterialCommunityIcons' style = {{fontSize: 25}} />
             </Button>
             <Button transparent>
-              <Icon name = 'send' type = 'MaterialCommunityIcons' />
+              <Icon name = 'send' type = 'MaterialCommunityIcons' style = {{fontSize: 25}} />
             </Button>
             <Button transparent>            
-              <Icon name = 'dots-vertical' type = 'MaterialCommunityIcons' />
+              <Icon name = 'dots-vertical' type = 'MaterialCommunityIcons' style = {{marginLeft: -5, marginRight: -5, fontSize: 25}} />
             </Button>
           </Right>
         </Header>
