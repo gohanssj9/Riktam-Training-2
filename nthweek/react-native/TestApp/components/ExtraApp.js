@@ -44,7 +44,7 @@ export default class ExtraApp extends Component {
         tweenDuration = {250}
         tweenEasing = {'easeOutCubic'} >
 
-        <MainComponent openDrawer = {() => openDrawer()} />
+        <MainComponent openDrawer = {() => openDrawer()} openSearch = {() => {this.props.navigation.navigate('Search')}} />
         <Fab
           active = {this.state.active}
           direction = "up"

@@ -7,7 +7,6 @@ import CircleText from './CircleText';
 export default class SingleItem extends Component {
 	render(){
 		let item = this.props.item;
-		console.log(item.item.sender)
 		return (
       <TouchableNativeFeedback borderLess = {false}>
   			<View style = {styles.container}>

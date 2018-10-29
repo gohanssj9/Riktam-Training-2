@@ -18,6 +18,8 @@ import {FlatList} from 'react-native';
 
 import mailData from '../data.json';
 import SingleItem from './SingleItem';
+import SearchComponent from './SearchComponent';
+
 export default class MainComponent extends Component {
   render() {
     return (
@@ -33,7 +35,7 @@ export default class MainComponent extends Component {
           </Body>
           <Right>
             <Button transparent>
-              <Icon name = 'search' />
+              <Icon name = 'search' onPress = {this.props.openSearch} />
             </Button>
           </Right>
         </Header>
