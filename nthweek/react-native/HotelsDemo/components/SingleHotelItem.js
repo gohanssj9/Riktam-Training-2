@@ -19,7 +19,15 @@ import {
 import {Image} from 'react-native';
 
 export default class SingleHotelItem extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      heartActive: false
+    };
+  }
+
   render(){
+    const heartState = (this.state.heartActive === false ? "heart-o" : "heart");
     return(
       <View style = {{
         height: 195, 
@@ -48,7 +56,7 @@ export default class SingleHotelItem extends Component {
               transform: [{rotate: '90deg'}],
             }}>
             </View>
-            <Icon name = "heart-o" type = "FontAwesome"  style = {{color: '#ff0000', zIndex: 10, fontSize: 16, marginTop: -42, marginRight: 8}}/>
+            <Icon name = {heartState} type = "FontAwesome"  style = {{color: '#ff0000', zIndex: 10, fontSize: 16, marginTop: -42, marginRight: 8}} onPress = {() => {this.setState({heartActive: !this.state.heartActive})}}/>
           </View>
           <View style = {{flex: 1, justifyContent: 'flex-end', alignItems: 'flex-end'}}>
             <View style = {{backgroundColor: '#990066', marginBottom: 10, marginRight: 8, borderRadius: 3}}>
