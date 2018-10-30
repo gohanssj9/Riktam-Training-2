@@ -51,7 +51,7 @@ export default class SingleHotelItem extends Component {
             <Icon name = "heart-o" type = "FontAwesome"  style = {{color: '#ff0000', zIndex: 10, fontSize: 16, marginTop: -42, marginRight: 8}}/>
           </View>
           <View style = {{flex: 1, justifyContent: 'flex-end', alignItems: 'flex-end'}}>
-            <View style = {{backgroundColor: '#990066', marginBottom: 10, marginRight: 10, borderRadius: 3}}>
+            <View style = {{backgroundColor: '#990066', marginBottom: 10, marginRight: 8, borderRadius: 3}}>
               <Icon name = "ios-moon" type = "Ionicons" style = {{fontSize: 12, color: 'white', padding: 3}} />
             </View>
           </View>
