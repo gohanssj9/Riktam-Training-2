@@ -40,7 +40,7 @@ export default class SingleHotelItem extends Component {
         flexDirection: 'row',
         flexWrap:'wrap',
         overflow: 'hidden'}}>
-        <View style = {{flex: 2, backgroundColor: '#00ff00'}}></View>
+        <View style = {{flex: 2, }}></View>
         <View style = {{flex: 1,}}>
           <Image source = {require('../assets/room.jpg')} style = {{resizeMode: 'cover', height: '100%', width: '100%', position: 'absolute'}} />
           <View style = {{justifyContent: 'flex-end', alignItems: 'flex-end',}}>
