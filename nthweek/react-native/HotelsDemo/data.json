@@ -1,0 +1,92 @@
+{
+	"items": [
+		{
+			"id": "1",
+			"title": "ITC Kohenur, a Luxury Collection Hotel",
+			"location": "Hyderabad",
+			"distance": "9.8 km",
+			"price": "Rs15,190",
+			"cutOffPrice": "Rs15,500",
+			"ratingText": "Outstanding",
+			"ratingNumber": "4.6",
+			"ratingExists": "true"
+		},
+		{
+			"id": "2",
+			"title": "Park Continental",
+			"location": "Hyderabad",
+			"distance": "2.2 km",
+			"price": "Rs3,230",
+			"cutOffPrice": "Rs3,800",
+			"ratingText": "Outstanding",
+			"ratingNumber": "5.0",
+			"ratingExists": "true"
+		},
+		{
+			"id": "3",
+			"title": "The Park Hyderabad",
+			"location": "Somajiguda",
+			"distance": "4.0 km",
+			"price": "Rs4,930",
+			"cutOffPrice": "Rs5,800",
+			"ratingText": "Good",
+			"ratingNumber": "3.6",
+			"ratingExists": "true"
+		},
+		{
+			"id": "4",
+			"title": "FabHotel Arastu Nampally",
+			"location": "Hyderabad",
+			"distance": "0.3 km",
+			"price": "Rs1,609",
+			"cutOffPrice": "Rs1,788",
+			"ratingText": "",
+			"ratingNumber": "",
+			"ratingExists": "false"
+		},
+		{
+			"id": "5",
+			"title": "Daspalla Hyderabad",
+			"location": "Jubilee Hills",
+			"distance": "8.4 km",
+			"price": "Rs4,270",
+			"cutOffPrice": "Rs5,024",
+			"ratingText": "Good",
+			"ratingNumber": "3.2",
+			"ratingExists": "true"
+		},
+		{
+			"id": "6",
+			"title": "ITC Kakatiya, a Luxury Collection Hotel",
+			"location": "Begumpet",
+			"distance": "4.9 km",
+			"price": "Rs10,290",
+			"cutOffPrice": "Rs10,500",
+			"ratingText": "Excellent",
+			"ratingNumber": "4.4",
+			"ratingExists": "true"
+		},
+		{
+			"id": "7",
+			"title": "OYO 11079 Hotel Prestige",
+			"location": "Hyderabad",
+			"distance": "6.3 km",
+			"price": "Rs1,390",
+			"cutOffPrice": "Rs2,316",
+			"ratingText": "",
+			"ratingNumber": "",
+			"ratingExists": "false"
+		},
+		{
+			"id": "8",
+			"title": "Aalankrita Resort and Convention",
+			"location": "Medchal",
+			"distance": "23 km",
+			"price": "Rs2,643",
+			"cutOffPrice": "Rs4,195",
+			"ratingText": "Good",
+			"ratingNumber": "3.0",
+			"ratingExists": "true"
+		},
+	]
+}

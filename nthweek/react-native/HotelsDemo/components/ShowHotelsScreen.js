@@ -16,9 +16,11 @@ import {
   Drawer,
   Fab } from 'native-base';
 
-import {ScrollView} from 'react-native';
+import {ScrollView, FlatList} from 'react-native';
 
 import FilterComponent from './FilterComponent';
+import SingleHotelItem from './SingleHotelItem';
+import hotelData from '../data.json';
 
 export default class ShowHotelsScreen extends Component {
   render(){
@@ -52,19 +54,25 @@ export default class ShowHotelsScreen extends Component {
               <FilterComponent text = {'Pet Friendly'} />
             </ScrollView>
           </View>
-          <View style = {{flex: 1, backgroundColor: '#00ff00', marginTop: 10}}>
-            <Text> Hello, World ! </Text>
+          <View style = {{flex: 1, backgroundColor: '#E3DDCC', marginTop: 5}}>
+            <FlatList
+              data = {hotelData.items}
+              renderItem = {(item) => <SingleHotelItem item = {item} />}
+              keyExtractor = {(item) => item.id}
+              ItemSeparatorComponent = {() => <View style = {{height: 0.5, backgroundColor: '#e5e5e5'}}></View>}
+              initialNumToRender = {7}
+              showsVerticalScrollIndicator = {false}
+            />
           </View>
         </Content>
+         <Footer>
+          <FooterTab>
+            <Button full style = {{backgroundColor: '#D32F2F'}}>
+              <Text>Footer</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
       </Container>
     );
   }
 }
-
-          // <FlatList
-          //   data = {mailData.items}
-          //   renderItem = {(item) => <SingleItem item = {item} />}
-          //   keyExtractor = {(item) => item.id}
-          //   ItemSeparatorComponent = {() => <View style = {{height: 0.5, backgroundColor: '#e5e5e5'}}></View>}
-          //   initialNumToRender = {7}
-          // />
