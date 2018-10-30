@@ -14,18 +14,30 @@ import {
   Text,
   View } from 'native-base';
 
-import {StyleSheet} from 'react-native';
+import {StyleSheet, TextInput} from 'react-native';
 
 export default class MailText extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      text: ''
+    };
+  }
+
+  componentWillMount(){
+    const {mailText} = this.props;
+    this.setState({text: mailText});
+  }
+
   render(){
-    const {text, mailText} = this.props;
+    const {text} = this.props;
     return (
       <View style = {styles.container}>
         <View style = {styles.firstView}>
           <Text style = {styles.fromText}> {text} </Text>
         </View>
         <View style = {styles.toSenderTextView}>
-          <Text numberOfLines = {1} style = {styles.toText}> {mailText} </Text>
+          <TextInput multiLine = {true} underlineColorAndroid='transparent' style = {styles.toText} value = {this.state.text} onChangeText = {(text) => this.setState({text})}/>
         </View>
         <View style = {styles.lastView}>
           <Icon name = 'chevron-down' type = 'MaterialCommunityIcons' style = {styles.iconDisplay} />
@@ -42,7 +54,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row', 
     borderBottomColor: '#f1f1f1', 
     borderBottomWidth: 1, 
-    padding: 10
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 5,
+    paddingBottom: 5
   },
   firstView: {
     flex: 1, 
@@ -57,14 +72,18 @@ const styles = StyleSheet.create({
   toSenderTextView: {
     flex: 5, 
     justifyContent: 'center', 
-    alignItems: 'center'
+    alignItems: 'flex-start',
+    paddingLeft: 10,
   },
   fromText: {
     color: '#858585', 
-    fontFamily: 'RobotoM'
+    fontFamily: 'RobotoM',
   },
   toText: {
-    fontFamily: 'RobotoM'
+    fontFamily: 'RobotoM',
+    fontSize: 17,
+    paddingBottom: 5,
+    width: '100%',
   },
   iconDisplay: {
     color: '#858585', 

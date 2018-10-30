@@ -42,7 +42,7 @@ export default class SearchComponent extends Component {
           <SearchText text = {'holiday list'} />
           <SearchText text = {'Tigersheet'} />
           <SearchText text = {'people on leave today'} />
-          <SearchText text = {'OyoRoomsApp '} />
+          <SearchText text = {'OyoRoomsApp'} />
         </Content>
       </Container>
     );
