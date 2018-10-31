@@ -28,6 +28,12 @@ export default class SingleHotelItem extends Component {
 
   render(){
     const heartState = (this.state.heartActive === false ? "heart-o" : "heart");
+    const {item} = this.props;
+    const ratingText = (item.item.ratingText === "" ? "No guest reviews yet" : item.item.ratingText)
+    const displayCheck = (item.item.ratingExists === "false" ? "none" : "flex")
+    const backgroundColorRating = (item.item.ratingNumber > "4.5" ? "#00AF87" : "#FFFFFF")
+    const colorRating = (item.item.ratingNumber > "4.5" ? "white" : "black")
+    const image = item.item.roomImage
     return(
       <View style = {{
         height: 195, 
@@ -36,13 +42,30 @@ export default class SingleHotelItem extends Component {
         marginLeft: 10, 
         marginRight: 10, 
         backgroundColor: '#FFFFFF',
-        borderRadius: 7,
+        borderRadius: 5,
         flexDirection: 'row',
         flexWrap:'wrap',
         overflow: 'hidden'}}>
-        <View style = {{flex: 2, }}></View>
+        <View style = {{flex: 2, padding: 10}}>
+          <View style = {{paddingLeft: 3}}>
+            <Text numberOfLines = {1} style = {{fontSize: 16, fontFamily: 'RobotoLight', marginBottom: 5}}>{item.item.title}</Text>
+            <Text numberOfLines = {1} style = {{fontSize: 12, fontFamily: 'RobotoLight', color: '#656565', marginBottom: 5}}>{item.item.location}</Text>
+            <Text numberOfLines = {1} style = {{fontSize: 12, fontFamily: 'RobotoLight', color: '#656565', marginBottom: 5}}>{item.item.distance} from City Centre</Text>
+            <Text numberOfLines = {1} style = {{fontSize: 20, fontFamily: 'RobotoLight', marginBottom: 5, color: '#7B1FA2', marginBottom: 5,}}>{item.item.price}</Text>
+            <Text numberOfLines = {1} style = {{fontSize: 13, fontFamily: 'RobotoLight', marginBottom: 5, textDecorationLine: 'line-through', color: '#656565'}}>{item.item.cutOffPrice}</Text>
+            <View style = {{flexDirection: 'row', marginBottom: 5}}>
+              <Text style = {{fontSize: 15, fontFamily: 'RobotoLight', }}>{ratingText} </Text>
+              <Text style = {{fontSize: 13, fontFamily: 'RobotoLight', backgroundColor: backgroundColorRating, color: colorRating, padding: 1.5, borderRadius: 4, display: displayCheck}}>{item.item.ratingNumber}</Text>
+              <Text style = {{fontSize: 15, fontFamily: 'RobotoLight', display: displayCheck }}> / 5</Text>
+            </View>
+            <View style = {{flexDirection: 'row'}}>
+              <Text style = {{fontSize: 12, fontFamily: 'RobotoLight', backgroundColor: '#990066', color: 'white', padding: 2, borderRadius: 3}}> Your Secret Price </Text>
+              <Text></Text>
+            </View>
+          </View>
+        </View>
         <View style = {{flex: 1,}}>
-          <Image source = {require('../assets/room.jpg')} style = {{resizeMode: 'cover', height: '100%', width: '100%', position: 'absolute'}} />
+          <Image source = {{uri: item.item.roomImage}} style = {{resizeMode: 'cover', height: '100%', width: '100%', position: 'absolute'}} />
           <View style = {{justifyContent: 'flex-end', alignItems: 'flex-end',}}>
             <View style = {{
               width: 0,

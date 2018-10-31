@@ -9,7 +9,8 @@
 			"cutOffPrice": "Rs15,500",
 			"ratingText": "Outstanding",
 			"ratingNumber": "4.6",
-			"ratingExists": "true"
+			"ratingExists": "true",
+			"roomImage": "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&h=350"
 		},
 		{
 			"id": "2",
@@ -20,7 +21,8 @@
 			"cutOffPrice": "Rs3,800",
 			"ratingText": "Outstanding",
 			"ratingNumber": "5.0",
-			"ratingExists": "true"
+			"ratingExists": "true",
+			"roomImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEpNZsHmSc3IDgYXlN8rYTA7fUtRg4o8szvSsWt6fbXIAcQ2Gl"
 		},
 		{
 			"id": "3",
@@ -31,7 +33,8 @@
 			"cutOffPrice": "Rs5,800",
 			"ratingText": "Good",
 			"ratingNumber": "3.6",
-			"ratingExists": "true"
+			"ratingExists": "true",
+			"roomImage": "https://images.trvl-media.com/hotels/1000000/10000/2500/2479/b1b8b047_z.jpg"
 		},
 		{
 			"id": "4",
@@ -42,7 +45,8 @@
 			"cutOffPrice": "Rs1,788",
 			"ratingText": "",
 			"ratingNumber": "",
-			"ratingExists": "false"
+			"ratingExists": "false",
+			"roomImage": "https://media-cdn.tripadvisor.com/media/photo-s/01/1e/cd/fb/astoria-hotel-room.jpg"
 		},
 		{
 			"id": "5",
@@ -53,7 +57,8 @@
 			"cutOffPrice": "Rs5,024",
 			"ratingText": "Good",
 			"ratingNumber": "3.2",
-			"ratingExists": "true"
+			"ratingExists": "true",
+			"roomImage": "https://media-cdn.tripadvisor.com/media/photo-s/0a/14/58/ae/4star-hotel-room.jpg"
 		},
 		{
 			"id": "6",
@@ -64,7 +69,8 @@
 			"cutOffPrice": "Rs10,500",
 			"ratingText": "Excellent",
 			"ratingNumber": "4.4",
-			"ratingExists": "true"
+			"ratingExists": "true",
+			"roomImage": "https://www.marinabaysands.com/content/dam/singapore/marinabaysands/master/main/home/hotel/rooms-suites/roomv2_masthead_920x340.jpg"
 		},
 		{
 			"id": "7",
@@ -75,7 +81,8 @@
 			"cutOffPrice": "Rs2,316",
 			"ratingText": "",
 			"ratingNumber": "",
-			"ratingExists": "false"
+			"ratingExists": "false",
+			"roomImage": "https://media-cdn.tripadvisor.com/media/photo-s/05/3c/00/75/simple-and-clean-hotel.jpg"
 		},
 		{
 			"id": "8",
@@ -86,7 +93,104 @@
 			"cutOffPrice": "Rs4,195",
 			"ratingText": "Good",
 			"ratingNumber": "3.0",
-			"ratingExists": "true"
+			"ratingExists": "true",
+			"roomImage": "https://www.caesars.com/content/scaffold_pages/rooms/ballys/bac/en/deluxe_k_ns/_jcr_content/cards/card/image.stdimg.hd.m.jpg/1489694116220.jpg"
+		},
+		{
+			"id": "9",
+			"title": "ITC Kohenur, a Luxury Collection Hotel",
+			"location": "Hyderabad",
+			"distance": "9.8 km",
+			"price": "Rs15,190",
+			"cutOffPrice": "Rs15,500",
+			"ratingText": "Outstanding",
+			"ratingNumber": "4.6",
+			"ratingExists": "true",
+			"roomImage": "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&h=350"
+		},
+		{
+			"id": "10",
+			"title": "Park Continental",
+			"location": "Hyderabad",
+			"distance": "2.2 km",
+			"price": "Rs3,230",
+			"cutOffPrice": "Rs3,800",
+			"ratingText": "Outstanding",
+			"ratingNumber": "5.0",
+			"ratingExists": "true",
+			"roomImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEpNZsHmSc3IDgYXlN8rYTA7fUtRg4o8szvSsWt6fbXIAcQ2Gl"
+		},
+		{
+			"id": "11",
+			"title": "The Park Hyderabad",
+			"location": "Somajiguda",
+			"distance": "4.0 km",
+			"price": "Rs4,930",
+			"cutOffPrice": "Rs5,800",
+			"ratingText": "Good",
+			"ratingNumber": "3.6",
+			"ratingExists": "true",
+			"roomImage": "https://images.trvl-media.com/hotels/1000000/10000/2500/2479/b1b8b047_z.jpg"
+		},
+		{
+			"id": "12",
+			"title": "FabHotel Arastu Nampally",
+			"location": "Hyderabad",
+			"distance": "0.3 km",
+			"price": "Rs1,609",
+			"cutOffPrice": "Rs1,788",
+			"ratingText": "",
+			"ratingNumber": "",
+			"ratingExists": "false",
+			"roomImage": "https://media-cdn.tripadvisor.com/media/photo-s/01/1e/cd/fb/astoria-hotel-room.jpg"
+		},
+		{
+			"id": "13",
+			"title": "Daspalla Hyderabad",
+			"location": "Jubilee Hills",
+			"distance": "8.4 km",
+			"price": "Rs4,270",
+			"cutOffPrice": "Rs5,024",
+			"ratingText": "Good",
+			"ratingNumber": "3.2",
+			"ratingExists": "true",
+			"roomImage": "https://media-cdn.tripadvisor.com/media/photo-s/0a/14/58/ae/4star-hotel-room.jpg"
+		},
+		{
+			"id": "14",
+			"title": "ITC Kakatiya, a Luxury Collection Hotel",
+			"location": "Begumpet",
+			"distance": "4.9 km",
+			"price": "Rs10,290",
+			"cutOffPrice": "Rs10,500",
+			"ratingText": "Excellent",
+			"ratingNumber": "4.4",
+			"ratingExists": "true",
+			"roomImage": "https://www.marinabaysands.com/content/dam/singapore/marinabaysands/master/main/home/hotel/rooms-suites/roomv2_masthead_920x340.jpg"
+		},
+		{
+			"id": "15",
+			"title": "OYO 11079 Hotel Prestige",
+			"location": "Hyderabad",
+			"distance": "6.3 km",
+			"price": "Rs1,390",
+			"cutOffPrice": "Rs2,316",
+			"ratingText": "",
+			"ratingNumber": "",
+			"ratingExists": "false",
+			"roomImage": "https://media-cdn.tripadvisor.com/media/photo-s/05/3c/00/75/simple-and-clean-hotel.jpg"
+		},
+		{
+			"id": "16",
+			"title": "Aalankrita Resort and Convention",
+			"location": "Medchal",
+			"distance": "23 km",
+			"price": "Rs2,643",
+			"cutOffPrice": "Rs4,195",
+			"ratingText": "Good",
+			"ratingNumber": "3.0",
+			"ratingExists": "true",
+			"roomImage": "https://www.caesars.com/content/scaffold_pages/rooms/ballys/bac/en/deluxe_k_ns/_jcr_content/cards/card/image.stdimg.hd.m.jpg/1489694116220.jpg"
 		},
 	]
 }

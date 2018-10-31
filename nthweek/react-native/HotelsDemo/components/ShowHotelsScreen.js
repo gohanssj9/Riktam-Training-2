@@ -60,7 +60,7 @@ export default class ShowHotelsScreen extends Component {
               renderItem = {(item) => <SingleHotelItem item = {item} />}
               keyExtractor = {(item) => item.id}
               ItemSeparatorComponent = {() => <View style = {{height: 0.5, backgroundColor: '#e5e5e5'}}></View>}
-              initialNumToRender = {7}
+              initialNumToRender = {8}
               showsVerticalScrollIndicator = {false}
             />
           </View>
