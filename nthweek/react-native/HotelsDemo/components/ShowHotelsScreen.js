@@ -34,7 +34,10 @@ export default class ShowHotelsScreen extends Component {
                   <Icon name = "arrow-back" style = {{color: 'white'}} />
                 </Button>
               </View>
-              <View style = {{flex: 8, backgroundColor: '#000000'}}></View>
+              <View style = {{flex: 8,}}>
+                <View style = {{flex: 1, backgroundColor: '#00ff00'}}></View>
+                <View style = {{flex: 1, backgroundColor: '#0000ff'}}></View>
+              </View>
               <View style = {{flex: 2, }}>
                 <View style = {{padding: 9, paddingTop: 15, paddingLeft: 15}}>
                   <Text style = {{color: 'white', fontSize: 14}}> EDIT </Text>
