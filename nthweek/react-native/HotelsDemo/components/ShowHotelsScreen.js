@@ -27,22 +27,24 @@ export default class ShowHotelsScreen extends Component {
     return (
        <Container>
         <Header style = {{backgroundColor: '#D32F2F', height: 113}} androidStatusBarColor = '#AF1D1F'>
-          <Left>
-            <Button transparent onPress = {() => {this.props.navigation.goBack()}}>
-              <Icon name = 'arrow-back' />
-            </Button>
-          </Left>
           <Body>
-            <Title>Demo</Title>
+            <View style = {{flex: 1, width: '100%', height: '100%', flexDirection: 'row'}}>
+              <View style = {{flex: 2,}}>
+                <Button transparent onPress = {() => {this.props.navigation.goBack()}}>
+                  <Icon name = "arrow-back" style = {{color: 'white'}} />
+                </Button>
+              </View>
+              <View style = {{flex: 8, backgroundColor: '#000000'}}></View>
+              <View style = {{flex: 2, }}>
+                <View style = {{padding: 9, paddingTop: 15, paddingLeft: 15}}>
+                  <Text style = {{color: 'white', fontSize: 14}}> EDIT </Text>
+                </View>
+              </View>
+            </View>
           </Body>
-          <Right>
-            <Button transparent>
-              <Icon name = 'search' />
-            </Button>
-          </Right>
         </Header>
         <Content>
-          <View style = {{height: 48, borderTopWidth: 0, elevation: 5, backgroundColor: '#FFFFFF'}}>
+          <View style = {{height: 48, borderTopWidth: 0, elevation: 5, backgroundColor: '#FFFFFF',}}>
             <ScrollView horizontal showsHorizontalScrollIndicator = {false}>
               <FilterComponent text = {'Under Rs4000'} />
               <FilterComponent text = {'4★+'} />
@@ -55,20 +57,21 @@ export default class ShowHotelsScreen extends Component {
             </ScrollView>
           </View>
           <View style = {{flex: 1, backgroundColor: '#E3DDCC', marginTop: 5}}>
-            <FlatList
-              data = {hotelData.items}
-              renderItem = {(item) => <SingleHotelItem item = {item} />}
-              keyExtractor = {(item) => item.id}
-              ItemSeparatorComponent = {() => <View style = {{height: 0.5, backgroundColor: '#e5e5e5'}}></View>}
-              initialNumToRender = {8}
-              showsVerticalScrollIndicator = {false}
-            />
+
           </View>
         </Content>
          <Footer>
           <FooterTab>
-            <Button full style = {{backgroundColor: '#D32F2F'}}>
-              <Text>Footer</Text>
+            <Button full style = {{backgroundColor: '#D32F2F', flexDirection: 'row'}}>
+              <View style = {{flex: 6, justifyContent: 'center', alignItems: 'flex-end', }}>
+                <Text style = {{color: 'white', fontSize: 15, fontFamily: 'RobotoLight',}}>MAP</Text>
+              </View>
+              <View style = {{flex: 4, justifyContent: 'center', alignItems: 'flex-end',}}>
+                <Text style = {{color: 'white', fontSize: 15, fontFamily: 'RobotoLight',}}> SORT & FILTER </Text>
+              </View>
+              <View style = {{flex: 1, justifyContent: 'center', alignItems: 'flex-end', marginRight: 10}}>
+                <Icon name = "dots-vertical" type = "MaterialCommunityIcons" style = {{color: 'white', fontSize: 24,}} />
+              </View>
             </Button>
           </FooterTab>
         </Footer>
@@ -76,3 +79,12 @@ export default class ShowHotelsScreen extends Component {
     );
   }
 }
+
+            // <FlatList
+            //   data = {hotelData.items}
+            //   renderItem = {(item) => <SingleHotelItem item = {item} />}
+            //   keyExtractor = {(item) => item.id}
+            //   ItemSeparatorComponent = {() => <View style = {{height: 0.5, backgroundColor: '#e5e5e5'}}></View>}
+            //   initialNumToRender = {8}
+            //   showsVerticalScrollIndicator = {false}
+            // />
