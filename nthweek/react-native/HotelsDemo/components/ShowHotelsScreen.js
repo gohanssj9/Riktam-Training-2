@@ -35,12 +35,34 @@ export default class ShowHotelsScreen extends Component {
                 </Button>
               </View>
               <View style = {{flex: 8,}}>
-                <View style = {{flex: 1, backgroundColor: '#00ff00'}}></View>
-                <View style = {{flex: 1, backgroundColor: '#0000ff'}}></View>
+                <View style = {{flex: 1, padding: 3}}>
+                  <View style = {{flex: 1, marginTop: 5, justifyContent: 'center'}}>
+                    <Text style = {{color: 'white', fontSize: 13}}> Hyderabad, India </Text>
+                  </View>
+                  <View style = {{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+                    <Text style = {{color: 'white', fontSize: 13}}> Thu 1 Nov - Fri 2 Nov </Text>
+                    <Icon name = "user" type = "Entypo" style = {{color: 'white', fontSize: 14}} />
+                    <Text style = {{color: 'white', fontSize: 13}}> 2 </Text> 
+                  </View>
+                </View>
+                <View style = {{flex: 1, justifyContent: 'center', alignItems: 'flex-start',}}>
+                  <View style = {{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
+                    <View style = {{backgroundColor: 'white', padding: 10, paddingTop: 5, paddingBottom: 5, borderRadius: 15, marginRight: 20}}>
+                      <Text style = {{color: '#D32F2F', fontWeight: 'bold', fontSize: 13}}>ALL</Text>
+                    </View>
+                    <View style = {{flexDirection: 'row', justifyContent: 'center', alignItems: 'center',}}>
+                      <View style = {{marginTop: 1}}>
+                        <Icon name = "heart" type = "FontAwesome" style = {{color: 'white', fontSize: 15, marginRight: 5}} />
+                      </View>
+                      <Text style = {{color: 'white', fontWeight: 'bold', fontSize: 13}}>FAVOURITES</Text>
+                      <Text style = {{color: 'white', fontWeight: 'bold', fontSize: 13}}> (0)</Text>
+                    </View>
+                  </View>
+                </View>
               </View>
               <View style = {{flex: 2, }}>
-                <View style = {{padding: 9, paddingTop: 15, paddingLeft: 15}}>
-                  <Text style = {{color: 'white', fontSize: 14}}> EDIT </Text>
+                <View style = {{padding: 8, paddingTop: 14, paddingLeft: 14}}>
+                  <Text style = {{color: 'white', fontSize: 14, fontWeight: 'bold'}}> EDIT </Text>
                 </View>
               </View>
             </View>
@@ -60,17 +82,24 @@ export default class ShowHotelsScreen extends Component {
             </ScrollView>
           </View>
           <View style = {{flex: 1, backgroundColor: '#E3DDCC', marginTop: 5}}>
-
+            <FlatList
+              data = {hotelData.items}
+              renderItem = {(item) => <SingleHotelItem item = {item} />}
+              keyExtractor = {(item) => item.id}
+              ItemSeparatorComponent = {() => <View style = {{height: 0.5, backgroundColor: '#e5e5e5'}}></View>}
+              initialNumToRender = {8}
+              showsVerticalScrollIndicator = {false}
+            />
           </View>
         </Content>
          <Footer>
           <FooterTab>
             <Button full style = {{backgroundColor: '#D32F2F', flexDirection: 'row'}}>
               <View style = {{flex: 6, justifyContent: 'center', alignItems: 'flex-end', }}>
-                <Text style = {{color: 'white', fontSize: 15, fontFamily: 'RobotoLight',}}>MAP</Text>
+                <Text style = {{color: 'white', fontSize: 15, fontFamily: 'RobotoLight', fontWeight: 'bold'}}>MAP</Text>
               </View>
               <View style = {{flex: 4, justifyContent: 'center', alignItems: 'flex-end',}}>
-                <Text style = {{color: 'white', fontSize: 15, fontFamily: 'RobotoLight',}}> SORT & FILTER </Text>
+                <Text style = {{color: 'white', fontSize: 15, fontFamily: 'RobotoLight', fontWeight: 'bold'}}> SORT & FILTER </Text>
               </View>
               <View style = {{flex: 1, justifyContent: 'center', alignItems: 'flex-end', marginRight: 10}}>
                 <Icon name = "dots-vertical" type = "MaterialCommunityIcons" style = {{color: 'white', fontSize: 24,}} />
@@ -82,12 +111,3 @@ export default class ShowHotelsScreen extends Component {
     );
   }
 }
-
-            // <FlatList
-            //   data = {hotelData.items}
-            //   renderItem = {(item) => <SingleHotelItem item = {item} />}
-            //   keyExtractor = {(item) => item.id}
-            //   ItemSeparatorComponent = {() => <View style = {{height: 0.5, backgroundColor: '#e5e5e5'}}></View>}
-            //   initialNumToRender = {8}
-            //   showsVerticalScrollIndicator = {false}
-            // />

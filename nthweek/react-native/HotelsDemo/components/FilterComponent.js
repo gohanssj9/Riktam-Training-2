@@ -27,6 +27,7 @@ export default class FilterComponent extends Component {
       textColorSet: '#7B7B7B',
       active: false
     };
+    this.onPress = this.onPress.bind(this);
   }
 
   onPress(){
