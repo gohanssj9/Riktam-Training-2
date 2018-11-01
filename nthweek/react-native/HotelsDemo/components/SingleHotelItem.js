@@ -16,7 +16,7 @@ import {
   Drawer,
   Fab } from 'native-base';
 
-import {Image} from 'react-native';
+import FastImage from 'react-native-fast-image';
 
 export default class SingleHotelItem extends Component {
   constructor(props){
@@ -65,7 +65,7 @@ export default class SingleHotelItem extends Component {
           </View>
         </View>
         <View style = {{flex: 1,}}>
-          <Image source = {require('../assets/room1.jpg')} style = {{resizeMode: 'cover', height: '100%', width: '100%', position: 'absolute'}} />
+          <FastImage source = {{uri: item.item.roomImage, priority: FastImage.priority.normal}} style = {{height: '100%', width: '100%', position: 'absolute'}} resizeMode = {FastImage.resizeMode.cover} />
           <View style = {{justifyContent: 'flex-end', alignItems: 'flex-end',}}>
             <View style = {{
               width: 0,
