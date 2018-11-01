@@ -62,11 +62,13 @@ export default class ShowHotelsScreen extends Component {
                   </View>
                 </View>
               </View>
-              <View style = {{flex: 2, }}>
-                <View style = {{padding: 8, paddingTop: 14, paddingLeft: 14}}>
-                  <Text style = {{color: 'white', fontSize: 14, fontWeight: 'bold'}}> EDIT </Text>
+              <TouchableWithoutFeedback onPress = {() => {this.props.navigation.navigate('EditDate')}}>
+                <View style = {{flex: 2, }}>
+                  <View style = {{padding: 8, paddingTop: 14, paddingLeft: 14}}>
+                    <Text style = {{color: 'white', fontSize: 14, fontWeight: 'bold'}}> EDIT </Text>
+                  </View>
                 </View>
-              </View>
+              </TouchableWithoutFeedback>
             </View>
           </Body>
         </Header>
