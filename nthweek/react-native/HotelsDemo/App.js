@@ -5,6 +5,7 @@ import {createStackNavigator} from 'react-navigation';
 
 import MainScreen from './components/MainScreen';
 import ShowHotelsScreen from './components/ShowHotelsScreen';
+import EditDateScreen from './components/EditDateScreen';
 
 const RootStack = createStackNavigator(
   {
@@ -13,7 +14,10 @@ const RootStack = createStackNavigator(
     },
     ShowHotels: {
       screen: ShowHotelsScreen
-    }
+    },
+    EditDate: {
+      screen: EditDateScreen
+    },
   },
   {
     initialRouteName: 'MainScreen',

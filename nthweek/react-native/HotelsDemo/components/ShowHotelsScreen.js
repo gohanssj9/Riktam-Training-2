@@ -16,7 +16,7 @@ import {
   Drawer,
   Fab } from 'native-base';
 
-import {ScrollView, FlatList} from 'react-native';
+import {ScrollView, FlatList, TouchableWithoutFeedback} from 'react-native';
 
 import FilterComponent from './FilterComponent';
 import SingleHotelItem from './SingleHotelItem';
@@ -35,16 +35,18 @@ export default class ShowHotelsScreen extends Component {
                 </Button>
               </View>
               <View style = {{flex: 8,}}>
-                <View style = {{flex: 1, padding: 3}}>
-                  <View style = {{flex: 1, marginTop: 5, justifyContent: 'center'}}>
-                    <Text style = {{color: 'white', fontSize: 13}}> Hyderabad, India </Text>
+                <TouchableWithoutFeedback onPress = {() => {this.props.navigation.navigate('EditDate')}}>
+                  <View style = {{flex: 1, padding: 3}}>
+                    <View style = {{flex: 1, marginTop: 5, justifyContent: 'center'}}>
+                      <Text style = {{color: 'white', fontSize: 13}}> Hyderabad, India </Text>
+                    </View>
+                    <View style = {{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+                      <Text style = {{color: 'white', fontSize: 13}}> Thu 1 Nov - Fri 2 Nov </Text>
+                      <Icon name = "user" type = "Entypo" style = {{color: 'white', fontSize: 14}} />
+                      <Text style = {{color: 'white', fontSize: 13}}> 2 </Text> 
+                    </View>
                   </View>
-                  <View style = {{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
-                    <Text style = {{color: 'white', fontSize: 13}}> Thu 1 Nov - Fri 2 Nov </Text>
-                    <Icon name = "user" type = "Entypo" style = {{color: 'white', fontSize: 14}} />
-                    <Text style = {{color: 'white', fontSize: 13}}> 2 </Text> 
-                  </View>
-                </View>
+                </TouchableWithoutFeedback>
                 <View style = {{flex: 1, justifyContent: 'center', alignItems: 'flex-start',}}>
                   <View style = {{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
                     <View style = {{backgroundColor: 'white', padding: 10, paddingTop: 5, paddingBottom: 5, borderRadius: 15, marginRight: 20}}>

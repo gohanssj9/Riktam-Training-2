@@ -65,7 +65,7 @@ export default class SingleHotelItem extends Component {
           </View>
         </View>
         <View style = {{flex: 1,}}>
-          <Image source = {{uri: item.item.roomImage}} style = {{resizeMode: 'cover', height: '100%', width: '100%', position: 'absolute'}} />
+          <Image source = {require('../assets/room1.jpg')} style = {{resizeMode: 'cover', height: '100%', width: '100%', position: 'absolute'}} />
           <View style = {{justifyContent: 'flex-end', alignItems: 'flex-end',}}>
             <View style = {{
               width: 0,
@@ -91,3 +91,5 @@ export default class SingleHotelItem extends Component {
     );
   }
 }
+
+// {uri: item.item.roomImage} -- removed due to performance issues. Will resolve later.
