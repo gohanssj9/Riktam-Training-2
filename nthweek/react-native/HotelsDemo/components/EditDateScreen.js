@@ -43,16 +43,42 @@ export default class EditDateScreen extends Component {
         </Header>
         <Content style = {{backgroundColor: '#E8E8E8', marginTop: 7}}>
           <View style = {{height: 150, margin: 7, marginTop: 0, flexDirection: 'row'}}>
-            <View style = {{flex: 1, backgroundColor: '#ff0000', marginRight: 3, borderRadius: 5}}>
-              <View style = {{flex: 1, borderBottomColor: '#e5e5e5', borderBottomWidth: 1,}}></View>
-              <View style = {{flex: 2, backgroundColor: '#0000ff'}}></View>
+            <View style = {{flex: 1, backgroundColor: 'white', marginRight: 3, borderRadius: 5, elevation: 3}}>
+              <View style = {{flex: 1, borderBottomColor: '#e5e5e5', borderBottomWidth: 1, justifyContent: 'center', paddingLeft: 12,}}>
+                <Text style = {{fontSize: 20, fontFamily: 'RobotoLight'}}> Check in </Text>
+              </View>
+              <View style = {{flex: 2}}>
+                <View style = {{padding: 11, paddingLeft: 15}}>
+                  <Text style = {{fontSize: 20, color: '#156BC1'}}>Today</Text>
+                  <Text style = {{fontSize: 14, color: '#156BC1'}}>01-Nov-2018</Text>
+                </View>
+              </View>
             </View>
-            <View style = {{flex: 1, marginLeft: 3, backgroundColor: '#00ff00', borderRadius: 5}}>
-              <View style = {{flex: 1, borderBottomColor: '#e5e5e5', borderBottomWidth: 1,}}></View>
-              <View style = {{flex: 2, backgroundColor: '#ff0000'}}></View>
+            <View style = {{flex: 1, marginLeft: 3, backgroundColor: 'white', borderRadius: 5, elevation: 3}}>
+              <View style = {{flex: 1, borderBottomColor: '#e5e5e5', borderBottomWidth: 1, justifyContent: 'center', paddingLeft: 12,}}>
+                <Text style = {{fontSize: 20, fontFamily: 'RobotoLight'}}> Check out </Text>
+              </View>
+              <View style = {{flex: 2,}}>
+                <View style = {{padding: 11, paddingLeft: 15}}>
+                  <Text style = {{fontSize: 20, color: '#156BC1'}}>Tomorrow</Text>
+                  <Text style = {{fontSize: 14, color: '#156BC1'}}>02-Nov-2018</Text>
+                  <Text style = {{fontSize: 13, fontFamily: 'RobotoLight', marginTop: 10, color: '#858585'}}>1 night</Text>
+                </View>
+              </View>
             </View>
           </View>
-          <View style = {{height: 198, margin: 7, marginTop: 3, backgroundColor: 'white', borderRadius: 5}}></View>
+          <View style = {{height: 198, margin: 7, marginTop: 3, backgroundColor: 'white', borderRadius: 5, elevation: 3}}>
+            <View style = {{flex: 1.25, borderBottomColor: '#e5e5e5', borderBottomWidth: 1, justifyContent: 'center', paddingLeft: 12,}}>
+              <Text style = {{fontSize: 20, fontFamily: 'RobotoLight'}}> Room 1 </Text>
+            </View>
+            <View style = {{flex: 2, borderBottomColor: '#e5e5e5', borderBottomWidth: 1,}}>
+              <View style = {{flex: 1, backgroundColor: '#ff0000', borderBottomColor: '#e5e5e5', borderBottomWidth: 1,}}></View>
+              <View style = {{flex: 1, backgroundColor: '#00ff00',}}></View>
+            </View>
+            <View style = {{flex: 1.25, alignItems: 'flex-end', justifyContent: 'center', paddingRight: 12}}>
+              <Text style = {{fontSize:14, color: '#156BC1'}}> ADD ANOTHER ROOM </Text>
+            </View>
+          </View>
         </Content>
         <Footer height = {47}>
           <FooterTab>
