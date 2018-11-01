@@ -43,8 +43,14 @@ export default class EditDateScreen extends Component {
         </Header>
         <Content style = {{backgroundColor: '#E8E8E8', marginTop: 7}}>
           <View style = {{height: 150, margin: 7, marginTop: 0, flexDirection: 'row'}}>
-            <View style = {{flex: 1, backgroundColor: '#ff0000', marginRight: 3, borderRadius: 5}}></View>
-            <View style = {{flex: 1, marginLeft: 3, backgroundColor: '#00ff00', borderRadius: 5}}></View>
+            <View style = {{flex: 1, backgroundColor: '#ff0000', marginRight: 3, borderRadius: 5}}>
+              <View style = {{flex: 1, borderBottomColor: '#e5e5e5', borderBottomWidth: 1,}}></View>
+              <View style = {{flex: 2, backgroundColor: '#0000ff'}}></View>
+            </View>
+            <View style = {{flex: 1, marginLeft: 3, backgroundColor: '#00ff00', borderRadius: 5}}>
+              <View style = {{flex: 1, borderBottomColor: '#e5e5e5', borderBottomWidth: 1,}}></View>
+              <View style = {{flex: 2, backgroundColor: '#ff0000'}}></View>
+            </View>
           </View>
           <View style = {{height: 198, margin: 7, marginTop: 3, backgroundColor: 'white', borderRadius: 5}}></View>
         </Content>
