@@ -41,7 +41,7 @@ export default class ShowHotelsScreen extends Component {
                       <Text style = {{color: 'white', fontSize: 13}}> Hyderabad, India </Text>
                     </View>
                     <View style = {{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
-                      <Text style = {{color: 'white', fontSize: 13}}> Thu 1 Nov - Fri 2 Nov </Text>
+                      <Text style = {{color: 'white', fontSize: 13}}> Fri 2 Nov - Sat 3 Nov </Text>
                       <Icon name = "user" type = "Entypo" style = {{color: 'white', fontSize: 14}} />
                       <Text style = {{color: 'white', fontSize: 13}}> 2 </Text> 
                     </View>
