@@ -72,8 +72,30 @@ export default class EditDateScreen extends Component {
               <Text style = {{fontSize: 20, fontFamily: 'RobotoLight'}}> Room 1 </Text>
             </View>
             <View style = {{flex: 2, borderBottomColor: '#e5e5e5', borderBottomWidth: 1,}}>
-              <View style = {{flex: 1, backgroundColor: '#ff0000', borderBottomColor: '#e5e5e5', borderBottomWidth: 1,}}></View>
-              <View style = {{flex: 1, backgroundColor: '#00ff00',}}></View>
+              <View style = {{flex: 1, borderBottomColor: '#e5e5e5', borderBottomWidth: 1, padding: 5, flexDirection: 'row', alignItems: 'center'}}>
+                <Text style = {{flex: 2, paddingLeft: 10}}> Adults </Text>
+                <View style = {{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+                  <View style = {{flex: 1}}>
+                    <Icon name = 'minus-circle-outline' type = "MaterialCommunityIcons" style = {{color: '#156BC1', fontSize: 22}} />
+                  </View>
+                  <Text style = {{flex: 1}}> 2 </Text>
+                  <View style = {{flex: 1}}>
+                    <Icon name = 'plus-circle-outline' type = "MaterialCommunityIcons" style = {{color: '#156BC1', fontSize: 22}} />
+                  </View>
+                </View>
+              </View>
+              <View style = {{flex: 1, padding: 5, flexDirection: 'row', alignItems: 'center'}}>
+                <Text style = {{flex: 2, paddingLeft: 8}}> Children </Text>
+                <View style = {{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+                  <View style = {{flex: 1}}>
+                    <Icon name = 'minus-circle-outline' type = "MaterialCommunityIcons" style = {{color: '#156BC1', fontSize: 22}} />
+                  </View>
+                  <Text style = {{flex: 1}}> 0 </Text>
+                  <View style = {{flex: 1}}>
+                    <Icon name = 'plus-circle-outline' type = "MaterialCommunityIcons" style = {{color: '#156BC1', fontSize: 22}} />
+                  </View>
+                </View>
+              </View>
             </View>
             <View style = {{flex: 1.25, alignItems: 'flex-end', justifyContent: 'center', paddingRight: 12}}>
               <Text style = {{fontSize:14, color: '#156BC1'}}> ADD ANOTHER ROOM </Text>
