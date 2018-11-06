@@ -1,0 +1,42 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.webix_view.webix_control.webix_el_button {
+	margin-left: 0 !important;
+	margin-top: 0 !important;
+	padding: 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+button.webix_img_btn {
+	border-radius: 34px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.32), 0 0 0 1px rgba(0, 0, 0, 0.16);
+	font-size: 15px;
+	letter-spacing: 0.5px;
+}
+
+.webix_img_btn .webix_image {
+	margin-right: 5px;
+	margin-left: 4px;
+}
+.webix_view.webix_list {
+	border: none;
+}
+.webix_list_item {
+	border-bottom: none;
+	border-radius: 18px;
+	height: 32px !important;
+	padding: 0 12px;
+}
+.webix_list_item.webix_selected, .webix_list_item.webix_focused {
+	background-color: #e8eaed;
+	box-shadow: none;
+	color: #000000;
+	font-weight: 500;
+}
+.webix_icon {
+	margin-right: 18px;
+}
