@@ -1,7 +1,12 @@
 body {
 	font-family: 'Roboto', sans-serif;
 }
-
+.webix_view.webix_list {
+	overflow-y: hidden !important;
+}
+.webix_view.webix_list:hover {
+	overflow-y: scroll !important;
+}
 .webix_view.webix_control.webix_el_button {
 	margin-left: 0 !important;
 	margin-top: 0 !important;
@@ -17,7 +22,11 @@ button.webix_img_btn {
 	font-size: 15px;
 	letter-spacing: 0.5px;
 }
-
+.profile_image button {
+	border-radius: 0;
+	height: 100%;
+	width: 100%;
+}
 .webix_img_btn .webix_image {
 	margin-right: 5px;
 	margin-left: 4px;
@@ -32,9 +41,9 @@ button.webix_img_btn {
 	padding: 0 12px;
 }
 .webix_list_item.webix_selected, .webix_list_item.webix_focused {
-	background-color: #e8eaed;
+	background-color: #fce8e6;
 	box-shadow: none;
-	color: #000000;
+	color: #d93025;
 	font-weight: 500;
 }
 .webix_icon {

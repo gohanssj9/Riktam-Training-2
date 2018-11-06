@@ -3,6 +3,7 @@ var topHeader = {template: "top", height: 64};
 var categories = [
 	{icon: 'fa fa-inbox', value: 'Inbox'},
 	{icon: 'fa fa-star', value: 'Starred'},
+	{icon: 'fa fa-clock-o', value: 'Snoozed'},
 	{icon: 'fa fa-comments', value: 'Sent Mail'},
 	{icon: 'fa fa-file', value: 'Drafts'},
 	{icon: 'fa fa-tags', value: 'Tigersheet'},
@@ -26,7 +27,14 @@ var menuSection = {
 			scroll: true}
 	]
 };
-var profileSection = {template: "Profile", height: 45}
+var profileSection = {type: 'clean', height: 50, cols: [
+		{view: 'button', css: 'profile_image', type: 'image', image: 'user_avatar.png', height: 32, width: 32},
+		{value: 'Sriteja', width: 17},
+		{view: 'button', type: 'iconButton', icon: 'fa fa-caret-down', width: 7, height: 4},
+		{},
+		{view: 'button', type: 'iconButton', icon: 'fa fa-plus', width: 30, height: 30}
+	]
+};
 var chatSection = {template: "Chat", height: 260};
 
 var leftSidebar = {rows: [
