@@ -58,11 +58,11 @@ var leftSidebar = {rows: [
 ], width: 256};
 
 var rightSidebar = {rows: [
-		{view: 'button', type: 'image', image: 'calendar.png', height: 30, width: 30},
-		{view: 'button', type: 'image', image: 'keep.png', height: 30, width: 30},
-		{view: 'button', type: 'image', image: 'tasks.png', height: 30, width: 30},
-		{template: '<div class = "border_line"></div>', height: 20, width: 20},
-		{view: 'button', type: 'image', image: 'plus.png', height: 30, width: 30}
+		{view: 'button', type: 'image', image: 'calendar.png', height: 26, width: 26},
+		{view: 'button', type: 'image', image: 'keep.png', height: 26, width: 26},
+		{view: 'button', type: 'image', image: 'tasks.png', height: 26, width: 26},
+		{template: '<div class = "border_line"></div>', height: 26, width: 26},
+		{view: 'button', type: 'image', image: 'plus.png', height: 26, width: 26}
 	], width: 55, css: 'right_sidebar'
 };
 

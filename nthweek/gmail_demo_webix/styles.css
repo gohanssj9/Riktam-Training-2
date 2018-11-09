@@ -118,6 +118,10 @@ button.webix_img_btn {
 	justify-content: flex-end;
 	align-items: center;
 }
+.date_section .webix_cell p {
+	font-size: 12px;
+}
+
 .subject_section .webix_cell p, .sender_section .webix_cell p{
 	white-space: nowrap !important;
 	overflow: hidden !important;
@@ -134,9 +138,9 @@ button.webix_img_btn {
 
 .border_line {
 	border-top: 1px solid #DADEE0;
+	margin: 27px 10px 0px 10px;
 	height: 100%;
 	width: 100%;
-	margin-top: 27px;
 }
 
 .right_sidebar .webix_view .webix_template {
