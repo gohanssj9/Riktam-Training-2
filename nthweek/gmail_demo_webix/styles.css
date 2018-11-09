@@ -22,6 +22,23 @@ button.webix_img_btn {
 	font-size: 15px;
 	letter-spacing: 0.5px;
 }
+
+.right_sidebar .webix_control.webix_el_button {
+	padding: 15px 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.right_sidebar button.webix_img_btn {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.right_sidebar button.webix_img_btn .webix_image {
+	margin: 0;
+	background-size: contain;
+}
+
 .profile_image button {
 	border-radius: 0;
 	height: 100%;
@@ -107,3 +124,23 @@ button.webix_img_btn {
 	text-overflow: ellipsis !important;
 }
 
+.right_sidebar .webix_template {
+	padding: 2px 6px !important;
+}
+
+.right_sidebar .webix_view {
+	border: none !important;
+}
+
+.border_line {
+	border-top: 1px solid #DADEE0;
+	height: 100%;
+	width: 100%;
+	margin-top: 27px;
+}
+
+.right_sidebar .webix_view .webix_template {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+}
