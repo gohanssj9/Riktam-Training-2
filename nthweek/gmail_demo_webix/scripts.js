@@ -1,3 +1,17 @@
+function getData(){
+	var data = [];
+	for(var i=0; i<50; i++){
+		data.push({
+			check: Math.random() > 0.85 ? 1 : 0,
+			star: Math.random() > 0.4 ? 1 : 0,
+			from: "<p>Tigersheet.com</p>",
+			subject: "<p>People WFH today - Hello all, People working from home today: Please login below to check the details. Click here. Cheers, Tigersheet.com Team </p>",
+			date: "<p>Oct " + (19+Math.round(Math.random()*10)) + "</p>"
+		});
+	}
+	return data;
+}
+
 var topHeader = {template: "top", height: 64};
 
 var categories = [
@@ -35,7 +49,7 @@ var profileSection = {type: 'clean', height: 50, cols: [
 		{view: 'button', type: 'iconButton', icon: 'fa fa-plus', width: 30, height: 30}
 	]
 };
-var chatSection = {template: "Chat", height: 260};
+var chatSection = {template: "Chat", height: 360};
 
 var leftSidebar = {rows: [
 	menuSection,
@@ -46,7 +60,20 @@ var leftSidebar = {rows: [
 var rightSidebar = {template: "right", width: 55};
 
 var appHeader = {template: "Menu tabs", height: 48};
-var mainContent = {template: 'Main Content'};
+var mainContent = {
+	view: 'datatable', scroll: 'y',
+	columns: [
+		{id: "check", css: "checkbox_section", template: "{common.checkbox()}", width: 40},
+		{id: "star", css: "star_section", template: function(obj){
+				return "<span class = 'webix_icon orange_star fa fa-star"+(obj.star?"":"-o")+"'></span>"
+			}, width: 40},
+		{id: "from", css: "sender_section", width: 150},
+		{id: "subject",css: "subject_section", fillspace: true},
+		{id: "date", css: "date_section"}		
+	], header: false, 
+		data:getData(), 
+		select: true,
+};
 
 var infoTabs = {rows: [
 	appHeader,

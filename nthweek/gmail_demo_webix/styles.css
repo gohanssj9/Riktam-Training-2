@@ -49,3 +49,61 @@ button.webix_img_btn {
 .webix_icon {
 	margin-right: 18px;
 }
+
+.profile_image .webix_image {
+	background-size: cover;
+}
+
+.orange_star {
+	color: #F4C84A;
+}
+
+.webix_ss_center_scroll {
+	background-color: #F4F7F7;
+}
+
+.webix_table_checkbox {
+	color: #586474;
+	background-color: #586474;
+}
+
+.webix_cell {
+	height: 40px !important;
+	padding-left: 0 !important;
+}
+
+.star_section span {
+	margin: 0 !important;
+}
+
+.checkbox_section .webix_cell, .star_section .webix_cell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.checkbox_section .webix_cell {
+	padding-left: 12px !important;
+}
+
+.webix_row_select {
+	box-shadow: none !important;
+	background-color: #C2DBFF !important;
+}
+
+.subject_section .webix_cell, .sender_section .webix_cell {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.date_section .webix_cell {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.subject_section .webix_cell p, .sender_section .webix_cell p{
+	white-space: nowrap !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+}
+
