@@ -160,25 +160,42 @@ button.webix_img_btn {
 	align-items: center !important;
 }
 
-.far.fa-square, .fa.fa-check-square, .fa.fa-ellipsis-v, .fa.fa-redo {
+.far.fa-square, .fa.fa-check-square, .fa.fa-ellipsis-v, .fa.fa-redo, .fa.fa-chevron-left, .fa.fa-chevron-right, .fas.fa-cog, .fas.fa-caret-down {
 	font-size: 18px;
 	color: #757575;
 }
-.fa.fa-redo, .fa.fa-ellipsis-v {
-	font-size: 16px;
+.fa.fa-redo, .fa.fa-ellipsis-v, .fas.fa-cog {
+	font-size: 14px;
 }
 
-.appheader_section .webixtype_base {
+.fa.fa-chevron-left, .fa.fa-chevron-right, .fas.fa-caret-down{
+	font-size: 12px;
+}
+
+.appheader_section .webixtype_base, .appheader_section_caret .webixtype_base {
 	background: #FFFFFF;
 }
 
-.appheader_section .webix_img_btn_abs .webix_icon {
+.appheader_section .webix_img_btn_abs .webix_icon, .appheader_section_caret .webixtype_base  {
 	margin: 0 !important;
 }
 
-.webix_view.webix_control.webix_el_button.appheader_section .webix_el_box {
+.webix_view.webix_control.webix_el_button.appheader_section .webix_el_box .webix_img_btn_abs, .webix_view.webix_control.webix_el_label.appheader_section .flexed,
+.webix_view.webix_control.webix_el_button.appheader_section_caret .webix_el_box .webix_img_btn_abs {
 	display: flex !important;
 	justify-content: center !important;
 	align-items: center !important;
 	padding: 0;
+}
+
+.appheader_section p {
+	margin: 0;
+	font-size: 12px;
+	font-weight: 300;
+	color: #757575;
+}
+
+.webix_view.webix_control.webix_el_button.appheader_section_caret{
+	padding-left: 0 !important;
+	margin-left: -8px !important;
 }

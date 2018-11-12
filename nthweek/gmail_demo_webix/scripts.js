@@ -66,17 +66,16 @@ var rightSidebar = {rows: [
 	], width: 55, css: 'right_sidebar'
 };
 
-var appHeader = {height: 48, width: 996, padding: 10, cols:[
+var appHeader = {height: 48, maxWidth: 996, padding: 10, cols:[
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'far fa-square', width: 20},
+	{view: 'button', css: 'appheader_section_caret', type: 'iconButton', icon: 'fas fa-caret-down', width: 10},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-redo', width: 20},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-ellipsis-v', width: 20},
-	{},
-	{view: 'label', label: '1-50 of 386', width: 100},
-	{type: 'clean', cols: [
-		{ view:"button", type:"iconButton", icon:"fa fa-chevron-left", width:47, css:"button_silver"},
-    { view:"button", type:"iconButton", icon:"fa fa-chevron-right", width:47, css:"button_silver"},
-	]},
-	{view:"button", type:"iconButton", icon:"fa fa-arrows-alt", width: 50}
+	{maxWidth: 630},
+	{view: 'label', label: '<div class="flexed"><p>1-50 of 386</p></div>', width: 100, css: 'appheader_section'},
+	{view:"button", type:"iconButton", icon:"fa fa-chevron-left", width:20, css:"appheader_section"},
+  {view:"button", type:"iconButton", icon:"fa fa-chevron-right", width:20, css:"appheader_section"},
+	{view:"button", type:"iconButton", icon:"fas fa-cog", width: 20, css: "appheader_section"}
 ]};
 
 var mainContent = {
