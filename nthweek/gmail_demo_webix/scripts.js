@@ -15,13 +15,13 @@ function getData(){
 var topHeader = {template: "top", height: 64};
 
 var categories = [
-	{icon: 'fa fa-inbox', value: 'Inbox'},
-	{icon: 'fa fa-star', value: 'Starred'},
-	{icon: 'fa fa-clock-o', value: 'Snoozed'},
-	{icon: 'fa fa-comments', value: 'Sent Mail'},
-	{icon: 'fa fa-file', value: 'Drafts'},
-	{icon: 'fa fa-tags', value: 'Tigersheet'},
-	{icon: 'fa fa-chevron-circle-down', value: 'More'}
+	{icon: 'category fa fa-inbox', value: 'Inbox'},
+	{icon: 'category fa fa-star', value: 'Starred'},
+	{icon: 'category fas fa-clock', value: 'Snoozed'},
+	{icon: 'category fa fa-comments', value: 'Sent Mail'},
+	{icon: 'category fa fa-file', value: 'Drafts'},
+	{icon: 'category fa fa-tags', value: 'Tigersheet'},
+	{icon: 'category fa fa-chevron-circle-down', value: 'More'}
 ];
 
 var menuSection = {
@@ -66,13 +66,27 @@ var rightSidebar = {rows: [
 	], width: 55, css: 'right_sidebar'
 };
 
-var appHeader = {template: "Menu tabs", height: 48};
+var appHeader = {height: 48, width: 996, padding: 10, cols:[
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'far fa-square', width: 20},
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-redo', width: 20},
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-ellipsis-v', width: 20},
+	{},
+	{view: 'label', label: '1-50 of 386', width: 100},
+	{type: 'clean', cols: [
+		{ view:"button", type:"iconButton", icon:"fa fa-chevron-left", width:47, css:"button_silver"},
+    { view:"button", type:"iconButton", icon:"fa fa-chevron-right", width:47, css:"button_silver"},
+	]},
+	{view:"button", type:"iconButton", icon:"fa fa-arrows-alt", width: 50}
+]};
+
 var mainContent = {
 	view: 'datatable', scroll: 'y',
 	columns: [
-		{id: "check", css: "checkbox_section", template: "{common.checkbox()}", width: 40},
+		{id: "check", css: "checkbox_section", template: function(obj) {
+			return "<div class='"+(obj.check?"fa fa-check-square" : "far fa-square")+"'></div>"	
+		}, width: 40},
 		{id: "star", css: "star_section", template: function(obj){
-				return "<span class = 'webix_icon orange_star fa fa-star"+(obj.star?"":"-o")+"'></span>"
+				return "<span class = 'webix_icon orange_star "+(obj.star?"fas fa-star":"far fa-star")+"'></span>"
 			}, width: 40},
 		{id: "from", css: "sender_section", width: 150},
 		{id: "subject",css: "subject_section", fillspace: true},
