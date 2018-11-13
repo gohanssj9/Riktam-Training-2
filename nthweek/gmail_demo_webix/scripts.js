@@ -13,16 +13,17 @@ function getData(){
 }
 
 var searchBar = { view: "form", margin: 0, cols: [
-	{ view: "search"},
-	{gravity: 1.5},
-	{view: "button", type: "iconButton", icon: "fa fa-bell-slash", width: 40, css: "topheader_section"}
+	{ view: "search", placeholder: "Search mail", inputHeight: 50, height: 50, css: 'search_section'},
+	{gravity: 0.25},
+	{view: "button", type: "iconButton", icon: "fas fa-th", width: 40, css: "topheader_section grid_icon"},
+	{view: "button", type: "iconButton", icon: "fas fa-bell", width: 40, css: "topheader_section bell_icon"},
+	{template: "<div class = 'avatar'>S</div>", css: "user_info", width: 60}
 ]};
 
 var topHeader = {type: 'clean', height: 64, cols: [
-	{view: "button", type: "iconButton", icon: "fas fa-bars", width: 30, css: "topheader_section"},
+	{view: "button", type: "iconButton", icon: "fas fa-bars", width: 30, height: 40, css: "topheader_section"},
 	{template: "<div class = 'logo_inner'></div>", css: "logo", height: 40, width: 200},
-	searchBar,
-	{template: "<div class = 'avatar'>S</div>", css: "user_info", width: 60}
+	searchBar
 ]};
 
 var categories = [
