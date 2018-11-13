@@ -3,7 +3,7 @@ function getData(){
 	for(var i=0; i<50; i++){
 		data.push({
 			check: Math.random() > 0.85 ? 1 : 0,
-			star: Math.random() > 0.4 ? 1 : 0,
+			star: Math.random() > 0.7 ? 1 : 0,
 			from: "<p>Tigersheet.com</p>",
 			subject: "<p>People WFH today - Hello all, People working from home today: Please login below to check the details. Click here. Cheers, Tigersheet.com Team </p>",
 			date: "<p>Oct " + (19+Math.round(Math.random()*10)) + "</p>"

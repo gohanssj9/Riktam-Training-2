@@ -164,7 +164,7 @@ button.webix_img_btn {
 	font-size: 18px;
 	color: #757575;
 }
-.fa.fa-redo, .fa.fa-ellipsis-v, .fas.fa-cog{
+.fa.fa-redo, .fa.fa-ellipsis-v, .fas.fa-cog, .fas.fa-th, .fas.fa-bell{
 	font-size: 16px;
 }
 
@@ -261,7 +261,7 @@ button.webix_img_btn {
 .webix_view .logo {
 	height: 50px !important;
 	border: none;
-	padding: 6px 6px 6px 0 !important;
+	padding: 6px 9px 6px 0 !important;
 }
 
 .search_section {
