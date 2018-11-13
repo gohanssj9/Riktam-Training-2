@@ -12,7 +12,18 @@ function getData(){
 	return data;
 }
 
-var topHeader = {template: "top", height: 64};
+var searchBar = { view: "form", margin: 0, cols: [
+	{ view: "search"},
+	{gravity: 1.5},
+	{view: "button", type: "iconButton", icon: "fa fa-bell-slash", width: 40, css: "topheader_section"}
+]};
+
+var topHeader = {type: 'clean', height: 64, cols: [
+	{view: "button", type: "iconButton", icon: "fas fa-bars", width: 30, css: "topheader_section"},
+	{template: "<div class = 'logo_inner'></div>", css: "logo", height: 40, width: 200},
+	searchBar,
+	{template: "<div class = 'avatar'>S</div>", css: "user_info", width: 60}
+]};
 
 var categories = [
 	{icon: 'category fa fa-inbox', value: 'Inbox'},
@@ -71,11 +82,11 @@ var appHeader = {height: 48, maxWidth: 996, padding: 10, cols:[
 	{view: 'button', css: 'appheader_section_caret', type: 'iconButton', icon: 'fas fa-caret-down', width: 10},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-redo', width: 20},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-ellipsis-v', width: 20},
-	{maxWidth: 630},
-	{view: 'label', label: '<div class="flexed"><p>1-50 of 386</p></div>', width: 100, css: 'appheader_section'},
-	{view:"button", type:"iconButton", icon:"fa fa-chevron-left", width:20, css:"appheader_section"},
-  {view:"button", type:"iconButton", icon:"fa fa-chevron-right", width:20, css:"appheader_section"},
-	{view:"button", type:"iconButton", icon:"fas fa-cog", width: 20, css: "appheader_section"}
+	{},
+	{view: 'label', label: '<div class="flexed"><p>1-50 of 391</p></div>', width: 100, css: 'appheader_section right_move'},
+	{view:"button", type:"iconButton", icon:"fa fa-chevron-left", width:20, css:"appheader_section right_move"},
+  {view:"button", type:"iconButton", icon:"fa fa-chevron-right", width:20, css:"appheader_section right_move"},
+	{view:"button", type:"iconButton", icon:"fas fa-cog", width: 20, css: "appheader_section right_move"}
 ]};
 
 var mainContent = {

@@ -172,7 +172,7 @@ button.webix_img_btn {
 	font-size: 12px;
 }
 
-.appheader_section .webixtype_base, .appheader_section_caret .webixtype_base {
+.appheader_section .webixtype_base, .appheader_section_caret .webixtype_base, .topheader_section .webixtype_base {
 	background: #FFFFFF;
 }
 
@@ -198,4 +198,43 @@ button.webix_img_btn {
 .webix_view.webix_control.webix_el_button.appheader_section_caret{
 	padding-left: 0 !important;
 	margin-left: -8px !important;
+}
+
+.webix_view.webix_control.webix_el_button.appheader_section.right_move {
+	transform: translateX(-300%);
+}
+
+.webix_view.webix_control.webix_el_label.appheader_section.right_move {
+	transform: translateX(-110%);
+}
+
+.logo .logo_inner{
+	background-image: url('logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.fa.fa-bell-slash {
+	font-size: 16px;
+}
+
+.user_info .webix_template{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4px 10px;
+}
+
+.user_info .avatar {
+	border-radius: 15px;
+	width: 30px;
+	height: 30px;
+	background-color: #c2185b;
+	color: #fff;
+	text-align: center;
+	line-height: 29px;
+	font-size: 18px;
+	margin: 5px;
 }
