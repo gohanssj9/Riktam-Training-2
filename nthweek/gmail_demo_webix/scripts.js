@@ -53,13 +53,13 @@ var menuSection = {
 			scroll: true}
 	]
 };
-var profileSection = {type: 'clean', height: 50, cols: [
+var profileSection = {height: 50, cols: [
 		{view: 'button', css: 'profile_image', type: 'image', image: 'user_avatar.png', height: 32, width: 32},
-		{value: 'Sriteja', width: 17},
-		{view: 'button', type: 'iconButton', icon: 'fa fa-caret-down', width: 7, height: 4},
-		{},
-		{view: 'button', type: 'iconButton', icon: 'fa fa-plus', width: 30, height: 30}
-	]
+		{template: '<div class="text_inside"><p>Sriteja</p></div>', width: 40, css: 'text_section'},
+		{view: 'button', type: 'iconButton', icon: 'fas fa-caret-down', width: 20, height: 20, css:'icon_section'},
+		{width: 95},
+		{view: 'button', type: 'image', image: 'plus.png', height: 50, width: 30, css: 'image_button_section'}
+	], css: 'profile_section'
 };
 var chatSection = {template: "Chat", height: 360};
 
