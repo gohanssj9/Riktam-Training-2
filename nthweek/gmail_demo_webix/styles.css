@@ -153,7 +153,7 @@ button.webix_img_btn {
 	align-items: center !important;
 }
 
-.far.fa-square, .fa.fa-check-square, .fa.fa-ellipsis-v, .fa.fa-redo, .fa.fa-chevron-left, .fa.fa-chevron-right, .fas.fa-cog, .fas.fa-caret-down, .fas.fa-bars, .fas.fa-th, .fas.fa-bell {
+.far.fa-square, .fa.fa-check-square, .fa.fa-ellipsis-v, .fa.fa-redo, .fa.fa-chevron-left, .fa.fa-chevron-right, .fas.fa-cog, .fas.fa-caret-down, .fas.fa-bars, .fas.fa-th, .fas.fa-bell, .fas.fa-user, .fas.fa-comment {
 	font-size: 18px;
 	color: #757575;
 }
@@ -342,4 +342,26 @@ button.webix_img_btn {
 .image_button_section .webix_image {
 	width: 20px !important;
 	height: 20px !important;
+}
+
+.webix_item_tab.webix_selected.icon_draft, 
+.webix_item_tab.webix_selected.icon_draft:focus,
+.webix_item_tab.webix_selected.icon_draft:hover {
+	box-shadow: none;
+	background: rgba(102,102,102,.1);
+}
+
+.webix_all_tabs.webixtype_bottom {
+	display: flex;
+	flex-direction: row;
+}
+
+.icon_draft .webix_icon {
+	margin: 0;
+}
+
+.icon_draft {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

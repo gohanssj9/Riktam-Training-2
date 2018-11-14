@@ -61,7 +61,39 @@ var profileSection = {height: 50, cols: [
 		{view: 'button', type: 'image', image: 'plus.png', height: 50, width: 30, css: 'image_button_section'}
 	], css: 'profile_section'
 };
-var chatSection = {template: "Chat", height: 360};
+
+var chatSection = {	type: 'clean', paddingX:10, height: 300, rows: [
+		{animate: false, cells: [
+			{template: "<div></div>"},
+      { id:"a1", css:"draft", 
+      	view: 'list', 
+					select: false,
+					columns: [
+						{id: 'icon', template: "<div class = 'avatar'>S</div>", css: "user_info", width: 60},
+						{id: 'menuOption', fillspace: true}
+					],
+				header: false,
+				data: categories, 
+				scroll: true},
+      { id:"a2", css:"draft", 
+      	view: 'list', 
+					select: true,
+				columns: [
+					{id: 'icon', height: 20, width: 20, marginRight: 18},
+					{id: 'menuOption', fillspace: true}
+			],
+			header: false,
+			data: categories, 
+			scroll: true},
+      {template: "<div></div>"}
+    ]},
+		{ view: 'tabbar', value: 'a1', type: 'bottom', multiview: true, tabMinWidth: 50, options: [
+			{value: ""},
+      { id:"a1", value:"<span class='webix_icon fas fa-user'></span>", css: "icon_draft"},
+      { id:"a2", value:"<span class='webix_icon fas fa-comment'></span>", css: "icon_draft" },
+      {value: ""}
+		]}
+	]};
 
 var leftSidebar = {rows: [
 	menuSection,
