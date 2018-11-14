@@ -61,15 +61,14 @@ var profileSection = {height: 50, cols: [
 		{view: 'button', type: 'image', image: 'plus.png', height: 50, width: 30, css: 'image_button_section'}
 	], css: 'profile_section'
 };
-
 var chatSection = {	type: 'clean', paddingX:10, height: 300, rows: [
 		{animate: false, cells: [
 			{template: "<div></div>"},
       { id:"a1", css:"draft", 
       	view: 'list', 
-					select: false,
+					select: true,
 					columns: [
-						{id: 'icon', template: "<div class = 'avatar'>S</div>", css: "user_info", width: 60},
+						{id: 'icon', height: 20, width: 20, marginRight: 18},
 						{id: 'menuOption', fillspace: true}
 					],
 				header: false,
