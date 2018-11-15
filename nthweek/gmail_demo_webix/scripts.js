@@ -20,7 +20,7 @@ var searchBar = { view: "form", margin: 0, cols: [
 	{template: "<div class = 'avatar'>S</div>", css: "user_info", width: 60}
 ]};
 
-var topHeader = {type: 'clean', height: 64, cols: [
+var topHeader = {type: 'clean', css: 'dummy_check', height: 64, cols: [
 	{view: "button", type: "iconButton", icon: "fas fa-bars", width: 30, height: 40, css: "topheader_section"},
 	{template: "<div class = 'logo_inner'></div>", css: "logo", height: 40, width: 200},
 	searchBar
@@ -30,10 +30,20 @@ var categories = [
 	{icon: 'category fa fa-inbox', value: 'Inbox'},
 	{icon: 'category fa fa-star', value: 'Starred'},
 	{icon: 'category fas fa-clock', value: 'Snoozed'},
-	{icon: 'category fa fa-comments', value: 'Sent Mail'},
+	{icon: 'category fa fa-comments', value: 'Sent'},
 	{icon: 'category fa fa-file', value: 'Drafts'},
 	{icon: 'category fa fa-tags', value: 'Tigersheet'},
 	{icon: 'category fa fa-chevron-circle-down', value: 'More'}
+];
+
+var chatbox = [
+	{dummyTitle: 'I', value: 'Iron Man', backgroundColor: '#f9619f', message: 'You: You want me to repair Jarvis? I know you cannot fix it on your own.'},
+	{dummyTitle: 'A', value: 'Atom', backgroundColor: '#352cb5', message: 'Beep Beep Beep'},
+	{dummyTitle: 'R', value: 'Real Steel', backgroundColor: '#2088c0', message: 'Great movie!'},
+	{dummyTitle: 'W', value: 'Wolverine', backgroundColor: '#f91abe', message: 'Grrr'},
+	{dummyTitle: 'C', value: 'Cyclops', backgroundColor: '#c43597', message: 'Thanks for saving us!'},
+	{dummyTitle: 'H', value: 'Hulk', backgroundColor: '#c4d395', message: 'Thanos scared me !'},
+	{dummyTitle: 'F', value: 'Flash', backgroundColor: '#a0cbc5', message: 'You: I told you not to go fast on a banana peel :P'},
 ];
 
 var menuSection = {
@@ -59,31 +69,33 @@ var profileSection = {height: 50, cols: [
 		{view: 'button', type: 'iconButton', icon: 'fas fa-caret-down', width: 20, height: 20, css:'icon_section'},
 		{width: 95},
 		{view: 'button', type: 'image', image: 'plus.png', height: 50, width: 30, css: 'image_button_section'}
-	], css: 'profile_section'
+	], css: 'profile_section dummy_check'
 };
 var chatSection = {	type: 'clean', paddingX:10, height: 300, rows: [
 		{animate: false, cells: [
 			{template: "<div></div>"},
       { id:"a1", css:"draft", 
       	view: 'list', 
-					select: true,
-					columns: [
-						{id: 'icon', height: 20, width: 20, marginRight: 18},
-						{id: 'menuOption', fillspace: true}
-					],
+				select: true,
+				type: {
+					templateStart: "<div item_id='id' class = 'custom_item chat_user_info'>",
+					template: "<div class = 'avatar' style = 'background-color: #backgroundColor#'>#dummyTitle#</div><div style = 'display: flex; justify-content: center; align-items: center;'><div class = 'title'> #value# </div></div>",
+					templateEnd: "</div>"
+				},
 				header: false,
-				data: categories, 
-				scroll: true},
+				data: chatbox, 
+				scroll: true, css: "chatbox_section"},
       { id:"a2", css:"draft", 
       	view: 'list', 
-					select: true,
-				columns: [
-					{id: 'icon', height: 20, width: 20, marginRight: 18},
-					{id: 'menuOption', fillspace: true}
-			],
+				select: true,
+				type: {
+					templateStart: "<div item_id='id' class = 'custom_item chat_user_info'>",
+					template: "<div class = 'avatar' style = 'background-color: #backgroundColor#'>#dummyTitle#</div><div style = 'display: flex; flex-direction: column; justify-content: flex-start; width: 180px;'><div class = 'title' style = 'color: #666; font-size: 13px;'> #value# </div><div class = 'message_section'><p style = 'color: #666; font-size: 11px;'>#message#</p></div></div>",
+					templateEnd: "</div>"
+				},
 			header: false,
-			data: categories, 
-			scroll: true},
+			data: chatbox, 
+			scroll: true, css: "chatbox_section"},
       {template: "<div></div>"}
     ]},
 		{ view: 'tabbar', value: 'a1', type: 'bottom', multiview: true, tabMinWidth: 50, options: [
@@ -91,7 +103,7 @@ var chatSection = {	type: 'clean', paddingX:10, height: 300, rows: [
       { id:"a1", value:"<span class='webix_icon fas fa-user'></span>", css: "icon_draft"},
       { id:"a2", value:"<span class='webix_icon fas fa-comment'></span>", css: "icon_draft" },
       {value: ""}
-		]}
+		], css: 'dummy_check'}
 	]};
 
 var leftSidebar = {rows: [
@@ -106,7 +118,7 @@ var rightSidebar = {rows: [
 		{view: 'button', type: 'image', image: 'tasks.png', height: 26, width: 26},
 		{template: '<div class = "border_line"></div>', height: 26, width: 26},
 		{view: 'button', type: 'image', image: 'plus.png', height: 26, width: 26}
-	], width: 55, css: 'right_sidebar'
+	], width: 55, css: 'right_sidebar dummy_check'
 };
 
 var appHeader = {height: 48, maxWidth: 996, padding: 10, cols:[
@@ -130,7 +142,7 @@ var mainContent = {
 		{id: "star", css: "star_section", template: function(obj){
 				return "<span class = 'webix_icon orange_star "+(obj.star?"fas fa-star":"far fa-star")+"'></span>"
 			}, width: 40},
-		{id: "from", css: "sender_section", width: 150},
+		{id: "from", css: "sender_section", width: 200},
 		{id: "subject",css: "subject_section", fillspace: true},
 		{id: "date", css: "date_section"}		
 	], header: false, 

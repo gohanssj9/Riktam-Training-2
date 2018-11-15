@@ -1,6 +1,13 @@
 body {
 	font-family: 'Roboto', sans-serif;
 }
+.webix_view {
+	border: none;
+}
+
+.dummy_check {
+	border: 1px solid #e5e5e5;
+}
 
 .category {
 	font-size: 14px;
@@ -190,7 +197,7 @@ button.webix_img_btn {
 
 .webix_view.webix_control.webix_el_button.appheader_section_caret{
 	padding-left: 0 !important;
-	margin-left: -8px !important;
+	margin-left: -3px !important;
 }
 
 .webix_view.webix_control.webix_el_button.appheader_section.right_move {
@@ -344,6 +351,11 @@ button.webix_img_btn {
 	height: 20px !important;
 }
 
+.webix_el_tabbar.dummy_check {
+	margin-left: 0px !important;
+	border-width: 1px 0px 0px 0px !important;
+}
+
 .webix_item_tab.webix_selected.icon_draft, 
 .webix_item_tab.webix_selected.icon_draft:focus,
 .webix_item_tab.webix_selected.icon_draft:hover {
@@ -364,4 +376,48 @@ button.webix_img_btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.chat_user_info {
+	border-width: 0px !important;
+	margin: 3px 0px !important;
+	height: 40px !important;
+	border-radius: 10px;
+	padding-left: 0px !important;
+	display: flex;
+	flex-direction: row;
+	width: 235px;
+}
+
+.chat_user_info .webix_template{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4px 10px;
+}
+
+.chat_user_info .avatar {
+	border-radius: 14px;
+	width: 28px;
+	height: 28px;
+	background-color: #0097A7;
+	color: #fff;
+	text-align: center;
+	line-height: 29px;
+	font-size: 18px;
+	margin: 5px;
+	margin-right: 8px;
+	display: inline-block;
+}
+
+.webix_view.webix_list.chatbox_section{
+	overflow-y: scroll !important;
+}
+
+.message_section p{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: 0;
+	font-size: 12px;
 }
