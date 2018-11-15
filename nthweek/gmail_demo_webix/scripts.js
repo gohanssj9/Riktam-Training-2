@@ -100,10 +100,10 @@ var chatSection = {	type: 'clean', paddingX:10, height: 300, rows: [
     ]},
 		{ view: 'tabbar', value: 'a1', type: 'bottom', multiview: true, tabMinWidth: 50, options: [
 			{value: ""},
-      { id:"a1", value:"<span class='webix_icon fas fa-user'></span>", css: "icon_draft"},
-      { id:"a2", value:"<span class='webix_icon fas fa-comment'></span>", css: "icon_draft" },
+      { id:"a1", value:"<span class='webix_icon fas fa-user'></span>", css: "icon_draft", width: 45},
+      { id:"a2", value:"<span class='webix_icon fas fa-comment'></span>", css: "icon_draft", width: 45},
       {value: ""}
-		], css: 'dummy_check'}
+		], css: 'dummy_check', height: 30}
 	]};
 
 var leftSidebar = {rows: [

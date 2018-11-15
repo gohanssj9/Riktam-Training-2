@@ -168,6 +168,10 @@ button.webix_img_btn {
 	font-size: 16px;
 }
 
+.fas.fa-user, .fas.fa-comment {
+	font-size: 14px;
+}
+
 .fa.fa-chevron-left, .fa.fa-chevron-right, .fas.fa-caret-down{
 	font-size: 12px;
 }
