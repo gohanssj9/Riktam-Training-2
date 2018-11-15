@@ -39,7 +39,7 @@ var categories = [
 var chatbox = [
 	{dummyTitle: 'I', value: 'Iron Man', backgroundColor: '#f9619f', message: 'You: You want me to repair Jarvis? I know you cannot fix it on your own.'},
 	{dummyTitle: 'A', value: 'Atom', backgroundColor: '#352cb5', message: 'Beep Beep Beep'},
-	{dummyTitle: 'R', value: 'Real Steel', backgroundColor: '#2088c0', message: 'Great movie!'},
+	{dummyTitle: 'R', value: 'Real Steel', backgroundColor: '#2088c0', message: 'You: Great movie!'},
 	{dummyTitle: 'W', value: 'Wolverine', backgroundColor: '#f91abe', message: 'Grrr'},
 	{dummyTitle: 'C', value: 'Cyclops', backgroundColor: '#c43597', message: 'Thanks for saving us!'},
 	{dummyTitle: 'H', value: 'Hulk', backgroundColor: '#c4d395', message: 'Thanos scared me !'},
