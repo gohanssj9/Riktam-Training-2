@@ -12,18 +12,6 @@ function getData(){
 	return data;
 }
 
-webix.ui({
-  view:"window",
-  id: "window1",
-  width:514,
-  height:476,
-  head:"My Window",
-  autofit:false,
-  body:{
-    template:"Window Position:<br/><br/> Left offset is 200px, <br/> Top offset is 150px"
-  }
-});
-
 var searchBar = { view: "form", margin: 0, cols: [
 	{ view: "search", placeholder: "Search mail", inputHeight: 50, height: 50, css: 'search_section'},
 	{gravity: 0.25},
@@ -166,6 +154,22 @@ var infoTabs = {rows: [
 	appHeader,
 	mainContent
 ]};
+
+webix.ui({
+  view:"window",
+  id: "window1",
+  width:514,
+  height:476,
+  head:{view: "toolbar", cols: [
+  	{view: "label", label: "New message"},
+  	{view: "button", label: "Close", click: "$$('window1').hide();"}
+  ]},
+  headHeight: 40,
+  autofit:false,
+  body:{
+    template:"Window Position:<br/><br/> Left offset is 200px, <br/> Top offset is 150px"
+  }
+});
 
 webix.ui({
 	rows: [
