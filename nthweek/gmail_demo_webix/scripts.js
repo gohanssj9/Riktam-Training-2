@@ -12,6 +12,18 @@ function getData(){
 	return data;
 }
 
+webix.ui({
+  view:"window",
+  id: "window1",
+  width:514,
+  height:476,
+  head:"My Window",
+  autofit:false,
+  body:{
+    template:"Window Position:<br/><br/> Left offset is 200px, <br/> Top offset is 150px"
+  }
+});
+
 var searchBar = { view: "form", margin: 0, cols: [
 	{ view: "search", placeholder: "Search mail", inputHeight: 50, height: 50, css: 'search_section'},
 	{gravity: 0.25},
@@ -51,7 +63,7 @@ var menuSection = {
 	margin: 10,
 	height: 250,
 	rows: [
-		{view: 'button', type: 'image', image: 'plus_logo.png', label: 'Compose', height: 55, width: 150},
+		{view: 'button', type: 'image', image: 'plus_logo.png', label: 'Compose', height: 55, width: 150, click: function(){$$("window1").show({x: 710, y:190});}},
 		{view: 'list', 
 			select: true,
 			columns: [

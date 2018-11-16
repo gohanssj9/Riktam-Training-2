@@ -323,6 +323,10 @@ button.webix_img_btn {
 	align-items: center !important;
 }
 
+.text_section p {
+	margin: 0 !important;
+}
+
 .webix_view.icon_section .webix_el_box, .webix_view.icon_section{
 	padding: 0px !important;
 }
