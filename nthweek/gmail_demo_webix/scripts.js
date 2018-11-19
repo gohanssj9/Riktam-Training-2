@@ -60,9 +60,11 @@ var menuSection = {
 			],
 			header: false,
 			data: categories, 
-			scroll: true}
+			scroll: true,
+		}
 	]
 };
+
 var profileSection = {height: 50, cols: [
 		{view: 'button', css: 'profile_image', type: 'image', image: 'user_avatar.png', height: 32, width: 32},
 		{template: '<div class="text_inside"><p>Sriteja</p></div>', width: 40, css: 'text_section'},
@@ -160,15 +162,30 @@ webix.ui({
   id: "window1",
   width:514,
   height:476,
-  head:{view: "toolbar", cols: [
-  	{view: "label", label: "New message"},
-  	{view: "button", label: "Close", click: "$$('window1').hide();"}
+  head:{view: "toolbar", css:"toolbar_compose_section", cols: [
+  	{view: "label", label: "New Message", maxWidth: 420, css: "header_section"},
+  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
+  	{view: "button", type: "iconButton", icon: "fas fa-arrows-alt-v", width: 24, height: 24, css: "header_icon_section"},
+  	{view: "button", type: "iconButton", icon: "fas fa-times", width: 24, height: 24, css: "header_icon_section", click: "$$('window1').hide();"}
   ]},
   headHeight: 40,
   autofit:false,
-  body:{
-    template:"Window Position:<br/><br/> Left offset is 200px, <br/> Top offset is 150px"
-  }
+  body:{ rows: [
+  	{view: "text", label: "To", css: "text_label_section"},
+  	{view: "text", placeholder: "Subject", css: "text_label_section"},
+  	{view: "textarea", css: "textarea_label_section", fillspace: true},
+  	{view: "toolbar", height: 60, cols: [
+  		{view: "button", label: "Send"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
+  	]}
+  ]}
 });
 
 webix.ui({
@@ -181,5 +198,10 @@ webix.ui({
 				rightSidebar
 			]
 		}
-	]
+	],
 });
+
+// $$("$list1").addCss(0, "webix_focused");
+
+
+    // template:"Window Position:<br/><br/> Left offset is 200px, <br/> Top offset is 150px"
