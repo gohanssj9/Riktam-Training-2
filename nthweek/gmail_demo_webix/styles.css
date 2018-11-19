@@ -507,6 +507,80 @@ button.webix_img_btn .webix_image {
 	border: none !important;
 }
 
+.body_compose_section {
+	height: 40px !important;
+	padding: 10px !important;
+}
+
+.body_compose_section .webix_scroll_cont {
+	height: 40px !important;
+}
+.send_button {
+	height: 36px !important;
+	padding: 0px 5px !important;
+}
+
+.send_button .webix_el_box {
+	height: 36px !important;
+	padding: 0px !important;
+}
+
+.send_button .webix_el_box button {
+	border-radius: 5px;
+	background-color: #1a73e8;
+	color: white;
+	height: 36px;
+	width: 72px;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.body_icon_section {
+	height: 36px !important;
+	padding: 0px 5px !important;
+}
+
+.body_icon_section .webix_el_box {
+	height: 36px !important;
+}
+
+.body_icon_section .webix_el_box button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;
+}
+
+.body_icon_section .webix_icon {
+	margin-right: 0px !important;
+}
+
+.body_icon_section .webix_img_btn_abs span.webix_icon {
+	color: #757575 !important;
+	font-size: 18px !important;
+}
+
+.text_compose_section {
+	width: 150px !important;
+	height: 36px !important;
+	margin-top: 0px !important;
+	margin-left: 0px !important;
+}
+
+.text_compose_section .webix_template {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 4px 8px 4px 12px !important;
+}
+
+.text_compose_section .webix_template p{
+	margin: 0px;
+	font-weight: 300;
+	color: #b5b5b5;	
+}
+
 ::placeholder {
 	color: #353535 !important;
 }
+

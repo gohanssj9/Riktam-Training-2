@@ -170,20 +170,21 @@ webix.ui({
   ]},
   headHeight: 40,
   autofit:false,
-  body:{ rows: [
+  body:{rows: [
   	{view: "text", label: "To", css: "text_label_section"},
   	{view: "text", placeholder: "Subject", css: "text_label_section"},
   	{view: "textarea", css: "textarea_label_section", fillspace: true},
-  	{view: "toolbar", height: 60, cols: [
-  		{view: "button", label: "Send"},
-	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
-	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
-	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
-	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
-	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
-	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
-	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
-	  	{view: "button", type: "iconButton", icon: "fas fa-chevron-down", width: 24, height: 24, css: "header_icon_section"},
+  	{view: "toolbar", height: 60,css: "body_compose_section", cols: [
+  		{view: "button", label: "Send", width: 72, height: 36, css: "send_button"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-underline", width: 24, height: 24, css: "body_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-paperclip", width: 24, height: 24, css: "body_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-link", width: 24, height: 24, css: "body_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "far fa-grin", width: 24, height: 24, css: "body_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fab fa-google-drive", width: 24, height: 24, css: "body_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-image", width: 24, height: 24, css: "body_icon_section"},
+	  	{template: "<p>Saved</p>", css: "text_compose_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-trash", width: 24, height: 24, css: "body_icon_section"},
+	  	{view: "button", type: "iconButton", icon: "fas fa-ellipsis-v", width: 24, height: 24, css: "body_icon_section"},
   	]}
   ]}
 });
