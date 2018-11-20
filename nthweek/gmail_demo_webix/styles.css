@@ -123,6 +123,10 @@ button.webix_img_btn .webix_image {
 	align-items: center;
 }
 
+.webix_table_checkbox {
+	color: inherit;
+	background-color: inherit;
+}
 .checkbox_section .webix_cell {
 	padding-left: 12px !important;
 }
@@ -185,7 +189,9 @@ button.webix_img_btn .webix_image {
 
 .far.fa-square, .fa.fa-check-square, .fa.fa-ellipsis-v, .fa.fa-redo, .fa.fa-chevron-left, 
 .fa.fa-chevron-right, .fas.fa-cog, .fas.fa-caret-down, 
-.fas.fa-bars, .fas.fa-th, .fas.fa-bell, .fas.fa-user, .fas.fa-comment, .fas.fa-arrows-alt-v, .fas.fa-times, .fas.fa-chevron-down {
+.fas.fa-bars, .fas.fa-th, .fas.fa-bell, .fas.fa-user, .fas.fa-comment, 
+.fas.fa-arrows-alt-v, .fas.fa-times, .fas.fa-chevron-down, .fas.fa-tags, .fas.fa-trash, .fas.fa-envelope, .fas.fa-clock, 
+.fas.fa-folder-plus {
 	font-size: 18px;
 	color: #757575;
 }
@@ -229,14 +235,14 @@ button.webix_img_btn .webix_image {
 	margin-left: -3px !important;
 }
 
-.webix_view.webix_control.webix_el_button.appheader_section.right_move {
+/*.webix_view.webix_control.webix_el_button.appheader_section.right_move {
 	transform: translateX(-300%);
 }
 
 .webix_view.webix_control.webix_el_label.appheader_section.right_move {
 	transform: translateX(-110%);
 }
-
+*/
 .logo .logo_inner{
 	background-image: url('logo.png');
 	background-size: contain;
@@ -596,6 +602,13 @@ button.webix_img_btn .webix_image {
 	margin: 0px;
 	font-weight: 300;
 	color: #b5b5b5;	
+}
+
+.myhover {
+}
+
+.notmyhover p {
+	font-size: 36px;
 }
 
 ::placeholder {

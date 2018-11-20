@@ -2,7 +2,7 @@ function getData(){
 	var data = [];
 	for(var i=0; i<50; i++){
 		data.push({
-			check: Math.random() > 0.85 ? 1 : 0,
+			check: Math.random() > 1.0 ? 1 : 0,
 			star: Math.random() > 0.7 ? 1 : 0,
 			from: "<p>Tigersheet.com</p>",
 			subject: "<p>People WFH today - Hello all, People working from home today: Please login below to check the details. Click here. Cheers, Tigersheet.com Team </p>",
@@ -123,13 +123,21 @@ var rightSidebar = {rows: [
 	], width: 55, css: 'right_sidebar dummy_check'
 };
 
-var appHeader = {height: 48, maxWidth: 996, padding: 10, cols:[
-	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'far fa-square', width: 20},
+var appHeader = {id: "appHeader", height: 48, maxWidth: 996, padding: 10, cols:[
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'webix_table_checkbox far fa-square', width: 20},
 	{view: 'button', css: 'appheader_section_caret', type: 'iconButton', icon: 'fas fa-caret-down', width: 10},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-redo', width: 20},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-ellipsis-v', width: 20},
-	{},
-	{view: 'label', label: '<div class="flexed"><p>1-50 of 391</p></div>', width: 100, css: 'appheader_section right_move'},
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-trash', width: 20},
+	{template: "<div class = 'vert_line'></div>", width: 10},
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-envelope', width: 20},
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-clock', width: 20},
+	{template: "<div class = 'vert_line'></div>", width: 10},
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-folder-plus', width: 20},
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-tags', width: 20},
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-ellipsis-v', width: 20},
+	{maxWidth: 380},
+	{view: 'label', label: '<div class="flexed"><p>1–50 of 409</p></div>', width: 100, css: 'appheader_section right_move'},
 	{view:"button", type:"iconButton", icon:"fa fa-chevron-left", width:20, css:"appheader_section right_move"},
   {view:"button", type:"iconButton", icon:"fa fa-chevron-right", width:20, css:"appheader_section right_move"},
 	{view:"button", type:"iconButton", icon:"fas fa-cog", width: 20, css: "appheader_section right_move"}
@@ -139,17 +147,19 @@ var mainContent = {
 	view: 'datatable', scroll: 'y',
 	columns: [
 		{id: "check", css: "checkbox_section", template: function(obj) {
-			return "<div class='"+(obj.check?"fa fa-check-square" : "far fa-square")+"'></div>"	
+			return "<div class='webix_table_checkbox clickable "+(obj.check?"fa fa-check-square" : "far fa-square")+"'></div>"	
 		}, width: 40},
 		{id: "star", css: "star_section", template: function(obj){
 				return "<span class = 'webix_icon orange_star "+(obj.star?"fas fa-star":"far fa-star")+"'></span>"
 			}, width: 40},
 		{id: "from", css: "sender_section", width: 200},
 		{id: "subject",css: "subject_section", fillspace: true},
-		{id: "date", css: "date_section"}		
+		{id: "date", css: "date_section", hover: "notmyhover"}		
 	], header: false, 
 		data:getData(), 
 		select: true,
+		hover: "myhover",
+		checkboxRefresh:true,
 };
 
 var infoTabs = {rows: [
@@ -201,7 +211,6 @@ webix.ui({
 		}
 	],
 });
-
 // $$("$list1").addCss(0, "webix_focused");
 
 
