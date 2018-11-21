@@ -23,7 +23,7 @@ body {
 .webix_view.webix_control.webix_el_button {
 	margin-left: 0 !important;
 	margin-top: 0 !important;
-	padding: 10px;
+	padding: 10px 12px 10px 10px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -191,7 +191,7 @@ button.webix_img_btn .webix_image {
 .fa.fa-chevron-right, .fas.fa-cog, .fas.fa-caret-down, 
 .fas.fa-bars, .fas.fa-th, .fas.fa-bell, .fas.fa-user, .fas.fa-comment, 
 .fas.fa-arrows-alt-v, .fas.fa-times, .fas.fa-chevron-down, .fas.fa-tags, .fas.fa-trash, .fas.fa-envelope, .fas.fa-clock, 
-.fas.fa-folder-plus {
+.fas.fa-folder-plus, .fas.fa-download, .fas.fa-exclamation-circle, .fas.fa-minus-square {
 	font-size: 18px;
 	color: #757575;
 }
@@ -223,6 +223,19 @@ button.webix_img_btn .webix_image {
 	padding: 0;
 }
 
+.vertic_line {
+	margin: 13px 5px 0px 5px !important;
+}
+
+.vertic_line .webix_template {
+	padding: 0px;
+}
+
+.vert_line {
+	border-left: 1px solid #e5e5e5 !important;
+	height: 23px;
+}
+
 .appheader_section p {
 	margin: 0;
 	font-size: 12px;
@@ -235,14 +248,6 @@ button.webix_img_btn .webix_image {
 	margin-left: -3px !important;
 }
 
-/*.webix_view.webix_control.webix_el_button.appheader_section.right_move {
-	transform: translateX(-300%);
-}
-
-.webix_view.webix_control.webix_el_label.appheader_section.right_move {
-	transform: translateX(-110%);
-}
-*/
 .logo .logo_inner{
 	background-image: url('logo.png');
 	background-size: contain;
@@ -604,11 +609,26 @@ button.webix_img_btn .webix_image {
 	color: #b5b5b5;	
 }
 
-.myhover {
+.date_section .myhover {
+	/*visibility: hidden;*/
+	width: 0px !important;
+	background-color: #FF0000;
 }
 
-.notmyhover p {
-	font-size: 36px;
+.random_text_section {
+	width: 0px !important;
+}
+
+.random_text_section .webix_cell {
+	padding: 0px !important;
+	width: 0px !important;
+	display: none;
+}
+
+.random_text_section .webix_cell.myhover {
+	width: 100px !important;
+	background-color: #00FF00;
+	display: block !important;
 }
 
 ::placeholder {

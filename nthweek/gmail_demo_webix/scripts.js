@@ -1,3 +1,5 @@
+var checkValue = 0;
+
 function getData(){
 	var data = [];
 	for(var i=0; i<50; i++){
@@ -6,7 +8,8 @@ function getData(){
 			star: Math.random() > 0.7 ? 1 : 0,
 			from: "<p>Tigersheet.com</p>",
 			subject: "<p>People WFH today - Hello all, People working from home today: Please login below to check the details. Click here. Cheers, Tigersheet.com Team </p>",
-			date: "<p>Oct " + (19+Math.round(Math.random()*10)) + "</p>"
+			date: "<p>Oct " + (19+Math.round(Math.random()*10)) + "</p>",
+			random_text: "random"
 		});
 	}
 	return data;
@@ -128,15 +131,27 @@ var appHeader = {id: "appHeader", height: 48, maxWidth: 996, padding: 10, cols:[
 	{view: 'button', css: 'appheader_section_caret', type: 'iconButton', icon: 'fas fa-caret-down', width: 10},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-redo', width: 20},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-ellipsis-v', width: 20},
+	{maxWidth: 600},
+	{view: 'label', label: '<div class="flexed"><p>1–50 of 409</p></div>', width: 100, css: 'appheader_section right_move'},
+	{view:"button", type:"iconButton", icon:"fa fa-chevron-left", width:20, css:"appheader_section right_move"},
+  {view:"button", type:"iconButton", icon:"fa fa-chevron-right", width:20, css:"appheader_section right_move"},
+	{view:"button", type:"iconButton", icon:"fas fa-cog", width: 20, css: "appheader_section right_move"}
+]};
+
+var appHeaderReplace = {id: "appHeaderReplace", height: 48, maxWidth: 996, padding: 10, cols:[
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'webix_table_checkbox fas fa-minus-square', width: 20},
+	{view: 'button', css: 'appheader_section_caret', type: 'iconButton', icon: 'fas fa-caret-down', width: 10},
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-download', width: 20},
+	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-exclamation-circle', width: 20},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-trash', width: 20},
-	{template: "<div class = 'vert_line'></div>", width: 10},
+	{template: "<div class = 'vert_line'></div>", width: 5, css: "vertic_line"},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-envelope', width: 20},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-clock', width: 20},
-	{template: "<div class = 'vert_line'></div>", width: 10},
+	{template: "<div class = 'vert_line'></div>", width: 5, css: "vertic_line"},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-folder-plus', width: 20},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fas fa-tags', width: 20},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-ellipsis-v', width: 20},
-	{maxWidth: 380},
+	{maxWidth: 320},
 	{view: 'label', label: '<div class="flexed"><p>1–50 of 409</p></div>', width: 100, css: 'appheader_section right_move'},
 	{view:"button", type:"iconButton", icon:"fa fa-chevron-left", width:20, css:"appheader_section right_move"},
   {view:"button", type:"iconButton", icon:"fa fa-chevron-right", width:20, css:"appheader_section right_move"},
@@ -144,7 +159,7 @@ var appHeader = {id: "appHeader", height: 48, maxWidth: 996, padding: 10, cols:[
 ]};
 
 var mainContent = {
-	view: 'datatable', scroll: 'y',
+	view: 'datatable', scroll: 'y', id: "datatable_id",
 	columns: [
 		{id: "check", css: "checkbox_section", template: function(obj) {
 			return "<div class='webix_table_checkbox clickable "+(obj.check?"fa fa-check-square" : "far fa-square")+"'></div>"	
@@ -154,12 +169,43 @@ var mainContent = {
 			}, width: 40},
 		{id: "from", css: "sender_section", width: 200},
 		{id: "subject",css: "subject_section", fillspace: true},
-		{id: "date", css: "date_section", hover: "notmyhover"}		
+		{id: "date", css: "date_section"},
+		{id: "random_text", css: "random_text_section"}		
 	], header: false, 
 		data:getData(), 
 		select: true,
 		hover: "myhover",
 		checkboxRefresh:true,
+		onClick: {
+			"clickable": function(e, id, target){
+				console.log("Clickable");
+				var val = this.getText(id.row, id.column);
+				if(val == "<div class='webix_table_checkbox clickable far fa-square'></div>")
+					val = 1;
+				else val = 0;
+
+				if(checkValue != val && val == 1) {
+					webix.ui(appHeaderReplace,$$("appHeader"));
+					checkValue = val;
+				}
+				else if(checkValue != val && val == 0){
+					webix.ui(appHeader, $$("appHeaderReplace"));
+					checkValue = val;
+				}
+				console.log(arguments);
+			}
+		},
+		on: {
+			onMouseMoving: function(ev){
+				console.log("In onMouseMoving");
+				var row = this.locate(ev).row;
+				console.log(row);
+				if(row != this.last_used_row)
+					webix.ui({template: "welcome"}, $$("date"));
+				this.last_used_row = row;
+				console.log("After onMouseMoving");
+			}
+		}
 };
 
 var infoTabs = {rows: [
