@@ -8,8 +8,7 @@ function getData(){
 			star: Math.random() > 0.7 ? 1 : 0,
 			from: "<p>Tigersheet.com</p>",
 			subject: "<p>People WFH today - Hello all, People working from home today: Please login below to check the details. Click here. Cheers, Tigersheet.com Team </p>",
-			date: "<p>Oct " + (19+Math.round(Math.random()*10)) + "</p>",
-			random_text: "random"
+			date: "<p>Oct " + (19+Math.round(Math.random()*10)) + "</p>"
 		});
 	}
 	return data;
@@ -131,7 +130,7 @@ var appHeader = {id: "appHeader", height: 48, maxWidth: 996, padding: 10, cols:[
 	{view: 'button', css: 'appheader_section_caret', type: 'iconButton', icon: 'fas fa-caret-down', width: 10},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-redo', width: 20},
 	{view: 'button', css: 'appheader_section', type: 'iconButton', icon: 'fa fa-ellipsis-v', width: 20},
-	{maxWidth: 600},
+	{maxWidth: 602},
 	{view: 'label', label: '<div class="flexed"><p>1–50 of 409</p></div>', width: 100, css: 'appheader_section right_move'},
 	{view:"button", type:"iconButton", icon:"fa fa-chevron-left", width:20, css:"appheader_section right_move"},
   {view:"button", type:"iconButton", icon:"fa fa-chevron-right", width:20, css:"appheader_section right_move"},
@@ -158,54 +157,76 @@ var appHeaderReplace = {id: "appHeaderReplace", height: 48, maxWidth: 996, paddi
 	{view:"button", type:"iconButton", icon:"fas fa-cog", width: 20, css: "appheader_section right_move"}
 ]};
 
-var mainContent = {
-	view: 'datatable', scroll: 'y', id: "datatable_id",
-	columns: [
-		{id: "check", css: "checkbox_section", template: function(obj) {
-			return "<div class='webix_table_checkbox clickable "+(obj.check?"fa fa-check-square" : "far fa-square")+"'></div>"	
-		}, width: 40},
-		{id: "star", css: "star_section", template: function(obj){
-				return "<span class = 'webix_icon orange_star "+(obj.star?"fas fa-star":"far fa-star")+"'></span>"
+var mainContent = {rows: [
+		{view: 'datatable', scroll: 'y', id: "datatable_id",
+			columns: [
+			{id: "check", css: "checkbox_section", template: function(obj) {
+				return "<div class='webix_table_checkbox clickable "+(obj.check?"fa fa-check-square" : "far fa-square")+"'></div>"	
 			}, width: 40},
-		{id: "from", css: "sender_section", width: 200},
-		{id: "subject",css: "subject_section", fillspace: true},
-		{id: "date", css: "date_section"},
-		{id: "random_text", css: "random_text_section"}		
-	], header: false, 
-		data:getData(), 
-		select: true,
-		hover: "myhover",
-		checkboxRefresh:true,
-		onClick: {
-			"clickable": function(e, id, target){
-				console.log("Clickable");
-				var val = this.getText(id.row, id.column);
-				if(val == "<div class='webix_table_checkbox clickable far fa-square'></div>")
-					val = 1;
-				else val = 0;
+			{id: "star", css: "star_section", template: function(obj){
+					return "<span class = 'webix_icon orange_star "+(obj.star?"fas fa-star":"far fa-star")+"'></span>"
+				}, width: 40},
+			{id: "from", css: "sender_section", width: 200},
+			{id: "subject",css: "subject_section", fillspace: true},
+			{id: "date", css: "date_section"},
+			{id: "icons_section", css: "icons_section", template: "<div class = 'space fas fa-download'></div><div class = 'space fas fa-trash'></div><div class = 'space fas fa-mail-bulk'></div><div class = 'space fas fa-clock'></div>"}
+		], 
+			header: false, 
+			data:getData(), 
+			select: "row",
+			multiselect: true,
+			hover: "myhover",
+			checkboxRefresh:true,
+			onClick: {
+				"clickable": function(e, id, target){
+					console.log("Clickable");
+					console.log(id);
+					var val = this.getText(id.row, id.column);
+					if(val == "<div class='webix_table_checkbox clickable far fa-square'></div>")
+						val = 1;
+					else val = 0;
 
-				if(checkValue != val && val == 1) {
-					webix.ui(appHeaderReplace,$$("appHeader"));
-					checkValue = val;
+					if(checkValue != val && val == 1) {
+						webix.ui(appHeaderReplace,$$("appHeader"));
+						checkValue = val;
+					}
+					else if(checkValue != val && val == 0){
+						webix.ui(appHeader, $$("appHeaderReplace"));
+						checkValue = val;
+					}
+					console.log(arguments);
 				}
-				else if(checkValue != val && val == 0){
-					webix.ui(appHeader, $$("appHeaderReplace"));
-					checkValue = val;
-				}
-				console.log(arguments);
-			}
-		},
-		on: {
-			onMouseMoving: function(ev){
-				console.log("In onMouseMoving");
-				var row = this.locate(ev).row;
-				console.log(row);
-				if(row != this.last_used_row)
-					webix.ui({template: "welcome"}, $$("date"));
-				this.last_used_row = row;
-				console.log("After onMouseMoving");
-			}
+			},
+			// on: {
+			// 	onMouseMove: function(id, e, node){
+			// 		// this.remove(id.row);
+			// 		this.addCellCss(id.row, "date", "make_me_none");
+			// 		this.addCellCss(id.row, "icons_section", "make_me_block");
+			// 		var row = id.row;
+			// 		if(row != this.last_used_row){
+			// 			this.removeCellCss(this.last_used_row, "date", "make_me_none");
+			// 			this.removeCellCss(id.row, "icons_section", "make_me_block");
+			// 			this.last_used_row = row;
+			// 		}
+					// console.log(this.locate(e));
+					// console.log("In onMouseMoving");
+					// var row = this.locate(ev).row;
+					// var col = this.locate(ev).cind;
+					// console.log(this.locate(ev));
+					// if (row != this.last_used_row)
+					// 	$$("datatable_id").remove(row);
+					// this.last_used_row = row;
+					// // $$("datatable_id").addCellCss(row, "date", "date_section make_me_none");
+					// // this.showColumn("random_text");
+					// // this.hideColumn("date");
+					// // if(row != this.last_used_row)
+					// // 	webix.ui({template: "welcome"}, $$("date"));
+					// // this.last_used_row = row;
+					// console.log("After onMouseMoving");
+				// }
+			// }
 		}
+	]
 };
 
 var infoTabs = {rows: [

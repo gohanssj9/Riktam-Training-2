@@ -89,6 +89,10 @@ button.webix_img_btn .webix_image {
 	border-bottom: 1px solid #e9e9e9;
 }
 
+.webix_column > div.myhover {
+	box-shadow: 0px 3px 2px -2px #a5a5a5;
+}
+
 .orange_star.fas.fa-star {
 	color: #F4C84A;
 	font-size: 14px;
@@ -191,7 +195,7 @@ button.webix_img_btn .webix_image {
 .fa.fa-chevron-right, .fas.fa-cog, .fas.fa-caret-down, 
 .fas.fa-bars, .fas.fa-th, .fas.fa-bell, .fas.fa-user, .fas.fa-comment, 
 .fas.fa-arrows-alt-v, .fas.fa-times, .fas.fa-chevron-down, .fas.fa-tags, .fas.fa-trash, .fas.fa-envelope, .fas.fa-clock, 
-.fas.fa-folder-plus, .fas.fa-download, .fas.fa-exclamation-circle, .fas.fa-minus-square {
+.fas.fa-folder-plus, .fas.fa-download, .fas.fa-exclamation-circle, .fas.fa-minus-square, .fas.fa-mail-bulk {
 	font-size: 18px;
 	color: #757575;
 }
@@ -206,7 +210,9 @@ button.webix_img_btn .webix_image {
 .fa.fa-chevron-left, .fa.fa-chevron-right, .fas.fa-caret-down{
 	font-size: 12px;
 }
-
+.space.fas.fa-mail-bulk, .space.fas.fa-download, .space.fas.fa-trash, .space.fas.fa-clock {
+	font-size: 16px;
+}
 .appheader_section .webixtype_base, .appheader_section_caret .webixtype_base, .topheader_section .webixtype_base {
 	background: #FFFFFF;
 }
@@ -609,26 +615,59 @@ button.webix_img_btn .webix_image {
 	color: #b5b5b5;	
 }
 
-.date_section .myhover {
-	/*visibility: hidden;*/
+/*.date_section .webix_cell.myhover {
 	width: 0px !important;
 	background-color: #FF0000;
 }
 
 .random_text_section {
 	width: 0px !important;
+	display: block;
 }
 
 .random_text_section .webix_cell {
 	padding: 0px !important;
 	width: 0px !important;
-	display: none;
 }
 
 .random_text_section .webix_cell.myhover {
 	width: 100px !important;
 	background-color: #00FF00;
-	display: block !important;
+}
+*/
+
+.subject_section .webix_cell {
+	width: 603px !important;
+}
+
+.subject_section .webix_cell.myhover {
+	width: 543px !important;
+}
+.date_section {
+	left: 877px !important;
+}
+.date_section .myhover{
+	visibility: hidden;
+}
+
+.icons_section {
+	width: 160px !important;
+	left: 817px !important
+}
+
+.icons_section .webix_cell {
+	visibility: hidden;
+}
+.icons_section .webix_cell.myhover{
+	visibility: visible;
+	width: 160px !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icons_section .webix_cell .space, .icons_section .webix_cell.myhover .space {
+	margin: 0px 10px !important;
 }
 
 ::placeholder {
