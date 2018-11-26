@@ -1,5 +1,5 @@
 import {JetView, plugins} from "webix-jet";
-
+import StartView from 'views/start';
 
 
 export default class TopView extends JetView{
@@ -23,23 +23,36 @@ export default class TopView extends JetView{
 			]
 		};
 
+		// var menu = {
+		// 	view:"menu", id:"top:menu", 
+		// 	css:"app_menu",
+		// 	width:380, layout:"y", select:true,
+		// 	template:"<span class='webix_icon #icon#'></span> #value# ",
+		// 	data:[
+		// 		{ value:"Dashboard", id:"start", icon:"wxi-columns" },
+		// 		{ value:"Data",		 id:"data",  icon:"wxi-pencil" }
+		// 	]
+		// };
+
 		var menu = {
-			view:"menu", id:"top:menu", 
-			css:"app_menu",
-			width:380, layout:"y", select:true,
-			template:"<span class='webix_icon #icon#'></span> #value# ",
-			data:[
-				{ value:"Dashboard", id:"start", icon:"wxi-columns" },
-				{ value:"Data",		 id:"data",  icon:"wxi-pencil" }
+			view: "accordion", width: 420, id: "top:menu",
+			rows: [
+				{header: "Look for a Flight", body: "content 1", height: 370},
+				{header: "Hotels", body: "content 2", collapsed: true, height: 330},
+				{header: "Cars", body: "content 3", collapsed: true, height: 330},
+				{header: "Register", body: "content 4", collapsed: true, height: 330},
+				{}
 			]
-		};
+		}
 
 		var ui = {
-			type:"clean", css:"app_layout", rows:[
+			rows:[
 				header,
-				{  paddingX:5, paddingY:10, rows: [ {css:"webix_shadow_medium", rows:[menu]} ]},
-				{ type:"wide", paddingY:10, paddingX:5, rows:[
-					{ $subview:true } 
+				{type: "space", cols: [
+					menu,
+					{rows:[
+						StartView
+					]}
 				]}
 			]
 		};
