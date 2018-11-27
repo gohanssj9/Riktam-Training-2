@@ -59,3 +59,27 @@ body {
 	font-size:20px;
 	vertical-align:middle;
 }
+
+.status {
+  font-weight: 500;
+}
+
+.status.o1 p{
+  color: #41ad7c;
+}
+
+.status.o2 p{
+  color: #FF5C4C;
+}
+
+.status.o3 p {
+  color: #1CA1C1;
+}
+
+.comments.p1 p {
+  color: #F3A601;
+}
+
+.comments.p2 p{
+  color: #1CA1C1;
+}

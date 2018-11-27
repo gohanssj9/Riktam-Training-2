@@ -35,7 +35,7 @@ export default class TopView extends JetView{
 		// };
 
 		var menu = {
-			view: "accordion", width: 420, id: "top:menu",
+			view: "accordion", width: 400, id: "top:menu",
 			rows: [
 				{header: "Look for a Flight", body: "content 1", height: 370},
 				{header: "Hotels", body: "content 2", collapsed: true, height: 330},
