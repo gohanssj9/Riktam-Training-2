@@ -14,7 +14,7 @@ export default class StartView extends JetView {
 							{id: "Info", value: "Info"},
 						], 
 						on: {
-							onChange: (obj) => { 
+							onChange: (obj) => {
 								var id = obj;
 								console.log(id);
 

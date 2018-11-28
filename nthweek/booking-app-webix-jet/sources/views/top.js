@@ -1,6 +1,6 @@
 import {JetView, plugins} from "webix-jet";
 import StartView from 'views/start';
-
+import LookForFlightView from 'views/lookforflight';
 
 export default class TopView extends JetView{
 	config(){
@@ -37,7 +37,7 @@ export default class TopView extends JetView{
 		var menu = {
 			view: "accordion", width: 400, id: "top:menu",
 			rows: [
-				{header: "Look for a Flight", body: "content 1", height: 370},
+				{header: "Look for a Flight", body: LookForFlightView, height: 370},
 				{header: "Hotels", body: "content 2", collapsed: true, height: 330},
 				{header: "Cars", body: "content 3", collapsed: true, height: 330},
 				{header: "Register", body: "content 4", collapsed: true, height: 330},

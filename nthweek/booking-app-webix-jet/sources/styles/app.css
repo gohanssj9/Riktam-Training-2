@@ -60,7 +60,7 @@ body {
 	vertical-align:middle;
 }
 
-.status {
+.status, .comments {
   font-weight: 500;
 }
 
@@ -82,4 +82,8 @@ body {
 
 .comments.p2 p{
   color: #1CA1C1;
+}
+
+.radio_section .webix_inp_label {
+  text-align: right;
 }
