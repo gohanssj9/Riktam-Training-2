@@ -6,7 +6,14 @@ export default class LookForFlightView extends JetView {
 				{view: "radio", label: "Trip", value: 1, options: [
 					{id: 1, value: "One-Way"},
 					{id: 2, value: "Return"}
-				], css: "radio_section", labelAlign: "right", labelWidth: 100},
+				], css: "radio_section", labelAlign: "right", labelWidth: 100,
+				on: {
+					onChange: (obj) => {
+						console.log(obj);
+						if(obj == 2) $$("returndate").show();
+						else $$("returndate").hide();
+					}
+				}},
 				{view: "combo", id: "departcombo", label: "From", options: [
 					{id: 1, value: "-- Not selected --"},
 					{id: 2, value: "Riga"},
@@ -43,6 +50,11 @@ export default class LookForFlightView extends JetView {
 					}
 				}
 			},
+			{view: "datepicker", value: new Date(2018, 10, 28), label: "Departure", labelWidth: 100, labelAlign: "right", format: "%d %M %Y"},
+			{view: "datepicker", id: "returndate", value: new Date(2018, 10, 28), label: "Return", labelWidth: 100, labelAlign: "right", format: "%d %M %Y", hidden: true},
+			{view: "counter", label: "Adults", labelAlign: "right", labelWidth: 100, value: 1},
+			{view: "counter", label: "Children", labelAlign: "right", labelWidth: 100},
+			{view: "button", type: "form", value: "Search Now"}
 		]};
 		return ui;
 	}
