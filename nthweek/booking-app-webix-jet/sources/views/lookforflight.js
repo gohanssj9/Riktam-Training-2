@@ -45,10 +45,18 @@ export default class LookForFlightView extends JetView {
 					{id: 10, value: "Minsk"},
 				], placeholder: "Select destination", labelAlign: "right", labelWidth: 100,
 				on: {
+					onShow: () => {
+						let getDepartureID = $$("departcombo").getValue();
+
+						console.log(getDepartureID);
+						if(getDepartureID != 1) {
+							// this.getList().filter(obj => obj.)
+						}
+					},
 					onChange: (obj) => {
 						if(obj == 1) $$("arrivecombo").setValue("");
-					}
-				}
+					},
+				},
 			},
 			{view: "datepicker", value: new Date(2018, 10, 28), label: "Departure", labelWidth: 100, labelAlign: "right", format: "%d %M %Y"},
 			{view: "datepicker", id: "returndate", value: new Date(2018, 10, 28), label: "Return", labelWidth: 100, labelAlign: "right", format: "%d %M %Y", hidden: true},
@@ -59,3 +67,14 @@ export default class LookForFlightView extends JetView {
 		return ui;
 	}
 }
+
+					// onBeforeRender: (id) => {
+					// 	var getDepartureID = $$("departcombo").getValue();
+					// 	console.log("onBeforeRender");
+					// 	console.log(getDepartureID);
+					// 	console.log(id);
+					// 	var options = $$("arrivecombo").getColumnConfig(id.column).collection;
+					// 	options.clearAll();
+					// 	options.parse([{id: 1, value: "-- Not selected --", id: 3, value: "Warsaw"}]);
+					// 	console.log("End of onBeforeRender");
+					// },
