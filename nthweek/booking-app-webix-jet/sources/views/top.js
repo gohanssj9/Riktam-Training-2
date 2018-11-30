@@ -6,8 +6,29 @@ import HotelsView from 'views/hotels';
 import CarsView from 'views/cars';
 import RegisterView from 'views/register';
 
+import LanguagesView from 'views/languages';
+
 export default class TopView extends JetView{
 	config(){
+		// var languagesPopup = {
+		// 	view: "popup", id: "languagesPopup", head: "Submenu",
+		// 	body: {
+		// 		view: "list",
+		// 		data: [
+		// 			{id: 1, lang: "English"},
+		// 			{id: 2, lang: "한국어"},
+		// 			{id: 3, lang: "Deutsch"},
+		// 			{id: 4, lang: "漢語"},
+		// 			{id: 5, lang: "Español"},
+		// 			{id: 6, lang: "Русский"},
+		// 		],
+		// 		template: "#lang#",
+		// 		select: true,
+		// 		autoheight: true,
+		// 		scroll: false
+		// 	}
+		// };
+
 		var header = {
 			view :"toolbar", height: 56, elements: [
 				{ paddingY: 7,
@@ -18,7 +39,10 @@ export default class TopView extends JetView{
 								{},
 								{view: "icon", icon: "mdi mdi-invert-colors", paddingX: 10},
 								{view: "icon", icon: "mdi mdi-bell", badge: 3, paddingX: 10},
-								{view: "icon", icon: "mdi mdi-earth", paddingX: 10},
+								{view: "icon", icon: "mdi mdi-earth", paddingX: 10, click: () => {
+									console.log(this);
+									this.LanguagesView.show();
+								}},
 							]
 						},
 					],
@@ -65,5 +89,6 @@ export default class TopView extends JetView{
 	}
 	init(){
 		this.use(plugins.Menu, "top:menu");
+		this.LanguagesView = this.ui(LanguagesView)
 	}
 }
