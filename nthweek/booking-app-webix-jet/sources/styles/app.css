@@ -87,3 +87,26 @@ body {
 .radio_section .webix_inp_label {
   text-align: right;
 }
+.notifications {
+  padding: 2px;
+}
+
+.notifications .webix_view {
+  border-width: 0px !important;
+}
+
+.notifications .webix_list_item {
+  line-height: 24px;
+  overflow: hidden;
+  padding: 2px 8px !important;
+}
+
+.notifications .title {
+  font-weight: 500;
+  color: #313131;
+}
+
+.notifications .body {
+  display: block;
+  color: #475466;
+}

@@ -1,4 +1,4 @@
-import {JetView} from "webix-jet";
+import {JetView, plugins} from "webix-jet";
 
 export default class StartView extends JetView {
 	config() {
@@ -16,8 +16,6 @@ export default class StartView extends JetView {
 						on: {
 							onChange: (obj) => {
 								var id = obj;
-								console.log(id);
-
 								if(id == "Offers") this.app.show("/top/specialoffers");
 								else if(id == "Regular") this.app.show("/top/regularoffers");
 								else this.app.show("/top/flightinfo");

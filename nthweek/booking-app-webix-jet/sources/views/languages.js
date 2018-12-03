@@ -3,7 +3,7 @@ import {JetView} from "webix-jet";
 export default class LanguagesView extends JetView {
 	config(){
 		var languagesPopup = {
-			view: "popup", id: "languagesPopup", head: "Submenu",
+			view: "popup", id: "languagesPopup", head: "Submenu", position: "center",
 			body: {
 				view: "list",
 				data: [
@@ -21,5 +21,9 @@ export default class LanguagesView extends JetView {
 			}
 		};
 		return languagesPopup;
+	}
+
+	showPopup() {
+		this.getRoot().show();
 	}
 }
