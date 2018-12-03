@@ -2,8 +2,8 @@ import {JetView} from 'webix-jet';
 
 export default class LookForFlightView extends JetView {
 	config(){
-		var ui = {type: "form", rows: [
-				{view: "radio", label: "Trip", value: 1, options: [
+		var ui = {id: "lookforflightform", view: "form", elements: [
+				{view: "radio", label: "Trip", name: "type_trip", value: 1, options: [
 					{id: 1, value: "One-Way"},
 					{id: 2, value: "Return"}
 				], css: "radio_section", labelAlign: "right", labelWidth: 100,
@@ -13,7 +13,7 @@ export default class LookForFlightView extends JetView {
 						else $$("returndate").hide();
 					}
 				}},
-				{view: "combo", id: "departcombo", label: "From", options: {
+				{view: "combo", id: "departcombo", name: "depart_city", label: "From", options: {
 					data: [
 					{id: 1, value: "-- Not selected --"},
 					{id: 2, value: "Riga"},
@@ -47,7 +47,7 @@ export default class LookForFlightView extends JetView {
 						if(obj == 1) $$("departcombo").setValue("");
 					}
 				}},
-				{view: "combo", id: "arrivecombo", label: "To", options: {
+				{view: "combo", id: "arrivecombo", name: "arrive_city", label: "To", options: {
 					data: [
 						{id: 1, value: "-- Not selected --"},
 						{id: 2, value: "Riga"},
@@ -84,13 +84,21 @@ export default class LookForFlightView extends JetView {
 						},
 					}
 			},
-			{view: "datepicker", value: new Date(), label: "Departure", labelWidth: 100, labelAlign: "right", format: "%d %M %Y"},
-			{view: "datepicker", id: "returndate", value: new Date(), label: "Return", labelWidth: 100, labelAlign: "right", format: "%d %M %Y", hidden: true},
-			{view: "counter", label: "Adults", labelAlign: "right", labelWidth: 100, value: 1},
-			{view: "counter", label: "Children", labelAlign: "right", labelWidth: 100},
+			{view: "datepicker", value: new Date(), label: "Departure", name: "depart_date", id: "depart_date", labelWidth: 100, labelAlign: "right", format: "%d %M %Y"},
+			{view: "datepicker", id: "returndate", value: new Date(), label: "Return", name: "return_date", labelWidth: 100, labelAlign: "right", format: "%d %M %Y", hidden: true},
+			{view: "counter", label: "Adults", name: "adult_count", labelAlign: "right", labelWidth: 100, value: 1, min: 1},
+			{view: "counter", label: "Children", name: "child_count", labelAlign: "right", labelWidth: 100},
 			{view: "button", type: "form", value: "Search Now", click: () => {
-				console.log("Onclick clicked");
-				
+				const data = $$("lookforflightform").getValues();
+				console.log(data);
+				if(data.depart_date || data.depart_city || data.arrive_city){
+					const depart = ($$("departcombo").getText() === "") ? "" : $$("departcombo").getText();
+					const arrive = $$("arrivecombo").getText();
+					const direct_date = webix.Date.dateToStr("%d %F %Y");
+					const date = (data.depart_date === null) ? "" : direct_date(data.depart_date);
+					this.app.callEvent("search:flight", [depart, arrive, date]);
+				}
+				else this.app.callEvent("search:flight");
 			}}
 		]};
 		return ui;

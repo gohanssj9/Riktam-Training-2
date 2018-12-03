@@ -5,7 +5,7 @@ import "styles/app.css";
 export default class SpecialOffersView extends JetView {
 	config(){
 		var ui = {
-			view: "datatable", scroll: "y",
+			view: "datatable", scroll: "y", id: "specialoffersgrid",
 			columns: [
 				{id: "id", header: "#", width: 42},
 				{id: "direction", header: "Direction", fillspace: 3},
@@ -25,6 +25,22 @@ export default class SpecialOffersView extends JetView {
 
 	}
 	init(view){
-		view.parse(data);
+		const grid = $$("specialoffersgrid");
+		grid.sync(data);
+
+		this.on(this.app, "search:flight", (from, to, date) => {
+			grid.hideOverlay();
+			if(from || to || date){
+				grid.filter(obj => {
+					const from_id = from ? obj.direction.indexOf(from) : 0;
+					const to_id = to ? obj.direction.indexOf(to) : 300;
+					const date_check = date ? (date === obj.date) : 1;
+					return from_id !== -1 && to_id !== -1 && from_id < to_id && date_check;
+				});
+			}
+			else grid.filter();
+
+			if(!grid.count()) grid.showOverlay("Sorry, there are no flights for this route");
+		});
 	}
 }

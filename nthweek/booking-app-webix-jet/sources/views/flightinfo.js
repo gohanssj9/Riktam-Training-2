@@ -5,7 +5,7 @@ import "styles/app.css";
 export default class FlightInfoView extends JetView {
 	config(){
 		var ui = {
-			view: "datatable", scroll: "y",
+			view: "datatable", scroll: "y", id: "flightinfoview",
 			columns: [
 				{id: "no", header: "Flight No.", fillspace: 1},
 				{id: "from", header: "From", fillspace: 1},
@@ -25,5 +25,16 @@ export default class FlightInfoView extends JetView {
 	}
 	init(view){
 		view.parse(getInfo());
+		this.on(this.app, "search:flight", (from, to, date) => {
+			view.hideOverlay();
+			if(from && to){
+				view.filter(obj => {
+					return obj.from === from && obj.to === to;
+				});
+			}
+			else view.filter();
+
+			if(!view.count()) view.showOverlay("Sorry, there are no flights for this route");
+		});
 	}
 }
