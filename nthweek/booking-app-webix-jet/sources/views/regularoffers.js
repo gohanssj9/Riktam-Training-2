@@ -5,26 +5,19 @@ import "styles/app.css";
 export default class RegularOffersView extends JetView {
 	config(){
 		var ui = {
-			view: "datatable", scroll: "y", id: "regularoffersgrid",
+			view: "datatable", scroll: "y", id: "regularoffersgrid", editable: true, editaction: "dblclick",
 			columns: [
 				{id: "id", header: "#", width: 42},
-				{id: "no", header: "Number", fillspace: 1},
-				{id: "direction", header: "Direction", fillspace: 3},
-				{id: "date", header: "Date", fillspace: 2},
-				{id: "deptime", header: "Departs", fillspace: 1},
-				{id: "arrtime", header: "Arrives", fillspace: 1},
-				{id: "comments", header: "Comments", fillspace: 1.25, template: function(obj) {
+				{id: "no", header: "Number", fillspace: 1, editor: "text"},
+				{id: "direction", header: "Direction", fillspace: 3, editor: "text"},
+				{id: "date", header: "Date", fillspace: 2, format: webix.i18n.longDateFormatStr, editor: "date", map: "(date)#date#"},
+				{id: "deptime", header: "Departs", fillspace: 1, editor: "text"},
+				{id: "arrtime", header: "Arrives", fillspace: 1, editor: "text"},
+				{id: "comments", header: "Comments", fillspace: 1.25, editor: "select", options: ["Landed", "On Time"], template: function(obj) {
 					let className = "";
-					let stringName = "";
-					if(obj.comments == 0) {
-						className = "p1";
-						stringName = "Landed";
-					}
-					else {
-						className = "p2";
-						stringName = "On Time";
-					}
-					return '<div class = "comments ' + className + '"><p style = "margin: 0;">&#9679;&nbsp;&nbsp;' + stringName + "</p></div>";
+					if(obj.comments === "Landed")	className = "p1";
+					else className = "p2";
+					return '<div class = "comments ' + className + '"><p style = "margin: 0;">&#9679;&nbsp;&nbsp;' + obj.comments + "</p></div>";
 				}}
 			],
 		};
