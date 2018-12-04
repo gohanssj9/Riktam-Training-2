@@ -9,10 +9,10 @@ export default class SpecialOffersView extends JetView {
 			columns: [
 				{id: "id", header: "#", width: 42},
 				{id: "direction", header: "Direction", fillspace: 3, editor: "text"},
-				{id: "date", header: "Date", fillspace: 1.5, format: webix.i18n.longDateFormatStr, editor: "date", map: "(date)#date#"},
+				{id: "date", header: "Date", fillspace: 1.5, format: webix.i18n.longDateFormatStr, editor: "editdate"},
 				{id: "price", header: "Price", fillspace: 1, format: webix.i18n.priceFormat, editor: "text"},
 				{id: "save", header: "You save", fillspace: 1, format: webix.i18n.priceFormat, editor: "text"},
-				{id: "status", header: "Status", fillspace: 1.75, editor: "select", options: ['Open', 'Available Soon', 'Last deals'], template: function(obj) {
+				{id: "status", header: "Status", fillspace: 1.75, editor: "richselect", options: ['Open', 'Available Soon', 'Last deals'], template: function(obj) {
 					let className = "";
 					if(obj.status === "Open") className = "o1";
 					else if(obj.status === "Last deals") className = "o2";
@@ -42,7 +42,26 @@ export default class SpecialOffersView extends JetView {
 
 			if(!grid.count()) grid.showOverlay("Sorry, there are no flights for this route");
 		});
+
+		webix.editors.editdate = webix.extend({
+  		render:function(){
+        var icon = "<span class='webix_input_icon wxi-calendar' style='position:absolute; cursor:pointer; top:8px; right:5px;'></span>";
+			  var node = webix.html.create("div", {
+					"class":"webix_dt_editor"
+				}, "<input type='text'>"+icon);
+
+        node.childNodes[1].onclick = function(){
+					var master = webix.UIManager.getFocus();
+        	var editor = master.getEditor();
+            
+        	master.editStop(false);
+        	var config = master.getColumnConfig(editor.column);
+        	config.editor = "date";
+        	master.editCell(editor.row, editor.column);
+        	config.editor = "editdate";
+      	}
+      	return node;
+			}
+		}, webix.editors.text);	
 	}
 }
-
-// , editor: "date", map: "(date)#date#"

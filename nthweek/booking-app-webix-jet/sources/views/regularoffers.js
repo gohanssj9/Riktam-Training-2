@@ -10,10 +10,10 @@ export default class RegularOffersView extends JetView {
 				{id: "id", header: "#", width: 42},
 				{id: "no", header: "Number", fillspace: 1, editor: "text"},
 				{id: "direction", header: "Direction", fillspace: 3, editor: "text"},
-				{id: "date", header: "Date", fillspace: 2, format: webix.i18n.longDateFormatStr, editor: "date", map: "(date)#date#"},
+				{id: "date", header: "Date", fillspace: 2, format: webix.i18n.longDateFormatStr, editor: "editdate"},
 				{id: "deptime", header: "Departs", fillspace: 1, editor: "text"},
 				{id: "arrtime", header: "Arrives", fillspace: 1, editor: "text"},
-				{id: "comments", header: "Comments", fillspace: 1.25, editor: "select", options: ["Landed", "On Time"], template: function(obj) {
+				{id: "comments", header: "Comments", fillspace: 1.25, editor: "richselect", options: ["Landed", "On Time"], template: function(obj) {
 					let className = "";
 					if(obj.comments === "Landed")	className = "p1";
 					else className = "p2";
@@ -42,5 +42,26 @@ export default class RegularOffersView extends JetView {
 
 			if(!grid.count()) grid.showOverlay("Sorry, there are no flights for this route");
 		});
+
+		webix.editors.editdate = webix.extend({
+  		render:function(){
+        var icon = "<span class='webix_input_icon wxi-calendar' style='position:absolute; cursor:pointer; top:8px; right:5px;'></span>";
+			  var node = webix.html.create("div", {
+					"class":"webix_dt_editor"
+				}, "<input type='text'>"+icon);
+          
+        node.childNodes[1].onclick = function(){
+					var master = webix.UIManager.getFocus();
+        	var editor = master.getEditor();
+            
+        	master.editStop(false);
+        	var config = master.getColumnConfig(editor.column);
+        	config.editor = "date";
+        	master.editCell(editor.row, editor.column);
+        	config.editor = "editdate";
+      	}
+      	return node;
+			}
+		}, webix.editors.text);	
 	}
 }
