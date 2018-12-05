@@ -57,12 +57,11 @@ export default class TopView extends JetView{
 								{view: "label", label: "Webix Booking App", width: 300},
 								{},
 								{view: "icon", icon: "mdi mdi-invert-colors", paddingX: 10},
-								{view: "icon", icon: "mdi mdi-bell", badge: 3, paddingX: 10, click: () => {
-									this.notifications.show({x: 1100, y: 43});
+								{view: "icon", icon: "mdi mdi-bell", badge: 3, paddingX: 10, click: function() {
+									this.$scope.notifications.show(this.$view);
 								}},
-								{view: "icon", icon: "mdi mdi-earth", paddingX: 10, click: () => {
-									console.log(this);
-									this.languages.show({x: 1200, y: 43});
+								{view: "icon", icon: "mdi mdi-earth", paddingX: 10, click: function() {
+									this.$scope.languages.show(this.$view);
 								}},
 							]
 						},

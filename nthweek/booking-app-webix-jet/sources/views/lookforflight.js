@@ -94,10 +94,8 @@ export default class LookForFlightView extends JetView {
 				if(data.depart_date || data.depart_city || data.arrive_city){
 					const depart = ($$("departcombo").getText() === "") ? "" : $$("departcombo").getText();
 					const arrive = $$("arrivecombo").getText();
-					console.log(data.depart_date);
 					const direct_date = webix.Date.dateToStr("%Y-%m-%d");
 					const date = (data.depart_date === null) ? "" : direct_date(data.depart_date);
-					console.log(date);	
 					this.app.callEvent("search:flight", [depart, arrive, date]);
 				}
 				else this.app.callEvent("search:flight");

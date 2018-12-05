@@ -76,6 +76,10 @@ body {
   color: #1CA1C1;
 }
 
+.status.o4 p{
+  color: #F3A601;
+}
+
 .comments.p1 p {
   color: #F3A601;
 }
@@ -109,4 +113,14 @@ body {
 .notifications .body {
   display: block;
   color: #475466;
+}
+
+.checkbox_section.webix_column > div {
+  padding: 0px 0px 0px 4px;
+}
+
+.checkbox_section .webix_cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
