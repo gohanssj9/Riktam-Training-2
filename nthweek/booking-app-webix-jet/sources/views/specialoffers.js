@@ -5,6 +5,7 @@ import "styles/app.css";
 import StatusPopup from 'views/statuses';
 
 var changingRowItem = 0;
+var changingStatus = "";
 
 export default class SpecialOffersView extends JetView {
 	config(){
@@ -29,6 +30,40 @@ export default class SpecialOffersView extends JetView {
 				"status": function(ev, id, trg) {
 					this.$scope.statuses.showPopup(trg);
 					changingRowItem = id.row;
+
+					var changing_status = $$("specialoffersgrid").getItem(id.row).status;
+					var changing_status_array = changing_status.split(",");
+					console.log(changing_status_array);
+
+					const notif = $$("status_multiselect");
+					if(changing_status_array.length === 1){
+						changingStatus = changing_status_array[0];
+						notif.eachRow(function(id) {
+							if(this.getItem(id).status === changingStatus) {
+								var updated_item = notif.getItem(id);
+								updated_item["check"] = 1;
+							}
+							else {
+								var updated_item = notif.getItem(id);
+								updated_item["check"] = 0;
+							}
+						});
+					}
+					else {
+						var cnt = 0;
+						notif.eachRow(function(id) {
+							if(this.getItem(id).status === changing_status_array[cnt]) {
+								var updated_item = notif.getItem(id);
+								updated_item["check"] = 1;
+								cnt++;
+							}
+							else {
+								var updated_item = notif.getItem(id);
+								updated_item["check"] = 0;
+							}
+						});
+					}
+					notif.refresh();
 				}
 			}
 		};
@@ -59,18 +94,24 @@ export default class SpecialOffersView extends JetView {
 		this.on(this.app, "checkboxes:check", () => {
 			var output_string = "";
 			const notif = $$("status_multiselect");
+
 			notif.eachRow(function(id) {
-				if(this.getItem(id).check) {
-					console.log(id + " is checked");
-					console.log(this.getItem(id).status);
-					output_string += this.getItem(id).status + ", ";
-				}
+				if(this.getItem(id).check) output_string += this.getItem(id).status + ",";
 			});
-			output_string = output_string.substring(0, output_string.length - 2);
+
+			output_string = output_string.substring(0, output_string.length - 1);
+
 			var updated_cell = grid.getItem(changingRowItem);
 			updated_cell["status"] = output_string;
 			grid.refresh();
+
 			$$("statusPopup").hide();
+
+			notif.eachRow(function(id) {
+				var updated_item = notif.getItem(id);
+				updated_item["check"] = 0;
+			});
+			notif.refresh();
 		});
 
 		webix.editors.editdate = webix.extend({
@@ -95,4 +136,3 @@ export default class SpecialOffersView extends JetView {
 		}, webix.editors.text);	
 	}
 }
-// , editor: "richselect", options: ['Open', 'Available Soon', 'Last deals']

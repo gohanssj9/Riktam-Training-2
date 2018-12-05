@@ -11,9 +11,9 @@ export default class StatusPopup extends JetView {
 						{id: "status", width: 125, css: "status_section"}
 					],
 					data: [
-						{check: 0, status: "Open"},
-						{check: 0, status: "Available soon"},
-						{check: 0, status: "Last deals"},
+						{id: 1, check: 0, status: "Open"},
+						{id: 2, check: 0, status: "Available soon"},
+						{id: 3, check: 0, status: "Last deals"},
 					],
 					select: true,
 					autoheight: true,
