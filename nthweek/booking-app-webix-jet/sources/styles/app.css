@@ -137,3 +137,7 @@ body {
   margin-left: 2px !important;
   border: 1px solid #DADEE0 !important;
 }
+
+.webix_view .webix_dt_editor input, .elevated {
+  box-shadow: 0 2px 2px -2px black;
+}

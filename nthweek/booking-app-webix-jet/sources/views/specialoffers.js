@@ -13,10 +13,10 @@ export default class SpecialOffersView extends JetView {
 			view: "datatable", scroll: "y", id: "specialoffersgrid", editable: true, editaction: "dblclick",
 			columns: [
 				{id: "id", header: "#", width: 42},
-				{id: "direction", header: "Direction", fillspace: 3, editor: "text", css: "elevated"},
+				{id: "direction", header: "Direction", fillspace: 3, editor: "text", css: "text_fields"},
 				{id: "date", header: "Date", fillspace: 1.5, format: webix.i18n.longDateFormatStr, editor: "editdate"},
-				{id: "price", header: "Price", fillspace: 1, format: webix.i18n.priceFormat, editor: "text"},
-				{id: "save", header: "You save", fillspace: 1, format: webix.i18n.priceFormat, editor: "text"},
+				{id: "price", header: "Price", fillspace: 1, format: webix.i18n.priceFormat, editor: "text", css: "text_fields"},
+				{id: "save", header: "You save", fillspace: 1, format: webix.i18n.priceFormat, editor: "text", css: "text_fields"},
 				{id: "status", header: "Status", fillspace: 1.75, template: function(obj) {
 					let className = "";
 					if(obj.status === "Open") className = "o1";
@@ -133,6 +133,6 @@ export default class SpecialOffersView extends JetView {
       	}
       	return node;
 			}
-		}, webix.editors.text);	
+		}, webix.editors.text);
 	}
 }
