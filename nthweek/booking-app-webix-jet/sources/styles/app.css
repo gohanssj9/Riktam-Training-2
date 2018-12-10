@@ -124,3 +124,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.status_label_section.webix_el_label, .status_value_section.webix_el_label {
+  padding: 3px 5px;
+}
+
+.status_label_section div {
+  text-align: right;
+}
+
+.status_value_section {
+  margin-left: 2px !important;
+  border: 1px solid #DADEE0 !important;
+}

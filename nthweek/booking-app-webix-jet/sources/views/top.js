@@ -5,8 +5,8 @@ import LookForFlightView from 'views/lookforflight';
 import HotelsView from 'views/hotels';
 import CarsView from 'views/cars';
 import RegisterView from 'views/register';
+import SaveFormView from 'views/saveform';
 
-import LanguagesView from 'views/languages';
 
 const languagesPopup = {
 	view: "popup", width: 100, id: "languagesPopup", borderless: true, head: "Submenu",
@@ -74,10 +74,11 @@ export default class TopView extends JetView{
 		var menu = {
 			view: "accordion", width: 400, id: "top:menu",
 			rows: [
-				{header: "Look for a Flight", body: LookForFlightView},
+				{header: "Look for a Flight", body: LookForFlightView, collapsed: false},
 				{header: "Hotels", body: HotelsView, collapsed: true},
 				{header: "Cars", body: CarsView, collapsed: true},
 				{header: "Register", body: RegisterView, collapsed: true},
+				{header: "Save Form", body: SaveFormView, collapsed: true},
 				{}
 			]
 		}
