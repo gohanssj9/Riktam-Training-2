@@ -13,7 +13,7 @@ export default class SpecialOffersView extends JetView {
 			view: "datatable", scroll: "y", id: "specialoffersgrid", editable: true, editaction: "dblclick",
 			columns: [
 				{id: "id", header: "#", width: 42},
-				{id: "direction", header: "Direction", fillspace: 3, editor: "text", css: "text_fields"},
+				{id: "direction", header: "Direction", fillspace: 3, editor: "textarea", css: "text_fields"},
 				{id: "date", header: "Date", fillspace: 1.5, format: webix.i18n.longDateFormatStr, editor: "editdate"},
 				{id: "price", header: "Price", fillspace: 1, format: webix.i18n.priceFormat, editor: "text", css: "text_fields"},
 				{id: "save", header: "You save", fillspace: 1, format: webix.i18n.priceFormat, editor: "text", css: "text_fields"},
