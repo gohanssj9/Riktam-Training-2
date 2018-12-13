@@ -6,7 +6,7 @@ import HotelsView from 'views/hotels';
 import CarsView from 'views/cars';
 import RegisterView from 'views/register';
 import SaveFormView from 'views/saveform';
-import TestCustomList from 'views/testcustommultiselect';
+import TestCustomList from 'views/testcustomlist';
 
 const languagesPopup = {
 	view: "popup", width: 100, id: "languagesPopup", borderless: true, head: "Submenu",

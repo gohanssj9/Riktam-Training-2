@@ -5,41 +5,25 @@ export default class TestCustomList extends JetView {
 		webix.protoUI({
 			name: "CustomMultiselect",
 			$init:function(config) {
-				this.$view.innerHTML = "<div class='webix_view webix_layout_line'><div class='webix_view webix_control webix_el_label'><div></div></div>";
-				console.log(config.id);
-				// this.$view.innerHTML = "<div class = 'item1'></div>";
-				// this.$ready.push(this.showDatatable);
+				this.$ready.push(this.showDatatable);
 			},
-			// item1_setter: function(value){
-			// 	console.log("Inside ready");
-			// 	console.log(this.config);
-			// 	webix.ui({
-			// 		view: "datatable", container: value, header: false,
-			// 		columns: [
-			// 			{id: "check", template: "{common.checkbox()}", width: 25, css: "checkbox_section"},
-			// 			{id: "status", width: 225, css: "status_section"}
-			// 		],
-			// 		data: [
-			// 			{id: 1, check: 0, status: "Open"},
-			// 			{id: 2, check: 0, status: "Available soon"},
-			// 			{id: 3, check: 0, status: "Last deals"},
-			// 		]
-			// 	});
-			// },
 			defaults: {
-				width: 150,
+				rows: []
 			},
-			label_setter:function(value) {
-				console.log(this);
-				if(value) this.$view.childNodes[0].childNodes[0].childNodes[0].innerHTML = value;
-				console.log(value);
-				return value;	
-			}
-		}, webix.ui.view);
+			showDatatable: function() {
+				var me = this;
+				var config = me.config;
+				console.log(config);
+				me.addView({ width: 200,
+					cols: [
+						{view: "label", label: config.label, align: config.align},
+						{view: "label", label: "Open", align: "left"}
+					]});
+			}			
+		}, webix.ui.layout);
 
 		var protoReturn = {
-			view: "CustomMultiselect", label: "Hello",
-			// , label: "Status"
+			view: "CustomMultiselect", label: "Status", align: "right"
 		};
 		return protoReturn;
 	}
@@ -61,3 +45,19 @@ export default class TestCustomList extends JetView {
 				// 	},
 				// 	{view: "button", type: "form", value: "Select"}
 				// ]}
+
+
+				// 		{rows: [
+				// 			{view: "datatable", header: false, scroll: false, autoheight: true, autowidth: true,
+				// 				columns: [
+				// 				{id: "check", template: "{common.checkbox()}", width: 25, css: "checkbox_section"},
+				// 				{id: "status", css: "status_section", width: 150}
+				// 			],
+				// 			data: [
+				// 				{id: 1, check: 0, status: "Open"},
+				// 				{id: 2, check: 0, status: "Available soon"},
+				// 				{id: 3, check: 0, status: "Last deals"},
+				// 			]
+				// 		},
+				// 		{view: "button", type: "form", label: "Select"}]
+				// }
