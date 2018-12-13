@@ -16,7 +16,7 @@ export default class TestCustomList extends JetView {
 				console.log(config);
 				me.addView({ width: 200,
 					cols: [
-						{view: "label", label: config.label, align: config.align},
+						{view: "label", label: config.label, align: config.align, width: 100},
 						{view: "label", label: "Open", align: "left"}
 					]});
 			}			
