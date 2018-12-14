@@ -141,3 +141,13 @@ body {
 .webix_view .webix_dt_editor input, .elevated {
   box-shadow: 0 2px 2px -2px black;
 }
+
+.custom_css .right_css.webix_el_label div {
+  width: 100%;
+  padding: 0px 5px;
+}
+
+.custom_css .right_css {
+  border: 1px solid #DADEE0 !important;
+  padding: 2px 0px !important;
+}
