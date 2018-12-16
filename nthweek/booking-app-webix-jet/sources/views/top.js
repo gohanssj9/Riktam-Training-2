@@ -77,9 +77,9 @@ export default class TopView extends JetView{
 				{header: "Look for a Flight", body: LookForFlightView, collapsed: true},
 				{header: "Hotels", body: HotelsView, collapsed: true},
 				{header: "Cars", body: CarsView, collapsed: true},
-				{header: "Register", body: RegisterView, collapsed: true},
+				{header: "Register", body: RegisterView, collapsed: false},
 				{header: "Save Form", body: SaveFormView, collapsed: true},
-				{header: "TestCustomList", body: TestCustomList, collapsed: false},
+				{header: "TestCustomList", body: TestCustomList, collapsed: true},
 				{}
 			]
 		}

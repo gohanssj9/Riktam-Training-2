@@ -14,7 +14,7 @@ export default class RegisterView extends JetView {
 			{view: "button", type: "form", value: "Register"},
 			{view: "CustomMultiselect", label: "Random", labelAlign: "center",
 				options: [
-					{id: 1, check:1 , status: "Munching away"}
+					{id: 1, check: 0, status: "Munching away"}
 				], value: "Add Up"
 			}
 		]};

@@ -1,6 +1,7 @@
 import {JetView} from 'webix-jet';
 
 import FormStatusPopup from 'views/formstatuses';
+import TestCustomList from 'views/testcustomlist';
 
 var changingRowItem = 0;
 var changingStatus = "";
@@ -8,6 +9,11 @@ var changingStatus = "";
 export default class SaveFormView extends JetView {
 	config(){
 		var ui = {type: "form", rows: [
+			{view: "CustomMultiselect", label: "Random", labelAlign: "center",
+				options: [
+					{id: 1, check: 0, status: "Munching away"}
+				], value: "Add Up"
+			},
 			{view: "text", label: "First Name", placeholder: "Matthew", labelAlign: "right", labelWidth: 100},
 			{view: "text", label: "Email", placeholder: "mattclark@some.com", labelAlign: "right", labelWidth: 100},
 			{cols: [

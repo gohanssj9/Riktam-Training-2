@@ -13,7 +13,9 @@ webix.protoUI({
 					],
 					data: config.options
 				},
-				{view: "button", type: "form", value: config.value}
+				{view: "button", type: "form", value: config.value, click: () => {
+					$$(show_id).hide();
+				}}
 			]}							
 		};
 		this.custom_multiselect = webix.ui(statPopup);
