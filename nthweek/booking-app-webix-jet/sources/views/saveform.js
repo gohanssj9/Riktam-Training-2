@@ -9,9 +9,12 @@ var changingStatus = "";
 export default class SaveFormView extends JetView {
 	config(){
 		var ui = {type: "form", rows: [
-			{view: "CustomMultiselect", label: "Random", labelAlign: "center",
+			{view: "CustomMultiselect", label: "Status", labelAlign: "center",
 				options: [
-					{id: 1, check: 0, status: "Munching away"}
+					{id: 1, check: 0, status: "Open"},
+					{id: 2, check: 0, status: "Available soon"},
+					{id: 3, check: 0, status: "Last deals"},
+					{id: 4, check: 0, status: "Not Available"},					
 				], value: "Add Up"
 			},
 			{view: "text", label: "First Name", placeholder: "Matthew", labelAlign: "right", labelWidth: 100},

@@ -6,7 +6,6 @@ import HotelsView from 'views/hotels';
 import CarsView from 'views/cars';
 import RegisterView from 'views/register';
 import SaveFormView from 'views/saveform';
-import TestCustomList from 'views/testcustomlist';
 
 const languagesPopup = {
 	view: "popup", width: 100, id: "languagesPopup", borderless: true, head: "Submenu",
@@ -77,9 +76,8 @@ export default class TopView extends JetView{
 				{header: "Look for a Flight", body: LookForFlightView, collapsed: true},
 				{header: "Hotels", body: HotelsView, collapsed: true},
 				{header: "Cars", body: CarsView, collapsed: true},
-				{header: "Register", body: RegisterView, collapsed: false},
-				{header: "Save Form", body: SaveFormView, collapsed: true},
-				{header: "TestCustomList", body: TestCustomList, collapsed: true},
+				{header: "Register", body: RegisterView, collapsed: true},
+				{header: "Save Form", body: SaveFormView, collapsed: false},
 				{}
 			]
 		}
