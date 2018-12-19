@@ -161,9 +161,9 @@ export default class SpecialOffersView extends JetView {
 							{id: "status", width: 225, css: "status_section"}
 						],
 						data: [
-							{id:1, check: 0, status: "Hello"},
-							{id:2, check: 0, status: "Hi"},
-							{id:3, check: 0, status: "Pay"},
+							{id:1, check: 0, status: "Open"},
+							{id:2, check: 0, status: "Available soon"},
+							{id:3, check: 0, status: "Last deals"},
 						]
 					},
 					{view: "button", label: "Select", type: "form", click: () => {
