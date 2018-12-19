@@ -17,7 +17,7 @@ export default class SpecialOffersView extends JetView {
 				{id: "date", header: "Date", fillspace: 1.5, format: webix.i18n.longDateFormatStr, editor: "editdate"},
 				{id: "price", header: "Price", fillspace: 1, format: webix.i18n.priceFormat, editor: "text", css: "text_fields"},
 				{id: "save", header: "You save", fillspace: 1, format: webix.i18n.priceFormat, editor: "text", css: "text_fields"},
-				{id: "status", header: "Status", fillspace: 1.75,  template: function(obj) {
+				{id: "status", header: "Status", fillspace: 1.75, editor: "custommultiselect",  template: function(obj) {
 					let className = "";
 					if(obj.status === "Open") className = "o1";
 					else if(obj.status === "Last deals") className = "o2";
@@ -135,43 +135,43 @@ export default class SpecialOffersView extends JetView {
 			}
 		}, webix.editors.text);
 
-		// webix.editors.custommultiselect = webix.extend({
-		// 	focus: function() {},
-		// 	popupType: "custommultiselect",
-		// 	setValue: function(value){
-		// 		this.getPopup().show(this.node);
-		// 	},
-		// 	getValue: function(){
-		// 		console.log("Inside getValue");
-		// 	}
-		// }, webix.editors.popup);
+		webix.editors.custommultiselect = webix.extend({
+			focus: function() {},
+			popupType: "custommultiselect",
+			setValue: function(value){
+				this.getPopup().show(this.node);
+				console.log("Inside setValue");
+			},
+			getValue: function(){
+				console.log("Inside getValue");
+			}
+		}, webix.editors.popup);
 
-		// webix.editors.$popup.custommultiselect = {
-		// 	view: "suggest",
-		// 	padding: 0,
-		// 	id: "something_else",
-		// 	body: {
-		// 		view: "form",
-		// 		id: "something_else_",
-		// 		rows: [
-		// 			{view: "datatable", header: false, id: "show_datatable_id", scroll: false, autoheight: true, autowidth: true,
-		// 				columns: [
-		// 					{id: "check", template: "{common.checkbox()}", width: 25, css: "checkbox_section"},
-		// 					{id: "status", width: 225, css: "status_section"}
-		// 				],
-		// 				data: [
-		// 					{id:1, check: 0, status: "Hello"},
-		// 					{id:2, check: 0, status: "Hi"},
-		// 					{id:3, check: 0, status: "Pay"},
-		// 				]
-		// 			},
-		// 			{view: "button", label: "Select", type: "form", click: () => {
-		// 				$$("something_else_").hide();
-		// 			}}
-		// 		]
-		// 	}
-		// }
+		webix.editors.$popup.custommultiselect = {
+			view: "suggest",
+			padding: 0,
+			id: "something_else",
+			body: {
+				view: "form",
+				id: "something_else_",
+				rows: [
+					{view: "datatable", header: false, id: "show_datatable_id", scroll: false, autoheight: true, autowidth: true,
+						columns: [
+							{id: "check", template: "{common.checkbox()}", width: 25, css: "checkbox_section"},
+							{id: "status", width: 225, css: "status_section"}
+						],
+						data: [
+							{id:1, check: 0, status: "Hello"},
+							{id:2, check: 0, status: "Hi"},
+							{id:3, check: 0, status: "Pay"},
+						]
+					},
+					{view: "button", label: "Select", type: "form", click: () => {
+						$$("something_else_").hide();
+					}}
+				]
+			}
+		}
 	}
 }
 
-// , editor: "custommultiselect"
