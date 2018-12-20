@@ -1,3 +1,4 @@
+import editors from 'views/customeditor';
 webix.protoUI({
 	name: "CustomMultiselect",
 	$init:function(config) {
@@ -8,7 +9,8 @@ webix.protoUI({
 			view: "popup", css: "custom_popup", id: show_id,
 			body: {
 				rows: [
-					{view: "datatable", header: false, id: show_datatable_id, scroll: false, autoheight: true, autowidth: true,
+					{view: "datatable", header: false, id: show_datatable_id, scroll: false, 
+					autoheight: true, autowidth: true,
 					columns: [
 						{id: "check", template: "{common.checkbox()}", width: 25, css: "checkbox_section"},
 						{id: "status", width: 225, css: "status_section"}

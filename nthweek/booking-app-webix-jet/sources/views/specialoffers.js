@@ -3,6 +3,7 @@ import {data} from "models/specialoffers";
 import "styles/app.css";
 
 import StatusPopup from 'views/statuses';
+import editors from 'views/customeditor';
 
 var changingRowItem = 0;
 var changingStatus = "";
@@ -17,7 +18,11 @@ export default class SpecialOffersView extends JetView {
 				{id: "date", header: "Date", fillspace: 1.5, format: webix.i18n.longDateFormatStr, editor: "editdate"},
 				{id: "price", header: "Price", fillspace: 1, format: webix.i18n.priceFormat, editor: "text", css: "text_fields"},
 				{id: "save", header: "You save", fillspace: 1, format: webix.i18n.priceFormat, editor: "text", css: "text_fields"},
-				{id: "status", header: "Status", fillspace: 1.75, editor: "custommultiselect",  template: function(obj) {
+				{id: "status", header: "Status", fillspace: 1.75, editor: "custommultiselect", options: [
+					{id:1, check: 0, status: "Open"},
+					{id:2, check: 0, status: "Available soon"},
+					{id:3, check: 0, status: "Last deals"},
+				], template: function(obj) {
 					let className = "";
 					if(obj.status === "Open") className = "o1";
 					else if(obj.status === "Last deals") className = "o2";
@@ -113,65 +118,6 @@ export default class SpecialOffersView extends JetView {
 			});
 			notif.refresh();
 		});
-
-		webix.editors.editdate = webix.extend({
-  		render:function(){
-        var icon = "<span class='webix_input_icon wxi-calendar' style='position:absolute; cursor:pointer; top:8px; right:5px;'></span>";
-			  var node = webix.html.create("div", {
-					"class":"webix_dt_editor"
-				}, "<input type='text'>"+icon);
-
-        node.childNodes[1].onclick = function(){
-					var master = webix.UIManager.getFocus();
-        	var editor = master.getEditor();
-            
-        	master.editStop(false);
-        	var config = master.getColumnConfig(editor.column);
-        	config.editor = "date";
-        	master.editCell(editor.row, editor.column);
-        	config.editor = "editdate";
-      	}
-      	return node;
-			}
-		}, webix.editors.text);
-
-		webix.editors.custommultiselect = webix.extend({
-			focus: function() {},
-			popupType: "custommultiselect",
-			setValue: function(value){
-				this.getPopup().show(this.node);
-				console.log("Inside setValue");
-			},
-			getValue: function(){
-				console.log("Inside getValue");
-			}
-		}, webix.editors.popup);
-
-		webix.editors.$popup.custommultiselect = {
-			view: "suggest",
-			padding: 0,
-			id: "something_else",
-			body: {
-				view: "form",
-				id: "something_else_",
-				rows: [
-					{view: "datatable", header: false, id: "show_datatable_id", scroll: false, autoheight: true, autowidth: true,
-						columns: [
-							{id: "check", template: "{common.checkbox()}", width: 25, css: "checkbox_section"},
-							{id: "status", width: 225, css: "status_section"}
-						],
-						data: [
-							{id:1, check: 0, status: "Open"},
-							{id:2, check: 0, status: "Available soon"},
-							{id:3, check: 0, status: "Last deals"},
-						]
-					},
-					{view: "button", label: "Select", type: "form", click: () => {
-						$$("something_else_").hide();
-					}}
-				]
-			}
-		}
 	}
 }
 

@@ -2,6 +2,8 @@ import {JetView} from "webix-jet";
 import {data} from "models/specialoffers";
 import "styles/app.css";
 
+import editors from 'views/customeditor';
+
 export default class RegularOffersView extends JetView {
 	config(){
 		var ui = {
