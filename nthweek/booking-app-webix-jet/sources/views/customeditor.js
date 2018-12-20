@@ -26,9 +26,10 @@ editors.custommultiselect = webix.extend({
 	setValue: function(value){
 		console.log(value);
 		this.getPopup().show(this.node);
-		console.log(this);
-		console.log(this.getInputNode().getChildViews());
-		this.getInputNode().getChildViews()[0].config.data = this.config.collection.config.data;
+		console.log(this.getPopup().getBody().getChildViews()[0]);
+		// console.log(this);
+		// console.log(this.getInputNode().getChildViews());
+		// this.getInputNode().getChildViews()[0].config.data = this.config.collection.config.data;
 		console.log("Inside setValue");
 		return this.config.collection.config.data;
 	},
