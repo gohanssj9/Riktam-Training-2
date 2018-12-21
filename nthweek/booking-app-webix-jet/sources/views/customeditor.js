@@ -24,20 +24,14 @@ editors.custommultiselect = webix.extend({
 	focus: function() {console.log(this); console.log("Inside focus");},
 	popupType: "custommultiselect",
 	setValue: function(value){
-		console.log(value);
 		this.getPopup().show(this.node);
-		console.log(this.getPopup().getBody().getChildViews()[0]);
-		// console.log(this);
-		// console.log(this.getInputNode().getChildViews());
-		// this.getInputNode().getChildViews()[0].config.data = this.config.collection.config.data;
 		var conf = $$("show_datatable_id");
-		console.log(conf);
 		conf.clearAll();
 		conf.parse(this.config.collection.config.data);
-		console.log("Inside setValue");
 		return this.config.collection.config.data;
 	},
 	getValue: function(){
+		console.log(this);
 		console.log("Inside getValue");
 	}
 }, webix.editors.popup);
