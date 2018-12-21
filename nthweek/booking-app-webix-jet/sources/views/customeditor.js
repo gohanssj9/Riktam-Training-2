@@ -30,6 +30,10 @@ editors.custommultiselect = webix.extend({
 		// console.log(this);
 		// console.log(this.getInputNode().getChildViews());
 		// this.getInputNode().getChildViews()[0].config.data = this.config.collection.config.data;
+		var conf = $$("show_datatable_id");
+		console.log(conf);
+		conf.clearAll();
+		conf.parse(this.config.collection.config.data);
 		console.log("Inside setValue");
 		return this.config.collection.config.data;
 	},
@@ -52,8 +56,7 @@ editors.$popup.custommultiselect = {
 					{id: "status", width: 225, css: "status_section"}
 				],
 				data: [
-					{id:1, check: 0, status: "Open"},
-					{id:2, check: 0, status: "Available soon"},
+					{id: 1, check: 0, status: "Open"}
 				]
 			},
 			{view: "button", label: "Select", type: "form", margin: 0, click: () => {

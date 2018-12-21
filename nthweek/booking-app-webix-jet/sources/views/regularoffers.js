@@ -15,7 +15,7 @@ export default class RegularOffersView extends JetView {
 				{id: "date", header: "Date", fillspace: 2, format: webix.i18n.longDateFormatStr, editor: "editdate"},
 				{id: "deptime", header: "Departs", fillspace: 1, editor: "text"},
 				{id: "arrtime", header: "Arrives", fillspace: 1, editor: "text"},
-				{id: "comments", header: "Comments", fillspace: 1.25, editor: "richselect", options: ["Landed", "On Time"], template: function(obj) {
+				{id: "comments", header: "Comments", fillspace: 1.25, editor: "custommultiselect", options: [{id:1, check: 0, status: "Landed"}, {id:2, check: 0, status: "On Time"}], template: function(obj) {
 					let className = "";
 					if(obj.comments === "Landed")	className = "p1";
 					else className = "p2";
