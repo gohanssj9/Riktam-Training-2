@@ -34,10 +34,10 @@ export default class SpecialOffersView extends JetView {
 			],
 			onDblClick: {
 				"status": function(ev, id, trg) {
-					this.$scope.statuses.showPopup(trg);
+					// this.$scope.statuses.showPopup(trg);
 					changingRowItem = id.row;
 
-					var changing_status = $$("specialoffersgrid").getItem(id.row).status;
+					var changing_status = $$("specialoffersgrid").getItem(changingRowItem).status;
 					var changing_status_array = changing_status.split(",");
 					console.log(changing_status_array);
 
