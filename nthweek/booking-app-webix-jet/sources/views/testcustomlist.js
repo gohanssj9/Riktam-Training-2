@@ -49,8 +49,6 @@ webix.protoUI({
 	showLabel: function() {
 		var me = this;
 		var config = me.config;
-		console.log(config);
-		console.log("Inside label");
 		var show_label_id = config.id + "_custom_label_select";
 		var show_datatable_id = config.id + "_custom_datatable_select";
 		me.addView({
@@ -58,7 +56,6 @@ webix.protoUI({
 				{view: "label", label: config.label, align: config.labelAlign, width: 100},
 				{view: "label", label: config.options[0].status, css: "right_css", align: "left", id: show_label_id, width: 200, click: (id, e, trg) => {
 					this.custom_multiselect.show(e.target);
-
 					var change_array = $$(show_label_id).config.label.split(",");
 					const popup = $$(show_datatable_id);
 					if(change_array.length === 1){

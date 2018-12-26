@@ -3,7 +3,7 @@ const editors = webix.editors;
 var changingRowItem = 0;
 var changingStatus = "";
 var output_string = "";
-
+var grid_row = "";
 editors.editdate = webix.extend({
 	render:function(){
     var icon = "<span class='webix_input_icon wxi-calendar' style='position:absolute; cursor:pointer; top:8px; right:5px;'></span>";
@@ -26,7 +26,9 @@ editors.editdate = webix.extend({
 }, webix.editors.text);
 
 editors.custommultiselect = webix.extend({
-	focus: function() {console.log(this); console.log("Inside focus");},
+	focus: function() {
+		grid_row = this.config.footer[0].text;
+	},
 	popupType: "custommultiselect",
 	setValue: function(value){
 		this.getPopup().show(this.node);
@@ -86,10 +88,10 @@ editors.$popup.custommultiselect = {
 					{id: 1, check: 0, status: "Enter some options."}
 				]
 			},
-			{view: "button", label: "Select", type: "form", margin: 0, click: () => {
+			{view: "button", label: "Select", type: "form", margin: 0, click: (id, e) => {
 				output_string = "";
 				const notif = $$("show_datatable_id");
-				const grid = $$("specialoffersgrid");
+				const grid = $$(grid_row);
 				notif.eachRow(function(id) {
 					if(this.getItem(id).check) output_string += this.getItem(id).status + ",";
 				});

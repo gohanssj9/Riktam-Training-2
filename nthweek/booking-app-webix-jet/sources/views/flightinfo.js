@@ -12,7 +12,7 @@ export default class FlightInfoView extends JetView {
 				{id: "to", header: "To", fillspace: 1, editor: "text"},
 				{id: "depart", header: "Departs", fillspace: 1, editor: "text"},
 				{id: "arrive", header: "Arrives", fillspace: 1, editor: "text"},
-				{id: "status", header: "Status", fillspace: 1, editor: "richselect", options: ["Landed", "On Time"], template: function(obj) {
+				{id: "status", header: "Status", footer: "flightinfoview", fillspace: 1, editor: "richselect", options: ["Landed", "On Time"], template: function(obj) {
 					let className = "";
 					if(obj.status == "Landed") className = "p1";
 					else className = "p2";
