@@ -54,7 +54,7 @@ webix.protoUI({
 		me.addView({
 			css: "custom_css", cols: [
 				{view: "label", label: config.label, align: config.labelAlign, width: 100},
-				{view: "label", label: config.options[0].status, css: "right_css", align: "left", id: show_label_id, width: 200, click: (id, e, trg) => {
+				{view: "label", label: config.options[0].status, css: "right_css", align: "left", id: show_label_id, width: 200, editable: true, editor: "popup", editaction: "click", click: (id, e, trg) => {
 					this.custom_multiselect.show(e.target);
 					var change_array = $$(show_label_id).config.label.split(",");
 					const popup = $$(show_datatable_id);
@@ -89,4 +89,4 @@ webix.protoUI({
 				}}
 			]});
 	},
-}, webix.ui.layout, webix.EventSystem, webix.MouseEvents);
+}, webix.EditAbility, webix.ui.layout, webix.EventSystem, webix.MouseEvents);

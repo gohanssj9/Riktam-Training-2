@@ -2,6 +2,7 @@ import {JetView} from 'webix-jet';
 
 import FormStatusPopup from 'views/formstatuses';
 import TestCustomList from 'views/testcustomlist';
+import TestCustom_Dataview from 'views/testcustommultiselect_dataview';
 
 var changingRowItem = 0;
 var changingStatus = "";
@@ -9,6 +10,7 @@ var changingStatus = "";
 export default class SaveFormView extends JetView {
 	config(){
 		var ui = {type: "form", rows: [
+			{view: "Custom_Multi_Dataview"},
 			{view: "CustomMultiselect", label: "Status", labelAlign: "center",
 				options: [
 					{id: 1, check: 0, status: "Open"},
