@@ -25,16 +25,19 @@ editors.editdate = webix.extend({
 	}
 }, webix.editors.text);
 
+//  || 
+
 editors.custommultiselect = webix.extend({
 	focus: function() {
-		grid_row = this.config.footer[0].text;
+		// grid_row = this.config.footer[0].text;
 	},
 	popupType: "custommultiselect",
 	setValue: function(value){
 		this.getPopup().show(this.node);
+		console.log(this);
 		var conf = $$("show_datatable_id");
 		conf.clearAll();
-		conf.parse(this.config.collection.config.data);
+		conf.parse(((this.config.collection.config.data)));
 
 		var changing_status_array = value.split(",");
 		if(changing_status_array.length === 1){
@@ -89,25 +92,25 @@ editors.$popup.custommultiselect = {
 				]
 			},
 			{view: "button", label: "Select", type: "form", margin: 0, click: (id, e) => {
-				output_string = "";
-				const notif = $$("show_datatable_id");
-				const grid = $$(grid_row);
-				notif.eachRow(function(id) {
-					if(this.getItem(id).check) output_string += this.getItem(id).status + ",";
-				});
+				// output_string = "";
+				// const notif = $$("show_datatable_id");
+				// const grid = $$(grid_row);
+				// notif.eachRow(function(id) {
+				// 	if(this.getItem(id).check) output_string += this.getItem(id).status + ",";
+				// });
 
-				output_string = output_string.substring(0, output_string.length - 1);
-				var updated_cell = grid.getItem(grid._item_clicked.row);
-				updated_cell[grid._item_clicked.column] = output_string;
-				grid.refresh();
+				// output_string = output_string.substring(0, output_string.length - 1);
+				// var updated_cell = grid.getItem(grid._item_clicked.row);
+				// updated_cell[grid._item_clicked.column] = output_string;
+				// grid.refresh();
 
 				$$("something_else").hide();
 
-				notif.eachRow(function(id) {
-					var updated_item = notif.getItem(id);
-					updated_item["check"] = 0;
-				});
-				notif.refresh();
+				// notif.eachRow(function(id) {
+				// 	var updated_item = notif.getItem(id);
+				// 	updated_item["check"] = 0;
+				// });
+				// notif.refresh();
 			}}
 		]
 	}

@@ -4,13 +4,22 @@ import FormStatusPopup from 'views/formstatuses';
 import TestCustomList from 'views/testcustomlist';
 import TestCustom_Dataview from 'views/testcustommultiselect_dataview';
 
+import editors from 'views/customeditor';
+
 var changingRowItem = 0;
 var changingStatus = "";
 
 export default class SaveFormView extends JetView {
 	config(){
 		var ui = {type: "form", rows: [
-			{view: "Custom_Multi_Dataview"},
+			{view: "Custom_Multi_Dataview", height: 60, scroll: false, editable: true, editor: "custommultiselect", options: [
+					{id:1 , check: 0, status: "I don't know"}
+				], editaction: "dblclick", editValue: "title",
+				data: [
+					{id: 1, title: "Something"}
+				],
+				template: "<div class = 'webix_strong'>#title#</div>"
+			},
 			{view: "CustomMultiselect", label: "Status", labelAlign: "center",
 				options: [
 					{id: 1, check: 0, status: "Open"},
