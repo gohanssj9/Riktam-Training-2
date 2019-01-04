@@ -1,4 +1,6 @@
 import editors from 'views/customeditor';
+import CustomDatatable from 'views/custom_datatable_component';
+
 webix.protoUI({
 	name: "CustomMultiselect",
 	$init:function(config) {
@@ -7,38 +9,42 @@ webix.protoUI({
 		var show_label_id = config.id + "_custom_label_select";
 		var statPopup = {
 			view: "popup", css: "custom_popup", id: show_id,
-			body: {
-				rows: [
-					{view: "datatable", header: false, id: show_datatable_id, scroll: false, 
-					autoheight: true, autowidth: true,
-					columns: [
-						{id: "check", template: "{common.checkbox()}", width: 25, css: "checkbox_section"},
-						{id: "status", width: 225, css: "status_section"}
-					],
-					data: config.options
-				},
-				{view: "button", type: "form", value: config.value, click: () => {
-					var output_string = "";
-					const popup = $$(show_datatable_id);
+			body: { view: "Custom_Datatable", label: "Select", options: [
+					{id:1 , check: 0, status: "Testing3"},
+					{id:2 , check: 0, status: "Testing4"},
+				]
+				// rows: [
+				// 	{view: "datatable", header: false, id: show_datatable_id, scroll: false, 
+				// 	autoheight: true, autowidth: true,
+				// 	columns: [
+				// 		{id: "check", template: "{common.checkbox()}", width: 25, css: "checkbox_section"},
+				// 		{id: "status", width: 225, css: "status_section"}
+				// 	],
+				// 	data: config.options
+				// },
+				// {view: "button", type: "form", value: config.value, click: () => {
+				// 	var output_string = "";
+				// 	const popup = $$(show_datatable_id);
 
-					popup.eachRow(function(id) {
-						if(this.getItem(id).check) output_string += this.getItem(id).status + ",";
-					});
+				// 	popup.eachRow(function(id) {
+				// 		if(this.getItem(id).check) output_string += this.getItem(id).status + ",";
+				// 	});
 
-					output_string = output_string.substring(0, output_string.length - 1);
+				// 	output_string = output_string.substring(0, output_string.length - 1);
 
-					$$(show_label_id).define("label", output_string);
-					$$(show_label_id).refresh();
+				// 	$$(show_label_id).define("label", output_string);
+				// 	$$(show_label_id).refresh();
 
-					$$(show_id).hide();
+				// 	$$(show_id).hide();
 
-					popup.eachRow(function(id) {
-						var updated_item = popup.getItem(id);
-						updated_item["check"] = 0;
-					});
-					popup.refresh();
-				}}
-			]}							
+				// 	popup.eachRow(function(id) {
+				// 		var updated_item = popup.getItem(id);
+				// 		updated_item["check"] = 0;
+				// 	});
+				// 	popup.refresh();
+				// }}
+			// ]
+		}							
 		};
 		this.custom_multiselect = webix.ui(statPopup);
 		this.$ready.push(this.showLabel);

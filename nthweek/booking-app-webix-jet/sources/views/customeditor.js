@@ -1,3 +1,4 @@
+import CustomDatatable from 'views/custom_datatable_component';
 const editors = webix.editors;
 
 var changingRowItem = 0;
@@ -78,20 +79,23 @@ editors.$popup.custommultiselect = {
 	view: "suggest",
 	padding: 0,
 	id: "something_else",
-	body: {
-		view: "form",
-		id: "something_else_",
-		rows: [
-			{view: "datatable", header: false, id: "show_datatable_id", margin: 0, scroll: false, autoheight: true, autowidth: true,
-				columns: [
-					{id: "check", template: "{common.checkbox()}", width: 25, css: "checkbox_section"},
-					{id: "status", width: 225, css: "status_section"}
-				],
-				data: [
-					{id: 1, check: 0, status: "Enter some options."}
-				]
-			},
-			{view: "button", label: "Select", type: "form", margin: 0, click: (id, e) => {
+	body: { view: "Custom_Datatable", label: "Add Up", options: [
+			{id: 1, check: 0, status: "Testing1"},
+			{id: 2, check: 0, status: "Testing2"},
+		]
+		// view: "form",
+		// id: "something_else_",
+		// rows: [
+		// 	{view: "datatable", header: false, id: "show_datatable_id", margin: 0, scroll: false, autoheight: true, autowidth: true,
+		// 		columns: [
+		// 			{id: "check", template: "{common.checkbox()}", width: 25, css: "checkbox_section"},
+		// 			{id: "status", width: 225, css: "status_section"}
+		// 		],
+		// 		data: [
+		// 			{id: 1, check: 0, status: "Enter some options."}
+		// 		]
+		// 	},
+		// 	{view: "button", label: "Select", type: "form", margin: 0, click: (id, e) => {
 				// output_string = "";
 				// const notif = $$("show_datatable_id");
 				// const grid = $$(grid_row);
@@ -104,15 +108,15 @@ editors.$popup.custommultiselect = {
 				// updated_cell[grid._item_clicked.column] = output_string;
 				// grid.refresh();
 
-				$$("something_else").hide();
+				// $$("something_else").hide();
 
 				// notif.eachRow(function(id) {
 				// 	var updated_item = notif.getItem(id);
 				// 	updated_item["check"] = 0;
 				// });
 				// notif.refresh();
-			}}
-		]
+		// 	}}
+		// ]
 	}
 }
 
